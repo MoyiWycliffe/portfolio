@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //function to send page visit data to the backend
     async function sendPageVisit() {
         try{
-            const response = await fetch("https://portfolio-2-xfzn.onrender.com/visit", {
+            const response = await fetch("http://localhost:8000/visit", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
