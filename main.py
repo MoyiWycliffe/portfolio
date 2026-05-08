@@ -35,9 +35,9 @@ async def add_visit(visit: Visit, request: Request):
 
     result = supabase.table("myportfolio_page_visits").select("*").execute()
 
-    return {
-        "message": "Data inserted successfully 🚀",
-        "ip": client_ip,
-        "inserted": insert_result.data,
-        "all_rows": result.data
-    }
+    # return {
+    #     "message": "Data inserted successfully 🚀",
+    #     "ip": client_ip,
+    #     "inserted": insert_result.data,
+    #     "all_rows": result.data
+    # }
