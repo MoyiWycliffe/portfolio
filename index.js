@@ -28,9 +28,16 @@ document.addEventListener("DOMContentLoaded", function() {
     //check if the current page is the portfolio page
     console.log(hostname);
     console.log(pathname);
+    //get head element to add adsense code
+    const headTag = document.getElementsByTagName("head")[0];
+
     //check if the host is vercel then call the sendPageVisit function
+
     if(hostname.includes("vercel.app")){
         sendPageVisit();
+
         console.log("Page visit data sent to the backend");
+        headTag.insertAdjacentHTML("beforeend", `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5875551558410781"
+     crossorigin="anonymous"></script>`);
     }
 });
