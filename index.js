@@ -22,5 +22,15 @@ document.addEventListener("DOMContentLoaded", function() {
             console.error("Error sending page visit data:", error);
         }
     }
-    sendPageVisit();
+    //get hostname and pathname of the current page
+    const hostname = window.location.hostname;
+    const pathname = window.location.pathname;
+    //check if the current page is the portfolio page
+    console.log(hostname);
+    console.log(pathname);
+    //check if the host is vercel then call the sendPageVisit function
+    if(hostname.includes("vercel.app")){
+        sendPageVisit();
+        console.log("Page visit data sent to the backend");
+    }
 });
