@@ -37,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function() {
         sendPageVisit();
 
         console.log("Page visit data sent to the backend");
-        headTag.insertAdjacentHTML("beforeend", `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5875551558410781"
-     crossorigin="anonymous"></script>`);
+        headTag.appendChild(document.createElement("script")).src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5875551558410781";
     }
 });
