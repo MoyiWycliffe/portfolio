@@ -37,6 +37,24 @@ document.addEventListener("DOMContentLoaded", function() {
         sendPageVisit();
 
         console.log("Page visit data sent to the backend");
-        headTag.appendChild(document.createElement("script")).src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5875551558410781";
+        const existingScript = document.querySelector(
+            'script[src*="googlesyndication"]'
+            );
+
+            if (!existingScript) {
+
+                const adsenseScript = document.createElement("script");
+
+                adsenseScript.src =
+                "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5875551558410781";
+
+                adsenseScript.async = true;
+
+                adsenseScript.crossOrigin = "anonymous";
+
+                headTag.appendChild(adsenseScript);
+            }
     }
+
+    console.log(headTag);
 });
