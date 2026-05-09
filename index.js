@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 },
                 body: JSON.stringify({
                     pageurl: window.location.href ?? null,
-                    statuscode: 200 ?? null,
+                    statuscode: 200,
                     useragent: navigator.userAgent ?? null,
                     referrer: document.referrer ?? null
                 })
