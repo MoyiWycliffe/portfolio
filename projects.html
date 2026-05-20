@@ -3,17 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mante`s MWC - Portfolio</title>
+    <title>Mante's MWC - Portfolio</title>
+
+    <link rel="stylesheet" href="projects.css">
     <script src="index.js" defer></script>
-    <link rel="stylesheet" href="index.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="education.html">Education</a></li>
-        </ul>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <h2>Mante<span>MWC</span></h2>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>
+                Building Modern <span>Web Experiences</span>
+            </h1>
+
+            <p>
+                Full-stack developer passionate about building clean,
+                responsive and scalable web applications with modern
+                technologies.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#projects">
+                    <button class="primary-btn">Explore Projects</button>
+                </a>
+
+                <a href="#">
+                    <button class="secondary-btn">Download CV</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="https://cutlnk.top/media/logo.png" alt="Profile">
+        </div>
+    </section>
+
+    <!-- PROJECT SECTION -->
+    <main class="content" id="projects">
+
+        <div class="section-title">
+            <h1>Featured Projects</h1>
+            <p>
+                Some real-world projects I have designed and developed.
+            </p>
+        </div>
+
+        <div class="project-cards">
+
+            <!-- CARD 1 -->
+            <div class="project-card">
+
+                <div class="project-card-header">
+                    <img src="https://cutlnk.top/media/logo.png" alt="Cutlnk">
+                </div>
+
+                <div class="project-card-body">
+                    <h2>Cutlnk</h2>
+
+                    <p>
+                        A modern URL shortening platform that allows users
+                        to create short and trackable links with analytics.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <a href="https://cutlnk.top/" target="_blank">
+                        <button>View Project</button>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="project-card">
+
+                <div class="project-card-header">
+                    <img src="https://mante-furniture-store.vercel.app/images/hero.jpg" alt="Furniture Store">
+                </div>
+
+                <div class="project-card-body">
+                    <h2>Furniture Store</h2>
+
+                    <p>
+                        A responsive e-commerce furniture website with
+                        admin dashboard, product management and pricing system.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>Supabase</span>
+                    </div>
+
+                    <a href="https://mante-furniture-store.vercel.app/" target="_blank">
+                        <button>View Project</button>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="project-card">
+
+                <div class="project-card-header">
+                    <img src="https://mante-restaurant.vercel.app/media/logo.png" alt="Mante Restaurant">
+                </div>
+
+                <div class="project-card-body">
+                    <h2>Mante Restaurant</h2>
+
+                    <p>
+                        A modern restaurant website with menu, reservation
+                        system and contact form built with Python-FastAPI and MySQL.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>FastAPI</span>
+                        <span>MySQL</span>
+                    </div>
+
+                    <a href="https://mante-restaurant.vercel.app/" target="_blank">
+                        <button>View Project</button>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- CARD 4
+            <div class="project-card">
+
+                <div class="project-card-header">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200&auto=format&fit=crop" alt="Developer Platform">
+                </div>
+
+                <div class="project-card-body">
+                    <h2>Developer Platform</h2>
+
+                    <p>
+                        A developer-focused platform for managing APIs,
+                        authentication systems and backend integrations.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Backend</span>
+                        <span>Security</span>
+                        <span>REST API</span>
+                    </div>
+
+                    <a href="#">
+                        <button>View Project</button>
+                    </a>
+                </div>
+
+            </div> -->
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <h2>Mante MWC</h2>
+
+        <p>
+            Passionate Full-Stack Developer building modern digital experiences.
+        </p>
+
+        <div class="footer-links">
+            <a href="https://www.facebook.com/ManteNtara2" target="_blank">Facebook</a>
+            <a href="https://x.com/moyi_mwc" target="_blank">Twitter</a>
+            <a href="https://github.com/MoyiWycliffe" target="_blank">GitHub</a>
+        </div>
+
+        <p class="copyright">
+            © <span id="currentYear"></span> Mante MWC. All rights reserved.
+        </p>
+
+    </footer>
+
 </body>
 </html>
