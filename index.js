@@ -57,4 +57,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     console.log(headTag);
+    //current yesr
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
 });
