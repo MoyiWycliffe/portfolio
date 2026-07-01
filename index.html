@@ -7,11 +7,12 @@
     <meta name="description" content="Portfolio of Mante Ntara (Moyi Wycliffe) AKA Mante MWC, a professional full-stack web developer based in Kenya. Providing affordable, high-end web development services.">
     <meta name="keywords" content="Mante Ntara, Moyi Wycliffe, ManteDev, Web Developer Kenya, Full Stack Developer, Cybersecurity Kenya, Cutlnk ,Mante's MWC, Portfolio, Affordable Web Development, Professional Web Developer">
     <meta name="google-site-verification" content="k1-ZmqR3Fs0tvoxVYZavyuBJlmzJqjn4xbp0tQgMdVA" />
-    <link rel="stylesheet" href="css/style.css">
-    <script src="index.js" defer></script>
-    <link rel="stylesheet" href="index.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <!-- <script src="index.js" defer></script> -->
+    <!-- <link rel="stylesheet" href="index.css"> -->
     <link rel="icon" href="media/logo.png" type="image/png">
-    
+    <!--BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- <script src="/src/main.jsx" type="module"></script> -->
 </head>
 <body>
@@ -34,95 +35,458 @@
         ]
 }
 </script>
-    <!-- <div id="root"></div> -->
-    <header>
-        <h1>Mante Ntara | Full-Stack Web Developer</h1>
-<p class="subtitle">Affordable & professional digital solutions for businesses.</p>
-    </header>
 
-    <nav>
-        <!-- 
-        <a href="#portfolio">Portfolio</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#contact">Contact</a>
-         -->
-        <ul>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="education.html">Education</a></li>
-            <li><a href="#services">Services</a></li>
-        </ul>
-    </nav>
+<header class="bg-dark text-white py-1">
+    <div class="container">
 
-    <section id="services">
-        <h2>Services</h2>
-        <div class="card">
-            <h3>Website Development</h3>
-            <p>Responsive, fast, and mobile-friendly websites for restaurants, salons, shops, and more.</p>
-        </div>
-        <div class="card">
-            <h3>Website Maintenance</h3>
-            <p>Regular updates, backups, and minor changes to keep your site running smoothly.</p>
-        </div>
-        <div class="card">
-            <h3>Consultation</h3>
-            <p>Advice on online presence, hosting, and maximizing your website to get more customers.</p>
-        </div>
-    </section>
+        <nav class="navbar navbar-expand-lg navbar-dark mb-2">
+            <div class="container-fluid">
 
-    <section id="portfolio">
-        <h2>Sample Websites</h2>
-        <div class="card">
-            <h3>Restaurant Demo</h3>
-            <p>One-page, clean, mobile-friendly website built as a sample for small restaurants.</p>
-            <a href="https://mante-restaurant.vercel.app/" class="btn">View Demo</a>
-        </div>
-        <div class="card">
-            <h3>Sample Salon Website</h3>
-            <p>Elegant design with services and contact form. Perfect for local salons and spas.</p>
-            <a href="https://mante-saloon.vercel.app/" class="btn">View Demo</a>
-        </div>
-    </section>
+                <a class="navbar-brand fw-bold" href="#">
+                    Mante MWC
+                </a>
 
-    <section id="pricing">
-        <h2>Pricing & Delivery</h2>
-        <div class="card">
-            <h3>Basic Website</h3>
-            <p>1-page website, About, Contact, Menu/Services.</p>
-            <p>Price: Ksh 5,000</p>
-            <p>Delivery: 1–2 days</p>
-        </div>
-        <div class="card">
-            <h3>Standard Website</h3>
-            <p>3–5 pages, gallery, contact form, responsive design.</p>
-            <p>Price: Ksh 10,000–20,000</p>
-            <p>Delivery: 2–3 days</p>
-        </div>
-        <div class="card">
-            <h3>Advanced Website</h3>
-            <p>Custom design, online menu/booking, admin dashboard.</p>
-            <p>Price: Ksh 25,000–60,000</p>
-            <p>Delivery: 3–5 days</p>
-        </div>
-    </section>
+                <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>.
+                </button>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>WhatsApp: <a href="https://cutlnk.top/DmcmpNE" rel="noopener noreferrer" target="_blank" class="btn">Chat Now</a></p>
-    </section>
-    <footer>
-        <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#contact">Contact</a>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">Projects</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="skills.html">Skills</a>
+                        </li>
+
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="education.html">Education</a>
+                        </li> -->
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pricing">Pricing</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+        </nav>
+
+        <div class="text-center py-5">
+
+            <h1 class="display-3 fw-bold">
+                Mante Ntara
+            </h1>
+
+            <h2 class="h3 text-warning">
+                Professional Full-Stack Web Developer
+            </h2>
+
+            <p class="lead mt-3">
+                Affordable, modern and responsive websites for businesses across Kenya.
+            </p>
+
+            <a href="#portfolio" class="btn btn-warning btn-lg me-2">
+                View Projects
+            </a>
+
         </div>
-        <p>© <span id="currentYear"></span> Mante MWC — Portfolio Site</p>
-        <div class="social-links">
-            <p>Follow/Connect with me:</p>
-            <a href="https://www.facebook.com/ManteNtara2" rel="noopener noreferrer" target="_blank">Facebook</a>
-            <a href="https://x.com/moyi_mwc" rel="noopener noreferrer" target="_blank">Twitter</a>
-            <a href="https://github.com/MoyiWycliffe" rel="noopener noreferrer" target="_blank">GitHub</a>
+
+    </div>
+</header>
+
+<section id="services" class="container py-5">
+
+    <h2 class="text-center mb-5">Services</h2>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+
+            <div class="card h-100 shadow-sm">
+
+                <div class="card-body">
+
+                    <h4 class="card-title">
+                        Website Development
+                    </h4>
+
+                    <p class="card-text">
+                        Responsive, fast and mobile-friendly websites for businesses, restaurants, salons and startups.
+                    </p>
+
+                </div>
+
+            </div>
+
         </div>
-    </footer>
+
+        <div class="col-md-4">
+
+            <div class="card h-100 shadow-sm">
+
+                <div class="card-body">
+
+                    <h4>
+                        Website Maintenance
+                    </h4>
+
+                    <p>
+                        Regular updates, security improvements, backups and ongoing support.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card h-100 shadow-sm">
+
+                <div class="card-body">
+
+                    <h4>
+                        Consultation
+                    </h4>
+
+                    <p>
+                        Advice on hosting, domains, SEO and growing your online presence.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="portfolio" class="bg-light py-5">
+
+    <div class="container">
+
+        <h2 class="text-center mb-5">
+            Sample Websites
+        </h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card h-100 shadow-sm">
+
+                    <img src="media/restaurant.png" class="card-img-top" alt="Restaurant">
+
+                    <div class="card-body">
+
+                        <h5>Restaurant Demo</h5>
+
+                        <p>
+                            One-page restaurant website.
+                        </p>
+
+                    </div>
+
+                    <div class="card-footer bg-white">
+
+                        <a href="https://mante-restaurant.vercel.app/" rel="noopener noreferrer" target="_blank" class="btn btn-primary w-100">
+                            View Demo
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card h-100 shadow-sm">
+
+                    <img src="media/salon.png" class="card-img-top" alt="Saloon Image">
+
+                    <div class="card-body">
+
+                        <h5>Salon Website</h5>
+
+                        <p>
+                            Elegant responsive salon website.
+                        </p>
+
+                    </div>
+
+                    <div class="card-footer bg-white">
+
+                        <a href="https://mante-saloon.vercel.app/" rel="noopener noreferrer" class="btn btn-primary w-100" target="_blank">
+                            View Demo
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card h-100 shadow-sm">
+
+                    <img src="media/mantemetrics.png" class="card-img-top" alt="ManteMetrics Image">
+
+                    <div class="card-body">
+
+                        <h5>ManteMetrics</h5>
+
+                        <p>
+                            Website analytics dashboard.
+                        </p>
+
+                    </div>
+
+                    <div class="card-footer bg-white">
+
+                        <a href="https://www.mantemetrics.app/" rel="noopener noreferrer" class="btn btn-primary w-100" target="_blank">
+                            View Demo
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card h-100 shadow-sm">
+
+                    <img src="media/furniture.png"  class="card-img-top" alt="Furniture Store Image">
+
+                    <div class="card-body">
+
+                        <h5>Furniture Store</h5>
+
+                        <p>
+                            Modern furniture ecommerce website.
+                        </p>
+
+                    </div>
+
+                    <div class="card-footer bg-white">
+
+                        <a href="https://mante-furniture-store.vercel.app/" rel="noopener noreferrer" class="btn btn-primary w-100" target="_blank">
+                            View Demo
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="pricing" class="container py-5">
+
+    <h2 class="text-center mb-5">
+        Pricing
+    </h2>
+
+    <div class="row g-4">
+
+        <div class="col-lg-4">
+
+            <div class="card border-primary h-100">
+
+                <div class="card-header bg-primary text-white">
+                    Basic
+                </div>
+
+                <div class="card-body">
+
+                    <h3>Ksh 5,000</h3>
+
+                    <p>1-page Website</p>
+
+                    <p>Delivery: 1-2 Days</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4">
+
+            <div class="card border-success h-100">
+
+                <div class="card-header bg-success text-white">
+                    Standard
+                </div>
+
+                <div class="card-body">
+
+                    <h3>Ksh 10K - 20K</h3>
+
+                    <p>3-5 Pages</p>
+
+                    <p>Delivery: 2-3 Days</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4">
+
+            <div class="card border-danger h-100">
+
+                <div class="card-header bg-danger text-white">
+                    Advanced
+                </div>
+
+                <div class="card-body">
+
+                    <h3>Ksh 25K - 60K</h3>
+
+                    <p>Custom Dashboard</p>
+
+                    <p>Delivery: 3-5 Days</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contact" class="bg-dark text-white py-5">
+
+    <div class="container text-center">
+
+        <h2>
+            Contact Me
+        </h2>
+
+        <p class="mb-4">
+            Ready to build your next website?
+        </p>
+
+        <a href="https://cutlnk.top/DmcmpNE"
+            target="_blank"
+            class="btn btn-success btn-lg" rel="noopener noreferrer">
+            WhatsApp Me
+        </a>
+
+    </div>
+
+</section>
+
+<footer class="bg-black text-white py-4">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <h5>Mante MWC</h5>
+
+                <p>
+                    Professional Full-Stack Web Developer.
+                </p>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <h5>Quick Links</h5>
+
+                <ul class="nav flex-column">
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white p-0 mb-2" href="#">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white p-0 mb-2" href="#portfolio">
+                            Portfolio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white p-0" href="#pricing">
+                            Pricing
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <h5>Connect</h5>
+
+                <a href="https://github.com/MoyiWycliffe" class="btn btn-outline-light btn-sm mb-2 w-100" target="_blank" rel="noopener noreferrer">
+                    GitHub
+                </a>
+
+                <a href="https://x.com/moyi_mwc" class="btn btn-outline-light btn-sm mb-2 w-100" target="_blank" rel="noopener noreferrer">
+                    Twitter
+                </a>
+
+                <a href="https://facebook.com/ManteNtara2" class="btn btn-outline-light btn-sm w-100" target="_blank" rel="noopener noreferrer">
+                    Facebook
+                </a>
+
+            </div>
+
+        </div>
+
+        <hr class="border-secondary">
+
+        <p class="text-center mb-0">
+            © <span id="currentYear"></span> Mante MWC. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+<script>
+document.getElementById("currentYear").textContent = new Date().getFullYear();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
-</html>
