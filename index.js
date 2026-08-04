@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const hostname = window.location.hostname;
     const pathname = window.location.pathname;
     //check if the current page is the portfolio page
-    console.log(hostname);
-    console.log(pathname);
+    // console.log(hostname);
+    // console.log(pathname);
     //get head element to add adsense code
     const headTag = document.getElementsByTagName("head")[0];
 
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if(hostname.includes("vercel.app")){
         sendPageVisit();
 
-        console.log("Page visit data sent to the backend");
+        // console.log("Page visit data sent to the backend");
         const existingScript = document.querySelector(
             'script[src*="googlesyndication"]'
             );
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
     }
 
-    console.log(headTag);
+    // console.log(headTag);
     //current yesr
     document.getElementById("currentYear").textContent = new Date().getFullYear();
 });
