@@ -56,6 +56,14 @@ document.addEventListener("DOMContentLoaded", function() {
             }
     }
 
+    const trackScript = document.createElement("script");
+        trackScript.src = "https://mantemetrics.app/index.js";
+        trackScript.dataset.id ='DXDMKaYoZzFTRcrS4qNGgibRjrlA7sOy12A1FbwK'
+
+        document.head.appendChild(trackScript);
+
+    // DXDMKaYoZzFTRcrS4qNGgibRjrlA7sOy12A1FbwK
+
     // console.log(headTag);
     //current yesr
     document.getElementById("currentYear").textContent = new Date().getFullYear();
