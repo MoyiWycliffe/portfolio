@@ -3,1198 +3,1641 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mante Ntara (Moyi Wycliffe) | Professional Full-Stack Web Developer</title>
-    <meta name="description" content="Portfolio of Mante Ntara (Moyi Wycliffe) AKA Mante MWC, a professional full-stack web developer based in Kenya. Providing affordable, high-end web development services.">
-    <meta name="keywords" content="Mante Ntara, Moyi Wycliffe, ManteDev, Web Developer Kenya, Full Stack Developer, Cybersecurity Kenya, Cutlnk ,Mante's MWC, Portfolio, Affordable Web Development, Professional Web Developer">
-    <meta name="google-site-verification" content="k1-ZmqR3Fs0tvoxVYZavyuBJlmzJqjn4xbp0tQgMdVA" />
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
-    <!-- <script src="index.js" defer></script> -->
-    <!-- <link rel="stylesheet" href="index.css"> -->
+
+    <meta name="description" content="Mante MWC — Software Engineer, cybersecurity enthusiast and builder of production-ready web applications, SaaS platforms and digital systems.">
+    <meta name="keywords" content="Mante MWC, Mante Moyi, software engineer, web developer, cybersecurity, SaaS, backend developer, Kenya, portfolio">
+    <meta name="author" content="Mante MWC">
+    <meta name="theme-color" content="#05070a">
+
+    <title>Mante MWC — Software Engineer & Builder</title>
+
+    <link rel="icon" href="media/logo.png" type="image/png">
     <script
     src="https://www.mantemetrics.app/index.js"
     data-id="DXDMKaYoZzFTRcrS4qNGgibRjrlA7sOy12A1FbwK">
-</script>
-    <link rel="icon" href="media/logo.png" type="image/png">
-    <!--BOOTSTRAP CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- <script src="/src/main.jsx" type="module"></script> -->
-</head>
-<body>
-    <script type="application/ld+json">
-        {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Mante Ntara",
-        "alternateName": [
-            "ManteDev",
-            "Mante MWC",
-            "Moyi Wycliffe"
-        ],
-        "url": "https://mantemwc.vercel.app/",
-        "jobTitle": "Full-Stack Web Developer",
-        "sameAs": [
-            "https://github.com/MoyiWycliffe/",
-            "https://www.facebook.com/ManteNtara2/",
-            "https://x.com/moyi_mwc"
-        ]
-}
-</script>
+    </script>
 
-<header class="bg-dark text-white py-1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #05070a;
+            --bg-soft: #090d12;
+            --surface: #0d1218;
+            --surface-2: #111820;
+            --border: rgba(255,255,255,.09);
+            --border-strong: rgba(255,255,255,.16);
+            --text: #f4f7fa;
+            --muted: #8d9aa8;
+            --accent: #62e6a8;
+            --accent-2: #5bbcff;
+            --danger: #ff6b7a;
+            --warning: #ffc857;
+            --radius: 24px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background:
+                radial-gradient(circle at 10% 5%, rgba(91,188,255,.09), transparent 28rem),
+                radial-gradient(circle at 90% 10%, rgba(98,230,168,.07), transparent 30rem),
+                var(--bg);
+            color: var(--text);
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ::selection {
+            background: var(--accent);
+            color: #04100a;
+        }
+
+        .navbar {
+            background: rgba(5,7,10,.78);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .navbar-brand {
+            color: var(--text) !important;
+            font-weight: 800;
+            letter-spacing: -.04em;
+            font-size: 1.25rem;
+        }
+
+        .brand-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            margin-left: 3px;
+            box-shadow: 0 0 15px rgba(98,230,168,.8);
+        }
+
+        .nav-link {
+            color: #aeb9c4 !important;
+            font-size: .9rem;
+            font-weight: 500;
+            transition: .25s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--text) !important;
+        }
+
+        .btn-main {
+            background: var(--accent);
+            border: 1px solid var(--accent);
+            color: #04100a;
+            font-weight: 700;
+            border-radius: 12px;
+            padding: .75rem 1.1rem;
+            transition: .25s ease;
+        }
+
+        .btn-main:hover {
+            transform: translateY(-2px);
+            background: #7af0b8;
+            color: #04100a;
+            box-shadow: 0 10px 30px rgba(98,230,168,.14);
+        }
+
+        .btn-outline-main {
+            border: 1px solid var(--border-strong);
+            color: var(--text);
+            border-radius: 12px;
+            padding: .75rem 1.1rem;
+            font-weight: 600;
+            transition: .25s ease;
+        }
+
+        .btn-outline-main:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 130px 0 80px;
+        }
+
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            opacity: .35;
+            background-image:
+                linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+            background-size: 55px 55px;
+            mask-image: linear-gradient(to bottom, black, transparent 90%);
+            pointer-events: none;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 8px 13px;
+            border: 1px solid rgba(98,230,168,.2);
+            background: rgba(98,230,168,.05);
+            color: var(--accent);
+            border-radius: 999px;
+            font-size: .78rem;
+            font-weight: 700;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 12px rgba(98,230,168,.9);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%,100% { opacity: 1; transform: scale(1); }
+            50% { opacity: .45; transform: scale(.7); }
+        }
+
+        .hero h1 {
+            font-size: clamp(3.3rem, 8vw, 7.4rem);
+            line-height: .91;
+            letter-spacing: -.075em;
+            font-weight: 850;
+            margin: 25px 0;
+        }
+
+        .gradient-text {
+            background: linear-gradient(100deg, #fff 20%, var(--accent-2) 50%, var(--accent) 85%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero-copy {
+            color: var(--muted);
+            max-width: 680px;
+            font-size: 1.12rem;
+            line-height: 1.8;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .hero-photo-wrap {
+            position: relative;
+            max-width: 410px;
+            margin-inline: auto;
+        }
+
+        .hero-photo-frame {
+            position: relative;
+            border-radius: 35px;
+            padding: 10px;
+            background: linear-gradient(145deg, rgba(98,230,168,.55), rgba(91,188,255,.2), rgba(255,255,255,.04));
+            transform: rotate(2deg);
+            box-shadow: 0 30px 90px rgba(0,0,0,.5);
+        }
+
+        .hero-photo {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            border-radius: 28px;
+            background: #10161d;
+        }
+
+        .photo-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            color: #657280;
+            font-size: .85rem;
+        }
+
+        .photo-placeholder i {
+            font-size: 3rem;
+        }
+
+        .floating-card {
+            position: absolute;
+            background: rgba(13,18,24,.9);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--border-strong);
+            border-radius: 16px;
+            padding: 14px 16px;
+            box-shadow: 0 20px 50px rgba(0,0,0,.35);
+        }
+
+        .floating-card.top {
+            top: 9%;
+            left: -55px;
+        }
+
+        .floating-card.bottom {
+            right: -35px;
+            bottom: 8%;
+        }
+
+        .floating-label {
+            color: var(--muted);
+            font-size: .68rem;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+        }
+
+        .floating-value {
+            margin-top: 4px;
+            font-weight: 700;
+            font-size: .9rem;
+        }
+
+        .terminal {
+            margin-top: 50px;
+            background: #070a0d;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 25px 80px rgba(0,0,0,.28);
+        }
+
+        .terminal-bar {
+            padding: 11px 15px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .terminal-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #3c4650;
+        }
+
+        .terminal-title {
+            margin-left: 8px;
+            color: #66727e;
+            font: 12px monospace;
+        }
+
+        .terminal-body {
+            padding: 20px;
+            font-family: "SFMono-Regular", Consolas, monospace;
+            font-size: .82rem;
+            line-height: 1.9;
+            color: #b7c2cd;
+        }
+
+        .terminal-green {
+            color: var(--accent);
+        }
+
+        .terminal-blue {
+            color: var(--accent-2);
+        }
+
+        .section {
+            padding: 115px 0;
+            position: relative;
+        }
+
+        .section-label {
+            color: var(--accent);
+            font-size: .74rem;
+            text-transform: uppercase;
+            letter-spacing: .14em;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            letter-spacing: -.055em;
+            line-height: 1;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .section-copy {
+            color: var(--muted);
+            line-height: 1.8;
+            max-width: 720px;
+        }
+
+        .stat-card,
+        .glass-card,
+        .project-card,
+        .service-card,
+        .process-card {
+            background: linear-gradient(145deg, rgba(255,255,255,.045), rgba(255,255,255,.015));
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            transition: .3s ease;
+        }
+
+        .stat-card:hover,
+        .glass-card:hover,
+        .project-card:hover,
+        .service-card:hover,
+        .process-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(98,230,168,.24);
+        }
+
+        .stat-card {
+            padding: 25px;
+            height: 100%;
+        }
+
+        .stat-number {
+            font-size: 2.3rem;
+            font-weight: 800;
+            letter-spacing: -.05em;
+        }
+
+        .stat-label {
+            color: var(--muted);
+            font-size: .85rem;
+            margin-top: 4px;
+        }
+
+        .about-photo {
+            width: 100%;
+            max-height: 570px;
+            object-fit: cover;
+            border-radius: 28px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0 0;
+        }
+
+        .feature-list li {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 17px;
+            color: #c3ccd5;
+        }
+
+        .feature-list i {
+            color: var(--accent);
+            margin-top: 2px;
+        }
+
+        .service-card {
+            padding: 28px;
+            height: 100%;
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            display: grid;
+            place-items: center;
+            border-radius: 15px;
+            background: rgba(98,230,168,.08);
+            color: var(--accent);
+            font-size: 1.35rem;
+            margin-bottom: 22px;
+        }
+
+        .service-card h3 {
+            font-size: 1.15rem;
+            font-weight: 750;
+        }
+
+        .service-card p {
+            color: var(--muted);
+            line-height: 1.7;
+            font-size: .9rem;
+            margin-bottom: 0;
+        }
+
+        .project-card {
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .project-visual {
+            min-height: 235px;
+            padding: 25px;
+            display: flex;
+            align-items: flex-end;
+            background:
+                radial-gradient(circle at 80% 20%, rgba(98,230,168,.18), transparent 30%),
+                linear-gradient(145deg, #10171e, #070a0e);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .project-code {
+            width: 100%;
+            background: rgba(0,0,0,.38);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 17px;
+            font-family: monospace;
+            font-size: .72rem;
+            color: #8897a5;
+        }
+
+        .project-code span {
+            color: var(--accent);
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-content h3 {
+            font-size: 1.35rem;
+            font-weight: 800;
+        }
+
+        .project-content p {
+            color: var(--muted);
+            line-height: 1.7;
+            font-size: .9rem;
+        }
+
+        .badge-tech {
+            border: 1px solid var(--border);
+            color: #aab5bf;
+            background: rgba(255,255,255,.025);
+            padding: 5px 8px;
+            border-radius: 7px;
+            font-size: .7rem;
+        }
+
+        .process-number {
+            color: rgba(98,230,168,.3);
+            font-size: 3rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .process-card {
+            padding: 25px;
+            height: 100%;
+        }
+
+        .process-card h3 {
+            font-size: 1.05rem;
+            margin-top: 20px;
+        }
+
+        .process-card p {
+            color: var(--muted);
+            font-size: .88rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 35px;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 8px;
+            top: 8px;
+            bottom: 8px;
+            width: 1px;
+            background: var(--border-strong);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 0 0 45px 20px;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -31px;
+            top: 5px;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: var(--bg);
+            border: 2px solid var(--accent);
+            box-shadow: 0 0 15px rgba(98,230,168,.3);
+        }
+
+        .timeline-year {
+            color: var(--accent);
+            font: 700 .76rem monospace;
+            margin-bottom: 8px;
+        }
+
+        .timeline-item h3 {
+            font-size: 1.2rem;
+            font-weight: 750;
+        }
+
+        .timeline-item p {
+            color: var(--muted);
+            line-height: 1.7;
+            max-width: 650px;
+        }
+
+        .status-panel {
+            background: #080c10;
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            padding: 25px;
+        }
+
+        .status-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: .9rem;
+        }
+
+        .status-row:last-child {
+            border-bottom: 0;
+        }
+
+        .online {
+            color: var(--accent);
+        }
+
+        .cta {
+            background:
+                radial-gradient(circle at 20% 20%, rgba(98,230,168,.12), transparent 35%),
+                radial-gradient(circle at 80% 80%, rgba(91,188,255,.1), transparent 35%),
+                var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            padding: 70px 35px;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: clamp(2.4rem, 5vw, 4.6rem);
+            letter-spacing: -.06em;
+            font-weight: 850;
+        }
+
+        .cta p {
+            max-width: 650px;
+            margin: 20px auto 30px;
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        footer {
+            padding: 55px 0 30px;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-brand {
+            font-weight: 850;
+            font-size: 1.4rem;
+            letter-spacing: -.05em;
+        }
+
+        .footer-copy {
+            color: var(--muted);
+            font-size: .85rem;
+            line-height: 1.7;
+            max-width: 430px;
+        }
+
+        .footer-link {
+            color: #8895a2;
+            font-size: .85rem;
+            transition: .2s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--accent);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: opacity .8s ease, transform .8s ease;
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 7px;
+            height: 1em;
+            background: var(--accent);
+            vertical-align: -.1em;
+            margin-left: 3px;
+            animation: blink 1s steps(2,end) infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        @media (max-width: 991px) {
+            .hero {
+                padding-top: 115px;
+            }
+
+            .hero-photo-wrap {
+                margin-top: 65px;
+                max-width: 340px;
+            }
+
+            .floating-card.top {
+                left: -10px;
+            }
+
+            .floating-card.bottom {
+                right: -10px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .section {
+                padding: 80px 0;
+            }
+
+            .hero {
+                padding-bottom: 60px;
+            }
+
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .floating-card {
+                padding: 10px 12px;
+            }
+
+            .floating-card.top {
+                top: 4%;
+            }
+
+            .floating-card.bottom {
+                bottom: 4%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container py-2">
+        <a class="navbar-brand" href="/">
+            MANTE MWC<span class="brand-dot"></span>
+        </a>
+
+        <button class="navbar-toggler border-0 shadow-none" type="button"
+                data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <i class="bi bi-list fs-2"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/skills.html">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="/education.html">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="/projects.html">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="/samples/">Samples</a></li>
+                <li class="nav-item"><a class="nav-link" href="/pricing.html">Pricing</a></li>
+                <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                    <a class="btn btn-main" href="/contact.html">
+                        Let's Build <i class="bi bi-arrow-up-right ms-1"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main>
+
+<section class="hero">
+    <div class="hero-grid"></div>
+
+    <div class="container position-relative">
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-7">
+                <div class="eyebrow">
+                    <span class="status-dot"></span>
+                    Software Engineer · Builder · Security Enthusiast
+                </div>
+
+                <h1>
+                    I build
+                    <span class="gradient-text">systems</span>
+                    that solve
+                    <span class="gradient-text">real problems.</span>
+                </h1>
+
+                <p class="hero-copy">
+                    I'm <strong class="text-white">Mante MWC</strong> — a software engineering student,
+                    developer and cybersecurity enthusiast building web applications, SaaS platforms,
+                    APIs and digital systems from idea to production.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="/projects.html" class="btn btn-main">
+                        Explore My Work
+                        <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+
+                    <a href="/samples/" class="btn btn-outline-main">
+                        View Website Samples
+                    </a>
+                </div>
+
+                <div class="terminal">
+                    <div class="terminal-bar">
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-title">mante@portfolio:~</span>
+                    </div>
+
+                    <div class="terminal-body">
+                        <div><span class="terminal-green">$</span> whoami</div>
+                        <div class="terminal-blue">mante@portfolio</div>
+
+                        <div><span class="terminal-green">$</span> ./current-focus</div>
+                        <div>software-engineering · cybersecurity · SaaS · system-design</div>
+
+                        <div><span class="terminal-green">$</span> ./status</div>
+                        <div><span class="terminal-green">BUILDING<span class="cursor"></span></span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="hero-photo-wrap">
+                    <div class="hero-photo-frame">
+                        <img src="media/logo.png" alt="Mante MWC" class="hero-photo">
+                        <div class="hero-photo photo-placeholder">
+                        </div>
+                    </div>
+
+                    <div class="floating-card top">
+                        <div class="floating-label">Currently</div>
+                        <div class="floating-value">
+                            <span class="status-dot d-inline-block me-1"></span>
+                            Building
+                        </div>
+                    </div>
+
+                    <div class="floating-card bottom">
+                        <div class="floating-label">Based in</div>
+                        <div class="floating-value">
+                            Kenya 🇰🇪
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="pb-5">
+    <div class="container">
+        <div class="row g-3 reveal">
+
+            <div class="col-6 col-lg-3">
+                <div class="stat-card">
+                    <div class="stat-number" data-counter="6">0+</div>
+                    <div class="stat-label">Products & systems built</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="stat-card">
+                    <div class="stat-number" data-counter="15">0+</div>
+                    <div class="stat-label">Technologies explored</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="stat-card">
+                    <div class="stat-number" data-counter="10">0+</div>
+                    <div class="stat-label">Production experiments</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="stat-card">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Things left to build</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="section" id="about">
+    <div class="container">
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-5 reveal">
+                <div class="about-photo photo-placeholder">
+                    <i class="bi bi-person-bounding-box fs-1"></i>
+                    <span>Portrait / About image</span>
+                    <small>assets/images/mante.jpg</small>
+                </div>
+            </div>
+
+            <div class="col-lg-7 reveal">
+                <div class="section-label">01 — About</div>
+
+                <h2 class="section-title">
+                    More than writing code.
+                    <span class="gradient-text">I build systems.</span>
+                </h2>
+
+                <p class="section-copy">
+                    My work sits at the intersection of software engineering, web development,
+                    cybersecurity and product building. I enjoy taking an idea, breaking the
+                    problem down, designing the system, writing the code, securing it and
+                    eventually putting it in production.
+                </p>
+
+                <p class="section-copy mt-3">
+                    I don't want to only know how to use a technology. I want to understand
+                    what happens underneath it — how requests move through a system, how
+                    databases store information, how authentication works, where applications
+                    fail and how software behaves in the real world.
+                </p>
+
+                <ul class="feature-list">
+                    <li>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Software engineering and full-stack web development</span>
+                    </li>
+                    <li>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Backend APIs, databases and system architecture</span>
+                    </li>
+                    <li>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Cybersecurity and secure application design</span>
+                    </li>
+                    <li>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Building SaaS products and practical digital systems</span>
+                    </li>
+                </ul>
+
+                <a href="/about.html" class="btn btn-outline-main mt-3">
+                    Read More About Me
+                    <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="section pt-0">
     <div class="container">
 
-        <nav class="navbar navbar-expand-lg navbar-dark mb-2">
-            <div class="container-fluid">
+        <div class="reveal">
+            <div class="section-label">02 — What I Build</div>
+            <h2 class="section-title">From websites to <span class="gradient-text">complete systems.</span></h2>
+            <p class="section-copy">
+                Different problems require different levels of engineering. I build everything
+                from focused business websites to full-stack platforms with databases,
+                authentication, APIs and analytics.
+            </p>
+        </div>
 
-                <a class="navbar-brand fw-bold" href="#">
-                    Mante MWC
-                </a>
+        <div class="row g-4 mt-4">
 
-                <button class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarMenu">
-                    <span class="navbar-toggler-icon"></span>.
-                </button>
+            <div class="col-md-6 col-lg-4 reveal">
+                <div class="service-card">
+                    <div class="service-icon"><i class="bi bi-window-stack"></i></div>
+                    <h3>Websites & Web Apps</h3>
+                    <p>
+                        Professional business websites, portfolios, landing pages, dashboards,
+                        web applications and custom interfaces designed for real users.
+                    </p>
+                    <a href="/samples/" class="footer-link d-inline-block mt-4">
+                        Explore samples <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                </div>
+            </div>
 
-                <div class="collapse navbar-collapse" id="navbarMenu">
+            <div class="col-md-6 col-lg-4 reveal">
+                <div class="service-card">
+                    <div class="service-icon"><i class="bi bi-server"></i></div>
+                    <h3>Backend & APIs</h3>
+                    <p>
+                        REST APIs, authentication, business logic, database integration,
+                        analytics endpoints and backend systems built around application requirements.
+                    </p>
+                    <a href="/skills.html" class="footer-link d-inline-block mt-4">
+                        View backend skills <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                </div>
+            </div>
 
-                    <ul class="navbar-nav ms-auto">
+            <div class="col-md-6 col-lg-4 reveal">
+                <div class="service-card">
+                    <div class="service-icon"><i class="bi bi-shield-lock"></i></div>
+                    <h3>Security Engineering</h3>
+                    <p>
+                        Security-focused development, vulnerability analysis, authentication,
+                        headers, DNS, SSL/TLS and understanding application attack surfaces.
+                    </p>
+                    <a href="/projects.html" class="footer-link d-inline-block mt-4">
+                        See security projects <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                </div>
+            </div>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="projects.html">Projects</a>
-                        </li>
+            <div class="col-md-6 col-lg-4 reveal">
+                <div class="service-card">
+                    <div class="service-icon"><i class="bi bi-bar-chart-line"></i></div>
+                    <h3>SaaS Platforms</h3>
+                    <p>
+                        Multi-feature web products involving accounts, subscriptions,
+                        dashboards, analytics, usage limits, APIs and business workflows.
+                    </p>
+                </div>
+            </div>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="skills.html">Skills</a>
-                        </li>
+            <div class="col-md-6 col-lg-4 reveal">
+                <div class="service-card">
+                    <div class="service-icon"><i class="bi bi-database"></i></div>
+                    <h3>Database Systems</h3>
+                    <p>
+                        Relational database design, schemas, relationships, queries,
+                        aggregation, data modelling and application-to-database architecture.
+                    </p>
+                </div>
+            </div>
 
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="education.html">Education</a>
-                        </li> -->
+            <div class="col-md-6 col-lg-4 reveal">
+                <div class="service-card">
+                    <div class="service-icon"><i class="bi bi-cloud-arrow-up"></i></div>
+                    <h3>Deployment & Infrastructure</h3>
+                    <p>
+                        Taking applications from localhost to production through Git,
+                        hosting platforms, domains, APIs, databases and cloud infrastructure.
+                    </p>
+                </div>
+            </div>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#services">Services</a>
-                        </li>
+        </div>
+    </div>
+</section>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="pricing.html">Pricing</a>
-                        </li>
+<section class="section pt-0">
+    <div class="container">
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
+        <div class="reveal">
+            <div class="section-label">03 — Featured Systems</div>
+            <h2 class="section-title">Things I've <span class="gradient-text">actually built.</span></h2>
+            <p class="section-copy">
+                These aren't concept cards. They represent real software projects, experiments
+                and systems I've worked on while developing my engineering skills.
+            </p>
+        </div>
 
-                    </ul>
+        <div class="row g-4 mt-4">
+
+            <div class="col-lg-6 reveal">
+                <article class="project-card">
+
+                    <div class="project-visual">
+                        <div class="project-code">
+                            <div><span>const</span> platform = {</div>
+                            <div>&nbsp;&nbsp;name: <span>"Mantemetrics"</span>,</div>
+                            <div>&nbsp;&nbsp;type: <span>"analytics"</span>,</div>
+                            <div>&nbsp;&nbsp;privacy: <span>true</span>,</div>
+                            <div>&nbsp;&nbsp;backend: <span>"FastAPI"</span>,</div>
+                            <div>&nbsp;&nbsp;database: <span>"MySQL"</span></div>
+                            <div>};</div>
+                        </div>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="section-label mb-2">SaaS · Analytics</div>
+                        <h3>Mantemetrics</h3>
+
+                        <p>
+                            A privacy-first website analytics platform designed to provide
+                            useful traffic and behavioral insights without turning analytics
+                            into a surveillance product.
+                        </p>
+
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                            <span class="badge-tech">FastAPI</span>
+                            <span class="badge-tech">MySQL</span>
+                            <span class="badge-tech">JavaScript</span>
+                            <span class="badge-tech">Chart.js</span>
+                            <span class="badge-tech">SaaS</span>
+                        </div>
+
+                        <a href="/projects.html" class="btn btn-outline-main">
+                            View Project
+                            <i class="bi bi-arrow-up-right ms-2"></i>
+                        </a>
+                    </div>
+
+                </article>
+            </div>
+
+            <div class="col-lg-6 reveal">
+                <article class="project-card">
+
+                    <div class="project-visual">
+                        <div class="project-code">
+                            <div><span>scan</span>(target)</div>
+                            <div>→ DNS analysis</div>
+                            <div>→ TLS analysis</div>
+                            <div>→ Security headers</div>
+                            <div>→ Exposure detection</div>
+                            <div>→ Risk calculation</div>
+                            <div>→ <span>security_report</span></div>
+                        </div>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="section-label mb-2">Cybersecurity · SaaS</div>
+                        <h3>Riscaly</h3>
+
+                        <p>
+                            A website security analysis platform focused on discovering
+                            security configuration issues, exposed services and weaknesses
+                            in publicly accessible websites.
+                        </p>
+
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                            <span class="badge-tech">Python</span>
+                            <span class="badge-tech">FastAPI</span>
+                            <span class="badge-tech">Security</span>
+                            <span class="badge-tech">DNS</span>
+                            <span class="badge-tech">TLS</span>
+                        </div>
+
+                        <a href="/projects.html" class="btn btn-outline-main">
+                            View Project
+                            <i class="bi bi-arrow-up-right ms-2"></i>
+                        </a>
+                    </div>
+
+                </article>
+            </div>
+
+            <div class="col-lg-6 reveal">
+                <article class="project-card">
+
+                    <div class="project-visual">
+                        <div class="project-code">
+                            <div><span>incoming_message</span></div>
+                            <div>↓</div>
+                            <div>webhook</div>
+                            <div>↓</div>
+                            <div><span>automation_engine</span></div>
+                            <div>↓</div>
+                            <div>reply + lead + analytics</div>
+                        </div>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="section-label mb-2">Automation · SaaS</div>
+                        <h3>ManteAds</h3>
+
+                        <p>
+                            A business communication and automation platform designed to help
+                            businesses manage customer conversations, automate responses and
+                            capture leads.
+                        </p>
+
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                            <span class="badge-tech">Node.js</span>
+                            <span class="badge-tech">Express</span>
+                            <span class="badge-tech">MySQL</span>
+                            <span class="badge-tech">APIs</span>
+                        </div>
+
+                        <a href="/projects.html" class="btn btn-outline-main">
+                            View Project
+                            <i class="bi bi-arrow-up-right ms-2"></i>
+                        </a>
+                    </div>
+
+                </article>
+            </div>
+
+            <div class="col-lg-6 reveal">
+                <article class="project-card">
+
+                    <div class="project-visual">
+                        <div class="project-code">
+                            <div><span>short_url</span> = generate()</div>
+                            <div>↓</div>
+                            <div>redirect(visitor)</div>
+                            <div>↓</div>
+                            <div>record_click()</div>
+                            <div>↓</div>
+                            <div>analytics</div>
+                        </div>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="section-label mb-2">Web Application</div>
+                        <h3>Cutlnk</h3>
+
+                        <p>
+                            A URL shortening platform with link management, redirects,
+                            click analytics, expiration controls and creator-facing pages.
+                        </p>
+
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                            <span class="badge-tech">PHP</span>
+                            <span class="badge-tech">MySQL</span>
+                            <span class="badge-tech">JavaScript</span>
+                            <span class="badge-tech">Analytics</span>
+                        </div>
+
+                        <a href="/projects.html" class="btn btn-outline-main">
+                            View Project
+                            <i class="bi bi-arrow-up-right ms-2"></i>
+                        </a>
+                    </div>
+
+                </article>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-5 reveal">
+            <a href="/projects.html" class="btn btn-main">
+                Explore All Projects
+                <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section class="section pt-0">
+    <div class="container">
+
+        <div class="row align-items-end g-4 reveal">
+            <div class="col-lg-8">
+                <div class="section-label">04 — How I Build</div>
+                <h2 class="section-title">From <span class="gradient-text">problem</span> to production.</h2>
+            </div>
+
+            <div class="col-lg-4">
+                <p class="section-copy">
+                    Good software starts before the first line of code. My workflow focuses
+                    on understanding the problem, designing the system and iterating toward
+                    something useful.
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-3 mt-4">
+
+            <div class="col-md-6 col-lg-3 reveal">
+                <div class="process-card">
+                    <div class="process-number">01</div>
+                    <h3>Understand</h3>
+                    <p>Define the problem, users, requirements and constraints before building.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 reveal">
+                <div class="process-card">
+                    <div class="process-number">02</div>
+                    <h3>Design</h3>
+                    <p>Design the architecture, database, interfaces, APIs and user flow.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 reveal">
+                <div class="process-card">
+                    <div class="process-number">03</div>
+                    <h3>Build</h3>
+                    <p>Implement the frontend, backend, database and business logic.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 reveal">
+                <div class="process-card">
+                    <div class="process-number">04</div>
+                    <h3>Secure & Deploy</h3>
+                    <p>Test, harden, deploy, monitor and keep improving the system.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="section pt-0">
+    <div class="container">
+        <div class="row g-5">
+
+            <div class="col-lg-7 reveal">
+                <div class="section-label">05 — Engineering Journey</div>
+                <h2 class="section-title">Learning by <span class="gradient-text">building.</span></h2>
+
+                <div class="timeline mt-5">
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2024</div>
+                        <h3>Software Engineering Journey</h3>
+                        <p>
+                            Started the formal software engineering journey and began building
+                            a stronger foundation in programming, algorithms, databases and web development.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2025</div>
+                        <h3>From Code to Applications</h3>
+                        <p>
+                            Expanded into full-stack development, backend systems, databases,
+                            APIs, authentication and increasingly complex web applications.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2026</div>
+                        <h3>Systems, Security & SaaS</h3>
+                        <p>
+                            Focus shifted toward production-oriented software, SaaS products,
+                            cybersecurity, cloud deployment, system architecture and building
+                            products around real-world problems.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">NOW</div>
+                        <h3>Build. Break. Learn. Repeat.</h3>
+                        <p>
+                            Continuing to turn ideas into working software while deepening
+                            knowledge in software engineering, cybersecurity, infrastructure
+                            and product development.
+                        </p>
+                    </div>
 
                 </div>
 
+                <a href="/education.html" class="btn btn-outline-main">
+                    View Education & Learning
+                    <i class="bi bi-arrow-right ms-2"></i>
+                </a>
             </div>
-        </nav>
 
-        <div class="text-center py-1">
+            <div class="col-lg-5 reveal">
+                <div class="status-panel">
+                    <div class="section-label mb-1">System Overview</div>
+                    <h3 class="mb-4">Current environment</h3>
 
-            <h1 class="display-3 fw-bold">
-                Mante Ntara
-            </h1>
+                    <div class="status-row">
+                        <span>Software Engineering</span>
+                        <span class="online">ACTIVE</span>
+                    </div>
 
-            <h2 class="h3 text-warning">
-                Professional Full-Stack Web Developer
+                    <div class="status-row">
+                        <span>Cybersecurity</span>
+                        <span class="online">ACTIVE</span>
+                    </div>
+
+                    <div class="status-row">
+                        <span>SaaS Development</span>
+                        <span class="online">BUILDING</span>
+                    </div>
+
+                    <div class="status-row">
+                        <span>Web Development</span>
+                        <span class="online">ACTIVE</span>
+                    </div>
+
+                    <div class="status-row">
+                        <span>System Design</span>
+                        <span class="online">LEARNING</span>
+                    </div>
+
+                    <div class="status-row">
+                        <span>Cloud / Infrastructure</span>
+                        <span class="online">EXPLORING</span>
+                    </div>
+
+                    <div class="mt-4 p-3 rounded-4"
+                         style="background:rgba(98,230,168,.04);border:1px solid rgba(98,230,168,.1);">
+                        <small class="text-secondary">
+                            Current principle
+                        </small>
+                        <div class="mt-2 fw-semibold">
+                            "Don't just make it work. Understand why it works."
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="section pt-0">
+    <div class="container">
+        <div class="reveal">
+            <div class="section-label">06 — Technical Stack</div>
+            <h2 class="section-title">The tools behind <span class="gradient-text">the systems.</span></h2>
+        </div>
+
+        <div class="row g-3 mt-4">
+
+            <div class="col-6 col-md-4 col-lg-2 reveal">
+                <div class="stat-card text-center">
+                    <i class="bi bi-filetype-html fs-1"></i>
+                    <div class="mt-3 fw-semibold">HTML</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2 reveal">
+                <div class="stat-card text-center">
+                    <i class="bi bi-filetype-js fs-1"></i>
+                    <div class="mt-3 fw-semibold">JavaScript</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2 reveal">
+                <div class="stat-card text-center">
+                    <i class="bi bi-filetype-py fs-1"></i>
+                    <div class="mt-3 fw-semibold">Python</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2 reveal">
+                <div class="stat-card text-center">
+                    <i class="bi bi-database fs-1"></i>
+                    <div class="mt-3 fw-semibold">MySQL</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2 reveal">
+                <div class="stat-card text-center">
+                    <i class="bi bi-terminal fs-1"></i>
+                    <div class="mt-3 fw-semibold">Git</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2 reveal">
+                <div class="stat-card text-center">
+                    <i class="bi bi-cloud fs-1"></i>
+                    <div class="mt-3 fw-semibold">Cloud</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-5 reveal">
+            <a href="/skills.html" class="btn btn-outline-main">
+                Explore Full Skillset
+                <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="section pt-0">
+    <div class="container">
+
+        <div class="cta reveal">
+            <div class="section-label">07 — Let's Build</div>
+
+            <h2>
+                Have an idea?
+                <br>
+                <span class="gradient-text">Let's turn it into software.</span>
             </h2>
 
-            <p class="lead mt-3">
-                Affordable, modern and responsive websites for businesses across Kenya.
+            <p>
+                Whether you need a professional business website, an e-commerce platform,
+                a custom web application, an API or a complete digital system, let's start
+                with the problem and figure out the right solution.
             </p>
 
-            <a href="projects.html" class="btn btn-warning btn-lg me-2">
-                View Projects
-            </a>
+            <div class="d-flex justify-content-center flex-wrap gap-3">
+                <a href="/contact.html" class="btn btn-main">
+                    Start a Project
+                    <i class="bi bi-arrow-up-right ms-2"></i>
+                </a>
 
+                <a href="/pricing.html" class="btn btn-outline-main">
+                    View Pricing
+                </a>
+
+                <a href="/samples/" class="btn btn-outline-main">
+                    Browse Samples
+                </a>
+            </div>
         </div>
 
     </div>
-</header>
-
-<section id="services" class="container py-5">
-
-    <h2 class="text-center mb-5">Services</h2>
-
-    <div class="row g-4">
-
-        <div class="col-md-4">
-
-            <div class="card h-100 shadow-sm">
-
-                <div class="card-body">
-
-                    <h4 class="card-title">
-                        Website Development
-                    </h4>
-
-                    <p class="card-text">
-                        Responsive, fast and mobile-friendly websites for businesses, restaurants, salons and startups.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="col-md-4">
-
-            <div class="card h-100 shadow-sm">
-
-                <div class="card-body">
-
-                    <h4>
-                        Website Maintenance
-                    </h4>
-
-                    <p>
-                        Regular updates, security improvements, backups and ongoing support.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="col-md-4">
-
-            <div class="card h-100 shadow-sm">
-
-                <div class="card-body">
-
-                    <h4>
-                        Consultation
-                    </h4>
-
-                    <p>
-                        Advice on hosting, domains, SEO and growing your online presence.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section id="portfolio" class="bg-light py-5">
-
-    <div class="container">
-
-        <h2 class="text-center mb-5">
-            Sample Websites
-        </h2>
-
-        <div class="row g-4">
-
-            <div class="col-md-6 col-lg-3">
-
-                <div class="card h-100 shadow-sm">
-
-                    <img src="media/restaurant.png" class="card-img-top" alt="Restaurant">
-
-                    <div class="card-body">
-
-                        <h5>Restaurant Demo</h5>
-
-                        <p>
-                            One-page restaurant website.
-                        </p>
-
-                    </div>
-
-                    <div class="card-footer bg-white">
-
-                        <a href="https://mante-restaurant.vercel.app/" rel="noopener noreferrer" target="_blank" class="btn btn-primary w-100">
-                            View Demo
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-
-                <div class="card h-100 shadow-sm">
-
-                    <img src="media/salon.png" class="card-img-top" alt="Saloon Image">
-
-                    <div class="card-body">
-
-                        <h5>Salon Website</h5>
-
-                        <p>
-                            Elegant responsive salon website.
-                        </p>
-
-                    </div>
-
-                    <div class="card-footer bg-white">
-
-                        <a href="https://mante-saloon.vercel.app/" rel="noopener noreferrer" class="btn btn-primary w-100" target="_blank">
-                            View Demo
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-
-                <div class="card h-100 shadow-sm">
-
-                    <img src="media/mantemetrics.png" class="card-img-top" alt="ManteMetrics Image">
-
-                    <div class="card-body">
-
-                        <h5>ManteMetrics</h5>
-
-                        <p>
-                            Website analytics dashboard.
-                        </p>
-
-                    </div>
-
-                    <div class="card-footer bg-white">
-
-                        <a href="https://www.mantemetrics.app/" rel="noopener noreferrer" class="btn btn-primary w-100" target="_blank">
-                            View Demo
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-
-                <div class="card h-100 shadow-sm">
-
-                    <img src="media/furniture.png"  class="card-img-top" alt="Furniture Store Image">
-
-                    <div class="card-body">
-
-                        <h5>Furniture Store</h5>
-
-                        <p>
-                            Modern furniture ecommerce website.
-                        </p>
-
-                    </div>
-
-                    <div class="card-footer bg-white">
-
-                        <a href="https://mante-furniture-store.vercel.app/" rel="noopener noreferrer" class="btn btn-primary w-100" target="_blank">
-                            View Demo
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<main class="container py-5">
-
-<div class="text-center mb-5">
-
-    <h2 class="fw-bold">
-        Choose Your Package
-    </h2>
-
-    <p class="text-muted">
-        Start small or go fully custom.
-    </p>
-
-</div>
-
-
-<div class="row g-4 justify-content-center">
-
-
-    <!-- STARTER -->
-
-    <div class="col-12 col-md-6 col-xl-3">
-
-        <div class="card h-100 shadow-sm border-0">
-
-            <div class="card-body p-4 d-flex flex-column">
-
-                <span class="badge bg-success align-self-start mb-3">
-                    STARTER
-                </span>
-
-                <h3 class="fw-bold">
-                    Starter Website
-                </h3>
-
-                <p class="text-muted">
-                    Perfect for individuals, freelancers and
-                    small businesses that need a professional
-                    online presence.
-                </p>
-
-                <div class="my-3">
-
-                    <span class="display-6 fw-bold">
-                        KSh 8,000
-                    </span>
-
-                    <span class="text-muted">
-                        starting
-                    </span>
-
-                </div>
-
-                <hr>
-
-                <ul class="list-unstyled">
-
-                    <li class="mb-2">
-                        ✓ 1–3 pages
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Responsive design
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Mobile friendly
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Contact form
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Social media integration
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Basic SEO
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Deployment assistance
-                    </li>
-
-                </ul>
-
-                <div class="mt-auto">
-
-                    <a href="index.html#contact"
-                       class="btn btn-outline-dark w-100">
-
-                        Get Started
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- BUSINESS -->
-
-    <div class="col-12 col-md-6 col-xl-3">
-
-        <div class="card h-100 shadow border-0">
-
-            <div class="card-body p-4 d-flex flex-column">
-
-                <span class="badge bg-primary align-self-start mb-3">
-                    BUSINESS
-                </span>
-
-                <h3 class="fw-bold">
-                    Business Website
-                </h3>
-
-                <p class="text-muted">
-                    Built for businesses that need a stronger
-                    online presence and more functionality.
-                </p>
-
-                <div class="my-3">
-
-                    <span class="display-6 fw-bold">
-                        KSh 20,000
-                    </span>
-
-                    <span class="text-muted">
-                        starting
-                    </span>
-
-                </div>
-
-                <hr>
-
-                <ul class="list-unstyled">
-
-                    <li class="mb-2">
-                        ✓ Up to 7 pages
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Custom UI design
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Fully responsive
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Contact & inquiry forms
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ WhatsApp integration
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Google-friendly SEO
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Analytics integration
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Deployment
-                    </li>
-
-                </ul>
-
-                <div class="mt-auto">
-
-                    <a href="index.html#contact"
-                       class="btn btn-primary w-100">
-
-                        Choose Business
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- PROFESSIONAL -->
-
-    <div class="col-12 col-md-6 col-xl-3">
-
-        <div class="card h-100 border-primary border-2 shadow position-relative">
-
-            <div class="position-absolute top-0 start-50 translate-middle">
-                <span class="badge bg-primary px-3 py-2">
-                    MOST POPULAR
-                </span>
-            </div>
-
-            <div class="card-body p-4 d-flex flex-column pt-5">
-
-                <span class="badge bg-dark align-self-start mb-3">
-                    PROFESSIONAL
-                </span>
-
-                <h3 class="fw-bold">
-                    Advanced Website
-                </h3>
-
-                <p class="text-muted">
-                    For companies and organizations requiring
-                    advanced functionality and integrations.
-                </p>
-
-                <div class="my-3">
-
-                    <span class="display-6 fw-bold">
-                        KSh 40,000
-                    </span>
-
-                    <span class="text-muted">
-                        starting
-                    </span>
-
-                </div>
-
-                <hr>
-
-                <ul class="list-unstyled">
-
-                    <li class="mb-2">
-                        ✓ Custom website
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Advanced UI/UX
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Backend integration
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Database integration
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Authentication
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ APIs & integrations
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Advanced SEO
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Deployment & configuration
-                    </li>
-
-                </ul>
-
-                <div class="mt-auto">
-
-                    <a href="index.html#contact"
-                       class="btn btn-primary w-100">
-
-                        Start a Project
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- CUSTOM -->
-
-    <div class="col-12 col-md-6 col-xl-3">
-
-        <div class="card h-100 shadow-sm border-0 bg-dark text-white">
-
-            <div class="card-body p-4 d-flex flex-column">
-
-                <span class="badge bg-warning text-dark align-self-start mb-3">
-                    CUSTOM
-                </span>
-
-                <h3 class="fw-bold">
-                    Custom Web App
-                </h3>
-
-                <p class="text-white-50">
-                    For SaaS platforms, dashboards, marketplaces,
-                    e-commerce platforms and complex systems.
-                </p>
-
-                <div class="my-3">
-
-                    <span class="display-6 fw-bold">
-                        Custom
-                    </span>
-
-                </div>
-
-                <hr class="border-secondary">
-
-                <ul class="list-unstyled">
-
-                    <li class="mb-2">
-                        ✓ SaaS applications
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Admin dashboards
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ REST APIs
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Database architecture
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Authentication systems
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Payment integrations
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Third-party APIs
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Cloud deployment
-                    </li>
-
-                </ul>
-
-                <div class="mt-auto">
-
-                    <a href="index.html#contact"
-                       class="btn btn-warning w-100">
-
-                        Discuss Your Project
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- ================= ADDITIONAL SERVICES ================= -->
-
-<section class="mt-5 pt-5">
-
-    <div class="text-center mb-4">
-
-        <h2 class="fw-bold">
-            Additional Services
-        </h2>
-
-        <p class="text-muted">
-            Need something outside the main packages?
-        </p>
-
-    </div>
-
-
-    <div class="row g-3">
-
-        <div class="col-12 col-md-6 col-lg-4">
-
-            <div class="card border-0 shadow-sm h-100">
-
-                <div class="card-body p-4">
-
-                    <h5 class="fw-bold">
-                        🔧 Website Maintenance
-                    </h5>
-
-                    <p class="text-muted mb-0">
-                        Updates, bug fixes, content changes
-                        and technical maintenance.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="col-12 col-md-6 col-lg-4">
-
-            <div class="card border-0 shadow-sm h-100">
-
-                <div class="card-body p-4">
-
-                    <h5 class="fw-bold">
-                        🚀 Website Optimization
-                    </h5>
-
-                    <p class="text-muted mb-0">
-                        Improve website performance, loading
-                        speed and technical quality.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="col-12 col-md-6 col-lg-4">
-
-            <div class="card border-0 shadow-sm h-100">
-
-                <div class="card-body p-4">
-
-                    <h5 class="fw-bold">
-                        🔐 Security Improvements
-                    </h5>
-
-                    <p class="text-muted mb-0">
-                        Security headers, HTTPS configuration,
-                        vulnerability checks and hardening.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="col-12 col-md-6 col-lg-4">
-
-            <div class="card border-0 shadow-sm h-100">
-
-                <div class="card-body p-4">
-
-                    <h5 class="fw-bold">
-                        🔌 API Integration
-                    </h5>
-
-                    <p class="text-muted mb-0">
-                        Connect your website to external APIs,
-                        services and platforms.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="col-12 col-md-6 col-lg-4">
-
-            <div class="card border-0 shadow-sm h-100">
-
-                <div class="card-body p-4">
-
-                    <h5 class="fw-bold">
-                        💳 Payment Integration
-                    </h5>
-
-                    <p class="text-muted mb-0">
-                        Integrate payment systems such as
-                        Paystack and other supported gateways.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="col-12 col-md-6 col-lg-4">
-
-            <div class="card border-0 shadow-sm h-100">
-
-                <div class="card-body p-4">
-
-                    <h5 class="fw-bold">
-                        ☁️ Deployment
-                    </h5>
-
-                    <p class="text-muted mb-0">
-                        Deployment and configuration on
-                        modern cloud hosting platforms.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= FAQ ================= -->
-
-<section class="mt-5 pt-5">
-
-    <div class="text-center mb-4">
-
-        <h2 class="fw-bold">
-            Frequently Asked Questions
-        </h2>
-
-    </div>
-
-
-    <div class="accordion" id="pricingFAQ">
-
-        <div class="accordion-item">
-
-            <h2 class="accordion-header">
-
-                <button
-                    class="accordion-button"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faqOne">
-
-                    Are these fixed prices?
-
-                </button>
-
-            </h2>
-
-            <div id="faqOne"
-                 class="accordion-collapse collapse show"
-                 data-bs-parent="#pricingFAQ">
-
-                <div class="accordion-body">
-
-                    Prices shown are starting prices.
-                    Final pricing depends on the project's
-                    complexity, features and requirements.
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="accordion-item">
-
-            <h2 class="accordion-header">
-
-                <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faqTwo">
-
-                    Do you build custom web applications?
-
-                </button>
-
-            </h2>
-
-            <div id="faqTwo"
-                 class="accordion-collapse collapse"
-                 data-bs-parent="#pricingFAQ">
-
-                <div class="accordion-body">
-
-                    Yes. Custom applications can include
-                    authentication, databases, APIs,
-                    dashboards, payments and other
-                    advanced functionality.
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="accordion-item">
-
-            <h2 class="accordion-header">
-
-                <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faqThree">
-
-                    Do you provide hosting?
-
-                </button>
-
-            </h2>
-
-            <div id="faqThree"
-                 class="accordion-collapse collapse"
-                 data-bs-parent="#pricingFAQ">
-
-                <div class="accordion-body">
-
-                    Deployment assistance is available.
-                    Hosting and domain costs are normally
-                    separate from development costs.
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="accordion-item">
-
-            <h2 class="accordion-header">
-
-                <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faqFour">
-
-                    Can I request a custom package?
-
-                </button>
-
-            </h2>
-
-            <div id="faqFour"
-                 class="accordion-collapse collapse"
-                 data-bs-parent="#pricingFAQ">
-
-                <div class="accordion-body">
-
-                    Absolutely. If your project doesn't fit
-                    one of the packages above, contact me and
-                    we'll scope the project based on its
-                    requirements.
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= CTA ================= -->
-
-<section class="bg-dark text-white rounded-4 p-5 text-center mt-5">
-
-    <h2 class="fw-bold">
-        Have a project in mind?
-    </h2>
-
-    <p class="text-white-50 lead">
-        Let's turn the idea into something real.
-    </p>
-
-    <a href="index.html#contact"
-       class="btn btn-warning btn-lg">
-
-        Let's Work Together
-
-    </a>
-
 </section>
 
 </main>
-<!-- <section id="pricing" class="container py-5">
 
-    <h2 class="text-center mb-5">
-        Pricing
-    </h2>
-
-    <div class="row g-4">
-
-        <div class="col-lg-4">
-
-            <div class="card border-primary h-100">
-
-                <div class="card-header bg-primary text-white">
-                    Basic
-                </div>
-
-                <div class="card-body">
-
-                    <h3>Ksh 5,000</h3>
-
-                    <p>1-page Website</p>
-
-                    <p>Delivery: 1-2 Days</p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="col-lg-4">
-
-            <div class="card border-success h-100">
-
-                <div class="card-header bg-success text-white">
-                    Standard
-                </div>
-
-                <div class="card-body">
-
-                    <h3>Ksh 10K - 20K</h3>
-
-                    <p>3-5 Pages</p>
-
-                    <p>Delivery: 2-3 Days</p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="col-lg-4">
-
-            <div class="card border-danger h-100">
-
-                <div class="card-header bg-danger text-white">
-                    Advanced
-                </div>
-
-                <div class="card-body">
-
-                    <h3>Ksh 25K - 60K</h3>
-
-                    <p>Custom Dashboard</p>
-
-                    <p>Delivery: 3-5 Days</p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section> -->
-
-<section id="contact" class="bg-dark text-white py-5">
-
-    <div class="container text-center">
-
-        <h2>
-            Contact Me
-        </h2>
-
-        <p class="mb-4">
-            Ready to build your next website?
-        </p>
-
-        <a href="https://cutlnk.top/DmcmpNE"
-            target="_blank"
-            class="btn btn-success btn-lg" rel="noopener noreferrer">
-            WhatsApp Me
-        </a>
-
-    </div>
-
-</section>
-
-<footer class="bg-black text-white py-4">
-
+<footer>
     <div class="container">
 
-        <div class="row">
+        <div class="row g-5">
 
-            <div class="col-md-6">
+            <div class="col-lg-6">
+                <div class="footer-brand">
+                    MANTE MWC<span class="brand-dot"></span>
+                </div>
 
-                <h5>Mante MWC</h5>
-
-                <p>
-                    Professional Full-Stack Web Developer.
+                <p class="footer-copy mt-3">
+                    Software engineering, cybersecurity and product development.
+                    Building practical systems from ideas, problems and curiosity.
                 </p>
 
+                <div class="d-flex gap-3 mt-4">
+                    <a href="https://github.com/MoyiWycliffe"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn btn-outline-main">
+                        <i class="bi bi-github me-2"></i> GitHub
+                    </a>
+
+                    <a href="https://x.com/moyi_mwc"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn btn-outline-main">
+                        <i class="bi bi-twitter-x me-2"></i> X
+                    </a>
+                </div>
             </div>
 
-            <div class="col-md-3">
-
-                <h5>Quick Links</h5>
-
-                <ul class="nav flex-column">
-
-                    <li class="nav-item">
-                        <a class="nav-link text-white p-0 mb-2" href="#">
-                            Home
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link text-white p-0 mb-2" href="#portfolio">
-                            Portfolio
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link text-white p-0" href="#pricing">
-                            Pricing
-                        </a>
-                    </li>
-
-                </ul>
-
+            <div class="col-6 col-lg-2">
+                <h6 class="fw-bold mb-3">Explore</h6>
+                <div class="d-flex flex-column gap-2">
+                    <a class="footer-link" href="/about.html">About</a>
+                    <a class="footer-link" href="/skills.html">Skills</a>
+                    <a class="footer-link" href="/education.html">Education</a>
+                    <a class="footer-link" href="/projects.html">Projects</a>
+                </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-6 col-lg-2">
+                <h6 class="fw-bold mb-3">Services</h6>
+                <div class="d-flex flex-column gap-2">
+                    <a class="footer-link" href="/services.html">Services</a>
+                    <a class="footer-link" href="/samples/">Samples</a>
+                    <a class="footer-link" href="/pricing.html">Pricing</a>
+                    <a class="footer-link" href="/contact.html">Contact</a>
+                </div>
+            </div>
 
-                <h5>Connect</h5>
-
-                <a href="https://github.com/MoyiWycliffe" class="btn btn-outline-light btn-sm mb-2 w-100" target="_blank" rel="noopener noreferrer">
-                    GitHub
-                </a>
-
-                <a href="https://x.com/moyi_mwc" class="btn btn-outline-light btn-sm mb-2 w-100" target="_blank" rel="noopener noreferrer">
-                    Twitter
-                </a>
-
-                <a href="https://facebook.com/ManteNtara2" class="btn btn-outline-light btn-sm w-100" target="_blank" rel="noopener noreferrer">
-                    Facebook
-                </a>
-
+            <div class="col-lg-2">
+                <h6 class="fw-bold mb-3">Identity</h6>
+                <div class="d-flex flex-column gap-2">
+                    <span class="footer-link">Software Engineer</span>
+                    <span class="footer-link">Developer</span>
+                    <span class="footer-link">Cybersecurity</span>
+                    <span class="footer-link">Builder</span>
+                </div>
             </div>
 
         </div>
 
-        <hr class="border-secondary">
+        <div class="d-flex flex-column flex-md-row justify-content-between gap-3 mt-5 pt-4"
+             style="border-top:1px solid var(--border);">
+            <small class="text-secondary">
+                © <span id="year"></span> Mante MWC. All rights reserved.
+            </small>
 
-        <p class="text-center mb-0">
-            © <span id="currentYear"></span> Mante MWC. All Rights Reserved.
-        </p>
+            <small class="text-secondary">
+                Built with code, curiosity & too many terminal windows.
+            </small>
+        </div>
 
     </div>
-
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
 <script>
-document.getElementById("currentYear").textContent = new Date().getFullYear();
+document.addEventListener("DOMContentLoaded", () => {
+
+    const revealElements = document.querySelectorAll(".reveal");
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.12
+    });
+
+    revealElements.forEach(element => revealObserver.observe(element));
+
+    const counters = document.querySelectorAll("[data-counter]");
+
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+
+            if (!entry.isIntersecting) return;
+
+            const element = entry.target;
+            const target = Number(element.dataset.counter);
+            let current = 0;
+
+            const duration = 1200;
+            const increment = target / (duration / 25);
+
+            const timer = setInterval(() => {
+                current += increment;
+
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+
+                element.textContent = Math.floor(current) + "+";
+            }, 25);
+
+            observer.unobserve(element);
+        });
+    }, {
+        threshold: 0.8
+    });
+
+    counters.forEach(counter => counterObserver.observe(counter));
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const navbar = document.querySelector(".navbar");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 30) {
+            navbar.style.background = "rgba(5,7,10,.94)";
+        } else {
+            navbar.style.background = "rgba(5,7,10,.78)";
+        }
+    });
+
+});
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
+</html>
