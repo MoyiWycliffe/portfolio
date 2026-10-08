@@ -3,269 +3,2382 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mante's MWC - Portfolio</title>
 
-    <link rel="stylesheet" href="projects.css">
-    <script src="index.js" defer></script>
+    <meta name="description" content="Explore projects built by Mante MWC — SaaS products, cybersecurity platforms, analytics systems, web applications, developer tools and experimental software.">
+    <meta name="author" content="Mante MWC">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Projects — Mante MWC</title>
+
     <link rel="icon" href="media/logo.png" type="image/png">
-
     <script
     src="https://www.mantemetrics.app/index.js"
     data-id="DXDMKaYoZzFTRcrS4qNGgibRjrlA7sOy12A1FbwK">
-</script>
+    </script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #05070a;
+            --surface: #0a0f14;
+            --surface-2: #0f161d;
+            --border: rgba(255,255,255,.09);
+            --text: #f5f7fa;
+            --muted: #8d99a6;
+            --accent: #62e6a8;
+            --blue: #5bbcff;
+            --purple: #a78bfa;
+            --orange: #ffad66;
+            --pink: #ff79c6;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            color: var(--text);
+            background:
+                radial-gradient(circle at 8% 0%, rgba(91,188,255,.08), transparent 32rem),
+                radial-gradient(circle at 92% 12%, rgba(98,230,168,.07), transparent 32rem),
+                var(--bg);
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        ::selection {
+            background: var(--accent);
+            color: #031008;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .navbar {
+            background: rgba(5,7,10,.88);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .navbar-brand {
+            color: var(--text) !important;
+            font-weight: 900;
+            letter-spacing: -.06em;
+        }
+
+        .brand-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin-left: 3px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 15px rgba(98,230,168,.8);
+        }
+
+        .nav-link {
+            color: #aab5c0 !important;
+            font-size: .9rem;
+            font-weight: 500;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #fff !important;
+        }
+
+        .btn-main {
+            background: var(--accent);
+            color: #041009;
+            border: 1px solid var(--accent);
+            border-radius: 12px;
+            font-weight: 800;
+            padding: .75rem 1.05rem;
+            transition: .25s ease;
+        }
+
+        .btn-main:hover {
+            color: #041009;
+            background: #7af0b8;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-main {
+            color: var(--text);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            font-weight: 650;
+            padding: .75rem 1.05rem;
+            transition: .25s ease;
+        }
+
+        .btn-outline-main:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            min-height: 76vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 155px 0 105px;
+            overflow: hidden;
+        }
+
+        .grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+            background-size: 55px 55px;
+            mask-image: linear-gradient(to bottom, black, transparent);
+        }
+
+        .orb {
+            position: absolute;
+            width: 460px;
+            height: 460px;
+            border-radius: 50%;
+            filter: blur(115px);
+            opacity: .08;
+            pointer-events: none;
+        }
+
+        .orb-one {
+            background: var(--accent);
+            top: -260px;
+            right: -130px;
+        }
+
+        .orb-two {
+            background: var(--blue);
+            bottom: -280px;
+            left: -170px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 13px;
+            border-radius: 999px;
+            color: var(--accent);
+            background: rgba(98,230,168,.05);
+            border: 1px solid rgba(98,230,168,.18);
+            font-size: .72rem;
+            font-weight: 850;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+        }
+
+        .eyebrow-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 12px rgba(98,230,168,.8);
+        }
+
+        .hero-title {
+            font-size: clamp(3.7rem, 8.5vw, 8rem);
+            line-height: .87;
+            letter-spacing: -.09em;
+            font-weight: 900;
+            margin: 26px 0;
+        }
+
+        .gradient {
+            background: linear-gradient(100deg, #fff, var(--blue), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero-copy {
+            max-width: 790px;
+            color: var(--muted);
+            font-size: 1.08rem;
+            line-height: 1.85;
+        }
+
+        .hero-stats {
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .stat {
+            padding: 13px 16px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            background: rgba(255,255,255,.025);
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 1rem;
+        }
+
+        .stat span {
+            color: var(--muted);
+            font-size: .67rem;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+        }
+
+        .section {
+            padding: 105px 0;
+        }
+
+        .section-label {
+            color: var(--accent);
+            font-size: .72rem;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            font-weight: 850;
+            margin-bottom: 13px;
+        }
+
+        .section-title {
+            font-size: clamp(2.4rem, 5vw, 4.5rem);
+            line-height: .98;
+            letter-spacing: -.07em;
+            font-weight: 900;
+        }
+
+        .section-copy {
+            max-width: 730px;
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        /* Featured project */
+
+        .featured-project {
+            position: relative;
+            overflow: hidden;
+            min-height: 560px;
+            border: 1px solid rgba(98,230,168,.2);
+            border-radius: 30px;
+            padding: 40px;
+            background:
+                radial-gradient(circle at 100% 0%, rgba(98,230,168,.12), transparent 38%),
+                radial-gradient(circle at 0% 100%, rgba(91,188,255,.08), transparent 35%),
+                linear-gradient(145deg, rgba(255,255,255,.045), rgba(255,255,255,.012));
+            box-shadow: 0 35px 100px rgba(0,0,0,.25);
+        }
+
+        .featured-project::after {
+            content: "MANTEMETRICS";
+            position: absolute;
+            right: -25px;
+            bottom: -20px;
+            color: rgba(255,255,255,.025);
+            font-size: clamp(4rem, 11vw, 10rem);
+            line-height: 1;
+            font-weight: 900;
+            letter-spacing: -.09em;
+            pointer-events: none;
+        }
+
+        .project-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 7px 10px;
+            border-radius: 999px;
+            color: var(--accent);
+            background: rgba(98,230,168,.07);
+            border: 1px solid rgba(98,230,168,.16);
+            font-size: .68rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+        }
+
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 10px rgba(98,230,168,.8);
+        }
+
+        .featured-project h3 {
+            font-size: clamp(2.4rem, 5vw, 4.5rem);
+            letter-spacing: -.075em;
+            line-height: .95;
+            font-weight: 900;
+            margin: 25px 0 15px;
+        }
+
+        .featured-project p {
+            color: var(--muted);
+            max-width: 690px;
+            line-height: 1.85;
+        }
+
+        .project-tag {
+            display: inline-flex;
+            padding: 7px 10px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            color: #b5c0ca;
+            background: rgba(255,255,255,.025);
+            font-size: .67rem;
+            margin: 4px 4px 4px 0;
+        }
+
+        .project-metrics {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 650px;
+            border: 1px solid var(--border);
+            border-radius: 17px;
+            overflow: hidden;
+            background: rgba(0,0,0,.13);
+        }
+
+        .metric {
+            padding: 18px;
+            border-right: 1px solid var(--border);
+        }
+
+        .metric:last-child {
+            border-right: 0;
+        }
+
+        .metric strong {
+            display: block;
+            font-size: 1rem;
+        }
+
+        .metric span {
+            color: var(--muted);
+            font-size: .66rem;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+        }
+
+        .project-actions {
+            margin-top: 28px;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        /* Filter */
+
+        .filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 40px;
+            padding: 8px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: rgba(255,255,255,.02);
+            width: fit-content;
+            max-width: 100%;
+        }
+
+        .filter-btn {
+            color: #929da8;
+            background: transparent;
+            border: 0;
+            border-radius: 10px;
+            padding: 9px 14px;
+            font-size: .75rem;
+            font-weight: 750;
+            transition: .2s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            color: #041009;
+            background: var(--accent);
+        }
+
+        /* Project cards */
+
+        .project-card {
+            height: 100%;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            background: rgba(255,255,255,.02);
+            transition: .3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+            border-color: rgba(98,230,168,.25);
+            box-shadow: 0 25px 70px rgba(0,0,0,.18);
+        }
+
+        .project-card.hidden {
+            display: none !important;
+        }
+
+        .project-cover {
+            height: 190px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:
+                linear-gradient(135deg, rgba(98,230,168,.09), rgba(91,188,255,.06)),
+                #080c10;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .project-cover::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+            background-size: 28px 28px;
+        }
+
+        .cover-icon {
+            position: relative;
+            width: 76px;
+            height: 76px;
+            display: grid;
+            place-items: center;
+            border-radius: 23px;
+            color: var(--accent);
+            background: rgba(98,230,168,.06);
+            border: 1px solid rgba(98,230,168,.15);
+            font-size: 2rem;
+            box-shadow: 0 0 60px rgba(98,230,168,.08);
+        }
+
+        .cover-icon.blue {
+            color: var(--blue);
+            background: rgba(91,188,255,.06);
+            border-color: rgba(91,188,255,.15);
+        }
+
+        .cover-icon.purple {
+            color: var(--purple);
+            background: rgba(167,139,250,.06);
+            border-color: rgba(167,139,250,.15);
+        }
+
+        .cover-icon.orange {
+            color: var(--orange);
+            background: rgba(255,173,102,.06);
+            border-color: rgba(255,173,102,.15);
+        }
+
+        .cover-icon.pink {
+            color: var(--pink);
+            background: rgba(255,121,198,.06);
+            border-color: rgba(255,121,198,.15);
+        }
+
+        .project-body {
+            padding: 25px;
+        }
+
+        .project-category {
+            color: var(--accent);
+            font-size: .65rem;
+            font-weight: 850;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+        }
+
+        .project-body h3 {
+            font-size: 1.45rem;
+            letter-spacing: -.045em;
+            font-weight: 900;
+            margin: 9px 0 10px;
+        }
+
+        .project-body p {
+            color: var(--muted);
+            font-size: .8rem;
+            line-height: 1.75;
+            min-height: 85px;
+            margin-bottom: 18px;
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+
+        .tech {
+            color: #9faab4;
+            border: 1px solid var(--border);
+            border-radius: 7px;
+            padding: 4px 7px;
+            font-size: .61rem;
+        }
+
+        .card-footer-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .card-link {
+            flex: 1;
+            text-align: center;
+            padding: 9px 10px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: #b9c3cc;
+            font-size: .7rem;
+            font-weight: 750;
+            transition: .2s ease;
+        }
+
+        .card-link:hover {
+            color: var(--accent);
+            border-color: rgba(98,230,168,.3);
+        }
+
+        .card-link.primary {
+            color: #041009;
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .card-link.primary:hover {
+            color: #041009;
+            background: #7af0b8;
+        }
+
+        /* Architecture */
+
+        .architecture {
+            border: 1px solid var(--border);
+            border-radius: 28px;
+            padding: 35px;
+            background:
+                linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.01));
+        }
+
+        .architecture-node {
+            height: 100%;
+            min-height: 145px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 18px;
+            border: 1px solid var(--border);
+            border-radius: 17px;
+            background: rgba(0,0,0,.13);
+        }
+
+        .architecture-node i {
+            color: var(--accent);
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .architecture-node strong {
+            font-size: .8rem;
+        }
+
+        .architecture-node span {
+            color: var(--muted);
+            font-size: .65rem;
+            margin-top: 5px;
+        }
+
+        .architecture-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #52606c;
+            font-size: 1.3rem;
+        }
+
+        /* Stats */
+
+        .engineering-stat {
+            height: 100%;
+            padding: 28px;
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            background: rgba(255,255,255,.02);
+        }
+
+        .engineering-stat strong {
+            display: block;
+            font-size: 2rem;
+            letter-spacing: -.06em;
+            font-weight: 900;
+            color: var(--accent);
+        }
+
+        .engineering-stat span {
+            color: var(--muted);
+            font-size: .72rem;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+        }
+
+        .engineering-stat p {
+            color: var(--muted);
+            font-size: .78rem;
+            line-height: 1.7;
+            margin: 12px 0 0;
+        }
+
+        /* Available builds */
+
+        .build-card {
+            height: 100%;
+            padding: 28px;
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            background: rgba(255,255,255,.02);
+        }
+
+        .build-icon {
+            width: 52px;
+            height: 52px;
+            display: grid;
+            place-items: center;
+            border-radius: 15px;
+            background: rgba(98,230,168,.06);
+            color: var(--accent);
+            font-size: 1.3rem;
+            margin-bottom: 18px;
+        }
+
+        .build-card h3 {
+            font-size: 1.08rem;
+            font-weight: 850;
+        }
+
+        .build-card p {
+            color: var(--muted);
+            font-size: .8rem;
+            line-height: 1.75;
+        }
+
+        .build-price {
+            display: inline-block;
+            margin-top: 10px;
+            color: var(--accent);
+            font-size: .75rem;
+            font-weight: 800;
+        }
+
+        /* CTA */
+
+        .cta {
+            padding: 80px 30px;
+            text-align: center;
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(98,230,168,.1), transparent 35%),
+                radial-gradient(circle at 80% 80%, rgba(91,188,255,.08), transparent 35%),
+                var(--surface);
+        }
+
+        .cta h2 {
+            font-size: clamp(2.4rem, 5vw, 4.5rem);
+            line-height: .95;
+            letter-spacing: -.07em;
+            font-weight: 900;
+        }
+
+        .cta p {
+            max-width: 670px;
+            color: var(--muted);
+            line-height: 1.8;
+            margin: 20px auto 30px;
+        }
+
+        footer {
+            padding: 55px 0 30px;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-brand {
+            font-size: 1.4rem;
+            font-weight: 900;
+            letter-spacing: -.06em;
+        }
+
+        .footer-copy,
+        .footer-link {
+            color: var(--muted);
+            font-size: .84rem;
+        }
+
+        .footer-link:hover {
+            color: var(--accent);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: .75s ease;
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 991px) {
+
+            .architecture-arrow {
+                transform: rotate(90deg);
+                padding: 8px 0;
+            }
+
+        }
+
+        @media (max-width: 767px) {
+
+            .hero {
+                padding-top: 125px;
+            }
+
+            .section {
+                padding: 75px 0;
+            }
+
+            .featured-project {
+                padding: 27px;
+            }
+
+            .project-metrics {
+                grid-template-columns: 1fr;
+            }
+
+            .metric {
+                border-right: 0;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .metric:last-child {
+                border-bottom: 0;
+            }
+
+            .filter-bar {
+                width: 100%;
+            }
+
+            .filter-btn {
+                flex: 1;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
-        <div class="logo">
-            <h2>Mante<span>MWC</span></h2>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+    <div class="container py-2">
+
+        <a class="navbar-brand" href="/">
+            MANTE MWC<span class="brand-dot"></span>
+        </a>
+
+        <button
+            class="navbar-toggler border-0 shadow-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav">
+
+            <i class="bi bi-list fs-2"></i>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/about.html">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/skills.html">Skills</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/education.html">Education</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="/projects.html">Projects</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/samples/">Samples</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/pricing.html">Pricing</a>
+                </li>
+
+                <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+
+                    <a href="/contact.html" class="btn btn-main">
+                        Let's Build
+                        <i class="bi bi-arrow-up-right ms-1"></i>
+                    </a>
+
+                </li>
+
+            </ul>
+
         </div>
 
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <!-- <li><a href="education.html">Education</a></li>
-                <li><a href="projects.html">Projects</a></li> -->
-                <!-- <li><a href="contact.html">Contact</a></li> -->
-            </ul>
-        </nav>
-    </header>
+    </div>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-text">
-            <h1>
-                Building Modern <span>Web Experiences</span>
-            </h1>
+</nav>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="grid"></div>
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+
+    <div class="container position-relative">
+
+        <div class="row">
+
+            <div class="col-xl-10">
+
+                <div class="eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    Selected Work & Experiments
+                </div>
+
+                <h1 class="hero-title">
+                    I don't just
+                    <span class="gradient">write code.</span>
+                    <br>
+                    I build things.
+                </h1>
+
+                <p class="hero-copy">
+                    This is a collection of systems, products, experiments and
+                    real-world software projects I've built while developing my
+                    engineering skills. Some started as ideas. Some became products.
+                    Some existed simply because I wanted to know whether I could
+                    build them.
+                </p>
+
+                <div class="hero-stats">
+
+                    <div class="stat">
+                        <strong>Web Apps</strong>
+                        <span>Full-stack systems</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>SaaS</strong>
+                        <span>Product engineering</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>Security</strong>
+                        <span>Cybersecurity tools</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>APIs</strong>
+                        <span>Backend systems</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURED -->
+
+<section class="section pt-0">
+
+    <div class="container">
+
+        <div class="section-label reveal">
+            Featured Project
+        </div>
+
+        <div class="featured-project reveal">
+
+            <span class="project-status">
+                <span class="status-dot"></span>
+                Active Product
+            </span>
+
+            <h3>
+                Mantemetrics
+                <span class="gradient">.</span>
+            </h3>
 
             <p>
-                Full-stack developer passionate about building clean,
-                responsive and scalable web applications with modern
-                technologies.
+                A privacy-first website analytics platform designed to help
+                website owners understand traffic, engagement and user behaviour
+                without turning their analytics stack into a privacy nightmare.
+                The platform combines event tracking, sessions, acquisition
+                sources, device information, behavioural insights and dashboards
+                into one system.
             </p>
 
-            <div class="hero-buttons">
-                <a href="#projects">
-                    <button class="primary-btn">Explore Projects</button>
+            <div class="mt-3">
+
+                <span class="project-tag">
+                    Privacy-first analytics
+                </span>
+
+                <span class="project-tag">
+                    Event tracking
+                </span>
+
+                <span class="project-tag">
+                    Live sessions
+                </span>
+
+                <span class="project-tag">
+                    Behaviour analytics
+                </span>
+
+                <span class="project-tag">
+                    SaaS
+                </span>
+
+            </div>
+
+            <div class="project-metrics">
+
+                <div class="metric">
+                    <strong>FastAPI</strong>
+                    <span>Backend</span>
+                </div>
+
+                <div class="metric">
+                    <strong>MySQL</strong>
+                    <span>Data layer</span>
+                </div>
+
+                <div class="metric">
+                    <strong>Chart.js</strong>
+                    <span>Analytics UI</span>
+                </div>
+
+            </div>
+
+            <div class="project-actions">
+
+                <a
+                    href="https://mantemetrics.app"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn btn-main">
+
+                    Visit Product
+                    <i class="bi bi-arrow-up-right ms-1"></i>
+
                 </a>
 
-                <!-- <a href="#">
-                    <button class="secondary-btn">Download CV</button>
-                </a> -->
             </div>
+
         </div>
 
-        <div class="hero-image">
-            <img src="media/logo.png" alt="Profile">
-        </div>
-    </section>
+    </div>
 
-    <!-- PROJECT SECTION -->
-    <main class="content" id="projects">
+</section>
 
-        <div class="section-title">
-            <h1>Featured Projects</h1>
-            <p>
-                Some real-world projects I have designed and developed.
+
+<!-- PROJECT COLLECTION -->
+
+<section class="section pt-0">
+
+    <div class="container">
+
+        <div class="reveal">
+
+            <div class="section-label">
+                Project Archive
+            </div>
+
+            <h2 class="section-title">
+                Systems I've
+                <span class="gradient">built.</span>
+            </h2>
+
+            <p class="section-copy">
+                From SaaS platforms and security tools to developer utilities and
+                experimental applications. Use the filters to explore the different
+                areas of my work.
             </p>
-        </div>
-
-        <div class="project-cards">
-
-            <!-- CARD 1 -->
-            <div class="project-card">
-
-                <div class="project-card-header">
-                    <img src="https://cutlnk.top/media/logo.png" alt="Cutlnk">
-                </div>
-
-                <div class="project-card-body">
-                    <h2>Cutlnk</h2>
-
-                    <p>
-                        A modern URL shortening platform that allows users
-                        to create short and trackable links with analytics.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>PHP</span>
-                        <span>MySQL</span>
-                        <span>JavaScript</span>
-                    </div>
-
-                    <a href="https://cutlnk.top/" target="_blank" rel="noopener noreferrer">
-                        <button>View Project</button>
-                    </a>
-                </div>
-
-            </div>
-
-            <!-- CARD 2 -->
-            <div class="project-card">
-
-                <div class="project-card-header">
-                    <img src="media/furniture-store-logo.jpg" alt="Furniture Store">
-                </div>
-
-                <div class="project-card-body">
-                    <h2>Furniture Store</h2>
-
-                    <p>
-                        A responsive e-commerce furniture website with
-                        admin dashboard, product management and pricing system.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <!-- <span>Fa</span>
-                        <span>Supabase</span> -->
-                    </div>
-
-                    <a href="https://mante-furniture-store.vercel.app/"  rel="noopener noreferrer" target="_blank">
-                        <button>View Project</button>
-                    </a>
-                </div>
-
-            </div>
-
-            <div class="project-card">
-
-                <div class="project-card-header">
-                    <img src="media/restaurant-store.jpg"  alt="Mante Restaurant">
-                </div>
-
-                <div class="project-card-body">
-                    <h2>Mante Restaurant</h2>
-
-                    <p>
-                        A modern restaurant website with menu, reservation
-                        system and contact form built with Python-FastAPI and MySQL.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>FastAPI</span>
-                        <span>MySQL</span>
-                    </div>
-
-                    <a href="https://mante-restaurant.vercel.app/"  rel="noopener noreferrer" target="_blank">
-                        <button>View Project</button>
-                    </a>
-                </div>
-
-            </div>
-            <div class="project-card">
-
-                <div class="project-card-header">
-                    <img src="media/mantemetrics.png"  alt="Mante Restaurant">
-                </div>
-
-                <div class="project-card-body">
-                    <h2>ManteMetrics</h2>
-
-                    <p>
-                        ManteMetrics is a privacy-focused web analytics platform that helps website owners monitor visitor traffic, page performance, device statistics, geographic insights, and referral sources through a clean, real-time dashboard. It enables businesses to make data-driven decisions by providing actionable website performance metrics without unnecessary complexity.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>FastAPI</span>
-                        <span>MySQL</span>
-                    </div>
-
-                    <a href="https://www.mantemetrics.app/"  rel="noopener noreferrer" target="_blank">
-                        <button>View Project</button>
-                    </a>
-                </div>
-
-            </div>
-
-            <div class="project-card">
-
-                <div class="project-card-header">
-                    <img src="media/riscaly.jpg"  alt="Riscaly">
-                </div>
-
-                <div class="project-card-body">
-                    <h2>Riscaly</h2>
-
-                    <p>
-                        Cybersecurity platform that scans websites for security vulnerabilities, analyzes risks, and provides actionable recommendations to help businesses strengthen their online security posture. It simplifies website security assessments through automated scans, detailed reports, and an easy-to-understand security score.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>FastAPI</span>
-                        <span>MySQL</span>
-                    </div>
-
-                    <a href="https://riscaly.manteads.com/"  rel="noopener noreferrer" target="_blank">
-                        <button>View Project</button>
-                    </a>
-                </div>
-
-            </div>
-            <div class="project-card">
-
-                <div class="project-card-header">
-                    <img src="media/count-notify.jpg"  alt="Count Notify">
-                </div>
-
-                <div class="project-card-body">
-                    <h2>Count Notify</h2>
-
-                    <p>
-                        A simple and efficient web application that allows users to create and manage countdown timers for events, deadlines, or special occasions. It provides real-time notifications and alerts to keep users informed about upcoming events.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>FastAPI</span>
-                        <span>MySQL</span>
-                    </div>
-
-                    <a href="https://countnotify.vercel.app/"  rel="noopener noreferrer" target="_blank">
-                        <button>View Project</button>
-                    </a>
-                </div>
-
-            </div>
-
 
         </div>
 
-    </main>
 
-    <!-- FOOTER -->
-    <footer class="footer">
+        <div class="filter-bar reveal">
 
-        <h2>Mante MWC</h2>
+            <button class="filter-btn active" data-filter="all">
+                All
+            </button>
 
-        <p>
-            Passionate Full-Stack Developer building modern digital experiences.
-        </p>
+            <button class="filter-btn" data-filter="saas">
+                SaaS
+            </button>
 
-        <div class="footer-links">
-            <a href="https://www.facebook.com/ManteNtara2" target="_blank" rel="noopener noreferrer">Facebook</a>
-            <a href="https://x.com/moyi_mwc" target="_blank" rel="noopener noreferrer">Twitter</a>
-            <a href="https://github.com/MoyiWycliffe" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <button class="filter-btn" data-filter="security">
+                Security
+            </button>
+
+            <button class="filter-btn" data-filter="web">
+                Web Apps
+            </button>
+
+            <button class="filter-btn" data-filter="developer">
+                Developer Tools
+            </button>
+
+            <button class="filter-btn" data-filter="experimental">
+                Experiments
+            </button>
+
         </div>
 
-        <p class="copyright">
-            © <span id="currentYear"></span> Mante MWC. All rights reserved.
-        </p>
 
-    </footer>
+        <div class="row g-4 mt-4" id="projectsGrid">
+
+            <!-- RISCalY -->
+
+            <div class="col-md-6 col-xl-4 project-item reveal"
+                 data-category="security">
+
+                <article class="project-card">
+
+                    <div class="project-cover">
+
+                        <div class="cover-icon purple">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="project-body">
+
+                        <div class="project-category">
+                            Security Platform
+                        </div>
+
+                        <h3>Riscaly</h3>
+
+                        <p>
+                            A website security scanner that evaluates SSL/TLS,
+                            security headers, DNS configuration, exposed services
+                            and common security misconfigurations.
+                        </p>
+
+                        <div class="tech-list">
+
+                            <span class="tech">Python</span>
+                            <span class="tech">FastAPI</span>
+                            <span class="tech">MySQL</span>
+                            <span class="tech">DNS</span>
+                            <span class="tech">Security</span>
+
+                        </div>
+
+                        <div class="card-footer-actions">
+
+                            <a
+                                href="https://riscaly.manteads.com"
+                                target="_blank"
+                                rel="noopener"
+                                class="card-link primary">
+
+                                Explore
+                                <i class="bi bi-arrow-up-right"></i>
+
+                            </a>
+
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- MANTEADS -->
+
+            <div class="col-md-6 col-xl-4 project-item reveal"
+                 data-category="saas">
+
+                <article class="project-card">
+
+                    <div class="project-cover">
+
+                        <div class="cover-icon green">
+                            <i class="bi bi-whatsapp"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="project-body">
+
+                        <div class="project-category">
+                            SaaS / Automation
+                        </div>
+
+                        <h3>ManteAds</h3>
+
+                        <p>
+                            A WhatsApp business automation platform focused on
+                            helping small businesses automate customer communication,
+                            capture leads and reduce repetitive support work.
+                        </p>
+
+                        <div class="tech-list">
+
+                            <span class="tech">Node.js</span>
+                            <span class="tech">Express</span>
+                            <span class="tech">MySQL</span>
+                            <span class="tech">WhatsApp API</span>
+
+                        </div>
+
+                        <div class="card-footer-actions">
+
+                            <a
+                                href="https://manteads.com"
+                                target="_blank"
+                                rel="noopener"
+                                class="card-link primary">
+
+                                Explore
+                                <i class="bi bi-arrow-up-right"></i>
+
+                            </a>
+
+                            <a
+                                href="#"
+                                class="card-link"
+                                onclick="return false;">
+
+                                Product
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- CUTLNK -->
+
+            <div class="col-md-6 col-xl-4 project-item reveal"
+                 data-category="web">
+
+                <article class="project-card">
+
+                    <div class="project-cover">
+
+                        <div class="cover-icon blue">
+                            <i class="bi bi-link-45deg"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="project-body">
+
+                        <div class="project-category">
+                            Web Application
+                        </div>
+
+                        <h3>Cutlnk</h3>
+
+                        <p>
+                            A URL shortening platform with link management,
+                            click statistics, creator pages, expiration controls
+                            and traffic insights.
+                        </p>
+
+                        <div class="tech-list">
+
+                            <span class="tech">PHP</span>
+                            <span class="tech">MySQL</span>
+                            <span class="tech">JavaScript</span>
+                            <span class="tech">Bootstrap</span>
+
+                        </div>
+
+                        <div class="card-footer-actions">
+
+                            <a
+                                href="https://cutlnk.top"
+                                target="_blank"
+                                rel="noopener"
+                                class="card-link primary">
+
+                                Explore
+                                <i class="bi bi-arrow-up-right"></i>
+
+                            </a>
+
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- COUNTNOTIFY -->
+
+            <div class="col-md-6 col-xl-4 project-item reveal"
+                 data-category="web">
+
+                <article class="project-card">
+
+                    <div class="project-cover">
+
+                        <div class="cover-icon orange">
+                            <i class="bi bi-stopwatch"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="project-body">
+
+                        <div class="project-category">
+                            Productivity Tool
+                        </div>
+
+                        <h3>CountNotify</h3>
+
+                        <p>
+                            A countdown and reminder application designed around
+                            time-based events, notifications and persistent
+                            application data.
+                        </p>
+
+                        <div class="tech-list">
+
+                            <span class="tech">FastAPI</span>
+                            <span class="tech">Python</span>
+                            <span class="tech">MySQL</span>
+                            <span class="tech">JavaScript</span>
+
+                        </div>
+
+                        <div class="card-footer-actions">
+
+                            <a
+                                href="https://countnotify.vercel.app"
+                                target="_blank"
+                                rel="noopener"
+                                class="card-link primary">
+
+                                Explore
+                                <i class="bi bi-arrow-up-right"></i>
+
+                            </a>
+
+                            
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- WEATHER -->
+
+            <div class="col-md-6 col-xl-4 project-item reveal"
+                 data-category="experimental">
+
+                <article class="project-card">
+
+                    <div class="project-cover">
+
+                        <div class="cover-icon blue">
+                            <i class="bi bi-cloud-sun"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="project-body">
+
+                        <div class="project-category">
+                            Data / Weather
+                        </div>
+
+                        <h3>Weather / Weathra</h3>
+
+                        <p>
+                            A weather-focused system exploring historical weather
+                            data, server-side processing, APIs, data persistence
+                            and cloud deployment.
+                        </p>
+
+                        <div class="tech-list">
+
+                            <span class="tech">Python</span>
+                            <span class="tech">API</span>
+                            <span class="tech">MySQL</span>
+                            <span class="tech">Azure</span>
+
+                        </div>
+
+                        <div class="card-footer-actions">
+
+                            <a
+                                href="#"
+                                class="card-link primary"
+                                onclick="return false;">
+
+                                Experiment
+                                <i class="bi bi-flask"></i>
+
+                            </a>
+
+                            <a
+                                href="#"
+                                class="card-link"
+                                onclick="return false;">
+
+                                Details
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- CAMPUSCONNECT -->
+
+            <div class="col-md-6 col-xl-4 project-item reveal"
+                 data-category="web">
+
+                <article class="project-card">
+
+                    <div class="project-cover">
+
+                        <div class="cover-icon pink">
+                            <i class="bi bi-people"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="project-body">
+
+                        <div class="project-category">
+                            Community Platform
+                        </div>
+
+                        <h3>CampusConnect</h3>
+
+                        <p>
+                            A student-focused web platform concept built around
+                            campus communication, discovery and digital community
+                            experiences.
+                        </p>
+
+                        <div class="tech-list">
+
+                            <span class="tech">JavaScript</span>
+                            <span class="tech">Web</span>
+                            <span class="tech">UI/UX</span>
+                            <span class="tech">Deployment</span>
+
+                        </div>
+
+                        <div class="card-footer-actions">
+
+                            <a
+                                href="https://campus-connect-chi-ashen.vercel.app"
+                                target="_blank"
+                                rel="noopener"
+                                class="card-link primary">
+
+                                Visit
+                                <i class="bi bi-arrow-up-right"></i>
+
+                            </a>
+
+                            <a
+                                href="#"
+                                class="card-link"
+                                onclick="return false;">
+
+                                Details
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- PORTFOLIO -->
+
+            <div class="col-md-6 col-xl-4 project-item reveal"
+                 data-category="web">
+
+                <article class="project-card">
+
+                    <div class="project-cover">
+
+                        <div class="cover-icon green">
+                            <i class="bi bi-person-badge"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="project-body">
+
+                        <div class="project-category">
+                            Personal Platform
+                        </div>
+
+                        <h3>Mante MWC Portfolio</h3>
+
+                        <p>
+                            This portfolio itself is an engineering project — a
+                            platform for documenting work, skills, education,
+                            products, services and website solutions.
+                        </p>
+
+                        <div class="tech-list">
+
+                            <span class="tech">HTML</span>
+                            <span class="tech">Bootstrap</span>
+                            <span class="tech">JavaScript</span>
+                            <span class="tech">UX</span>
+
+                        </div>
+
+                        <div class="card-footer-actions">
+
+                            <a
+                                href="https://www.mantemwc.me"
+                                target="_blank"
+                                rel="noopener"
+                                class="card-link primary">
+
+                                Live Site
+                                <i class="bi bi-arrow-up-right"></i>
+
+                            </a>
+
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- DEVELOPER EXPERIMENTS -->
+
+            <div class="col-md-6 col-xl-4 project-item reveal"
+                 data-category="developer">
+
+                <article class="project-card">
+
+                    <div class="project-cover">
+
+                        <div class="cover-icon purple">
+                            <i class="bi bi-terminal"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="project-body">
+
+                        <div class="project-category">
+                            Developer Experiments
+                        </div>
+
+                        <h3>Developer Tools</h3>
+
+                        <p>
+                            Smaller experiments, scripts, utilities and reusable
+                            components created while solving practical engineering
+                            problems across different projects.
+                        </p>
+
+                        <div class="tech-list">
+
+                            <span class="tech">Python</span>
+                            <span class="tech">JavaScript</span>
+                            <span class="tech">PHP</span>
+                            <span class="tech">SQL</span>
+
+                        </div>
+
+                        <div class="card-footer-actions">
+
+                            <a
+                                href="https://github.com/MoyiWycliffe"
+                                target="_blank"
+                                rel="noopener"
+                                class="card-link primary">
+
+                                GitHub
+                                <i class="bi bi-arrow-up-right"></i>
+
+                            </a>
+
+                            <a
+                                href="https://github.com/MoyiWycliffe?tab=repositories"
+                                target="_blank"
+                                rel="noopener"
+                                class="card-link">
+
+                                Repositories
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- OTHER -->
+
+            <div class="col-md-6 col-xl-4 project-item reveal"
+                 data-category="experimental">
+
+                <article class="project-card">
+
+                    <div class="project-cover">
+
+                        <div class="cover-icon orange">
+                            <i class="bi bi-beaker"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="project-body">
+
+                        <div class="project-category">
+                            Experiments
+                        </div>
+
+                        <h3>Other Experiments</h3>
+
+                        <p>
+                            Prototypes, proof-of-concepts and ideas that may not
+                            have become products yet — but each experiment exists
+                            to answer a technical or product question.
+                        </p>
+
+                        <div class="tech-list">
+
+                            <span class="tech">APIs</span>
+                            <span class="tech">Cloud</span>
+                            <span class="tech">Security</span>
+                            <span class="tech">Automation</span>
+
+                        </div>
+
+                        <div class="card-footer-actions">
+
+                            <a
+                                href="https://github.com/MoyiWycliffe"
+                                target="_blank"
+                                rel="noopener"
+                                class="card-link primary">
+
+                                Explore GitHub
+                                <i class="bi bi-arrow-up-right"></i>
+
+                            </a>
+
+                            <a
+                                href="https://github.com/MoyiWycliffe?tab=repositories"
+                                target="_blank"
+                                rel="noopener"
+                                class="card-link">
+
+                                Repos
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ENGINEERING NUMBERS -->
+
+<section class="section pt-0">
+
+    <div class="container">
+
+        <div class="reveal">
+
+            <div class="section-label">
+                What Projects Teach
+            </div>
+
+            <h2 class="section-title">
+                Every project adds
+                <span class="gradient">another layer.</span>
+            </h2>
+
+            <p class="section-copy">
+                Building different types of systems has forced me to work across
+                the stack rather than treating frontend, backend, databases and
+                infrastructure as isolated worlds.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4 mt-4">
+
+            <div class="col-md-6 col-lg-3 reveal">
+
+                <div class="engineering-stat">
+
+                    <strong>UI</strong>
+
+                    <span>Frontend</span>
+
+                    <p>
+                        Interfaces that communicate clearly and work across
+                        different devices.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3 reveal">
+
+                <div class="engineering-stat">
+
+                    <strong>API</strong>
+
+                    <span>Backend</span>
+
+                    <p>
+                        Server-side logic, authentication, integrations and
+                        structured data exchange.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3 reveal">
+
+                <div class="engineering-stat">
+
+                    <strong>SQL</strong>
+
+                    <span>Data</span>
+
+                    <p>
+                        Relational modelling, queries, persistence, indexes and
+                        application data.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3 reveal">
+
+                <div class="engineering-stat">
+
+                    <strong>OPS</strong>
+
+                    <span>Infrastructure</span>
+
+                    <p>
+                        Deployment, DNS, cloud services, hosting and production
+                        troubleshooting.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ARCHITECTURE -->
+
+<section class="section pt-0">
+
+    <div class="container">
+
+        <div class="row g-5 align-items-center">
+
+            <div class="col-lg-5 reveal">
+
+                <div class="section-label">
+                    How I Think About Systems
+                </div>
+
+                <h2 class="section-title">
+                    From screen
+                    <span class="gradient">to server.</span>
+                </h2>
+
+                <p class="section-copy mt-4">
+                    A polished interface is only one part of a software system.
+                    My projects increasingly connect the complete chain: user
+                    interaction, application logic, APIs, databases and
+                    infrastructure.
+                </p>
+
+            </div>
+
+
+            <div class="col-lg-7 reveal">
+
+                <div class="architecture">
+
+                    <div class="row g-2 align-items-stretch">
+
+                        <div class="col-lg">
+
+                            <div class="architecture-node">
+
+                                <i class="bi bi-window"></i>
+
+                                <strong>Interface</strong>
+
+                                <span>
+                                    HTML / Bootstrap / JS
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-lg-auto architecture-arrow">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+
+
+                        <div class="col-lg">
+
+                            <div class="architecture-node">
+
+                                <i class="bi bi-braces"></i>
+
+                                <strong>Application</strong>
+
+                                <span>
+                                    Business logic
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-lg-auto architecture-arrow">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+
+
+                        <div class="col-lg">
+
+                            <div class="architecture-node">
+
+                                <i class="bi bi-database"></i>
+
+                                <strong>Data</strong>
+
+                                <span>
+                                    MySQL / SQL
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-lg-auto architecture-arrow">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+
+
+                        <div class="col-lg">
+
+                            <div class="architecture-node">
+
+                                <i class="bi bi-cloud"></i>
+
+                                <strong>Infrastructure</strong>
+
+                                <span>
+                                    Cloud / Deployment
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- AVAILABLE TO BUILD -->
+
+<section class="section pt-0">
+
+    <div class="container">
+
+        <div class="reveal">
+
+            <div class="section-label">
+                Available For Clients
+            </div>
+
+            <h2 class="section-title">
+                Need something
+                <span class="gradient">built?</span>
+            </h2>
+
+            <p class="section-copy">
+                Not every project needs to start from zero. I can build customised
+                versions of common website and software concepts for businesses,
+                creators and organisations.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4 mt-4">
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="build-card">
+
+                    <div class="build-icon">
+                        <i class="bi bi-shop"></i>
+                    </div>
+
+                    <h3>Business Website</h3>
+
+                    <p>
+                        Professional company website with services, about,
+                        contact, testimonials, location and responsive design.
+                    </p>
+
+                    <span class="build-price">
+                        From KES 15,000+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="build-card">
+
+                    <div class="build-icon">
+                        <i class="bi bi-scissors"></i>
+                    </div>
+
+                    <h3>Salon / Beauty Website</h3>
+
+                    <p>
+                        Stylish salon presence with services, gallery, pricing,
+                        WhatsApp contact and optional booking functionality.
+                    </p>
+
+                    <span class="build-price">
+                        From KES 20,000+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="build-card">
+
+                    <div class="build-icon">
+                        <i class="bi bi-cart3"></i>
+                    </div>
+
+                    <h3>E-commerce Website</h3>
+
+                    <p>
+                        Product catalogue, shopping experience, customer
+                        management and payment integration.
+                    </p>
+
+                    <span class="build-price">
+                        From KES 60,000+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="build-card">
+
+                    <div class="build-icon">
+                        <i class="bi bi-calendar-check"></i>
+                    </div>
+
+                    <h3>Booking Platform</h3>
+
+                    <p>
+                        Appointment or reservation system for services,
+                        professionals, events and businesses.
+                    </p>
+
+                    <span class="build-price">
+                        From KES 45,000+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="build-card">
+
+                    <div class="build-icon">
+                        <i class="bi bi-bar-chart"></i>
+                    </div>
+
+                    <h3>Admin Dashboard</h3>
+
+                    <p>
+                        Data-rich dashboard for managing users, transactions,
+                        content, analytics or internal business operations.
+                    </p>
+
+                    <span class="build-price">
+                        From KES 50,000+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="build-card">
+
+                    <div class="build-icon">
+                        <i class="bi bi-code-square"></i>
+                    </div>
+
+                    <h3>Custom Web App</h3>
+
+                    <p>
+                        A custom system designed around your specific workflow,
+                        requirements, users, database and business logic.
+                    </p>
+
+                    <span class="build-price">
+                        Custom Quote
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="section pt-0">
+
+    <div class="container">
+
+        <div class="cta reveal">
+
+            <div class="section-label">
+                Your Idea Could Be Next
+            </div>
+
+            <h2>
+                Have an idea?
+                <br>
+                <span class="gradient">Let's build it.</span>
+            </h2>
+
+            <p>
+                Whether you need a simple business website, a dashboard, a SaaS
+                product or a completely custom system, the first step is simply
+                figuring out what needs to exist.
+            </p>
+
+            <div class="d-flex justify-content-center flex-wrap gap-3">
+
+                <a href="/pricing.html" class="btn btn-main">
+
+                    Calculate A Price
+                    <i class="bi bi-calculator ms-2"></i>
+
+                </a>
+
+                <a href="/samples/" class="btn btn-outline-main">
+
+                    View Website Samples
+
+                </a>
+
+                <a href="/contact.html" class="btn btn-outline-main">
+
+                    Start A Project
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+
+        <div class="row g-5">
+
+            <div class="col-lg-6">
+
+                <div class="footer-brand">
+                    MANTE MWC<span class="brand-dot"></span>
+                </div>
+
+                <p class="footer-copy mt-3">
+                    Software engineering, cybersecurity and product development.
+                    Building practical systems through code, experimentation and
+                    continuous learning.
+                </p>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h6 class="fw-bold mb-3">
+                    Explore
+                </h6>
+
+                <div class="d-flex flex-column gap-2">
+
+                    <a href="/" class="footer-link">Home</a>
+                    <a href="/about.html" class="footer-link">About</a>
+                    <a href="/skills.html" class="footer-link">Skills</a>
+                    <a href="/education.html" class="footer-link">Education</a>
+                    <a href="/projects.html" class="footer-link">Projects</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h6 class="fw-bold mb-3">
+                    Build
+                </h6>
+
+                <div class="d-flex flex-column gap-2">
+
+                    <a href="/samples/" class="footer-link">Samples</a>
+                    <a href="/pricing.html" class="footer-link">Pricing</a>
+                    <a href="/contact.html" class="footer-link">Contact</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-2">
+
+                <h6 class="fw-bold mb-3">
+                    Focus
+                </h6>
+
+                <div class="d-flex flex-column gap-2">
+
+                    <span class="footer-link">SaaS</span>
+                    <span class="footer-link">Web Apps</span>
+                    <span class="footer-link">Security</span>
+                    <span class="footer-link">Cloud</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="d-flex flex-column flex-md-row justify-content-between gap-3 mt-5 pt-4"
+            style="border-top:1px solid var(--border);">
+
+            <small class="text-secondary">
+                © <span id="year"></span> Mante MWC. All rights reserved.
+            </small>
+
+            <small class="text-secondary">
+                Built with code, curiosity & too many terminal windows.
+            </small>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    /*
+     * PROJECT FILTER
+     */
+
+    const filterButtons =
+        document.querySelectorAll(".filter-btn");
+
+    const projectItems =
+        document.querySelectorAll(".project-item");
+
+
+    filterButtons.forEach(button => {
+
+        button.addEventListener("click", function () {
+
+            filterButtons.forEach(btn => {
+                btn.classList.remove("active");
+            });
+
+            this.classList.add("active");
+
+            const filter =
+                this.dataset.filter;
+
+
+            projectItems.forEach(item => {
+
+                const category =
+                    item.dataset.category;
+
+
+                if (
+                    filter === "all" ||
+                    category === filter
+                ) {
+
+                    item.classList.remove("hidden");
+
+                } else {
+
+                    item.classList.add("hidden");
+
+                }
+
+            });
+
+        });
+
+    });
+
+
+    /*
+     * Reveal animations
+     */
+
+    const revealElements =
+        document.querySelectorAll(".reveal");
+
+
+    const observer =
+        new IntersectionObserver((entries, observer) => {
+
+            entries.forEach(entry => {
+
+                if (!entry.isIntersecting) {
+                    return;
+                }
+
+                entry.target.classList.add("show");
+
+                observer.unobserve(entry.target);
+
+            });
+
+        }, {
+            threshold: .1
+        });
+
+
+    revealElements.forEach(element => {
+
+        observer.observe(element);
+
+    });
+
+
+    /*
+     * Navbar scroll state
+     */
+
+    const navbar =
+        document.querySelector(".navbar");
+
+
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 30) {
+
+            navbar.style.background =
+                "rgba(5,7,10,.97)";
+
+        } else {
+
+            navbar.style.background =
+                "rgba(5,7,10,.88)";
+
+        }
+
+    });
+
+
+    /*
+     * Footer year
+     */
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+});
+
+</script>
 
 </body>
 </html>
