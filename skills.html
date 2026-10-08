@@ -1,96 +1,1406 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mante Ntara (Moyi Wycliffe) | Skills</title>
-    <meta name="description" content="Portfolio of Mante Ntara (Moyi Wycliffe) AKA Mante MWC, a professional full-stack web developer based in Kenya. Providing affordable, high-end web development services.">
-    <meta name="keywords" content="Mante Ntara, Moyi Wycliffe, ManteDev, Web Developer Kenya, Full Stack Developer, Cybersecurity Kenya, Cutlnk ,Mante's MWC, Portfolio, Affordable Web Development, Professional Web Developer">
-    <meta name="google-site-verification" content="k1-ZmqR3Fs0tvoxVYZavyuBJlmzJqjn4xbp0tQgMdVA" />
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
-    <!-- <script src="index.js" defer></script> -->
-    <!-- <link rel="stylesheet" href="index.css"> -->
+
+    <meta name="description" content="Mante MWC — Technical skills, software engineering, web development, backend engineering, databases, cybersecurity, cloud and infrastructure.">
+    <meta name="author" content="Mante MWC">
+
+    <title>Skills — Mante MWC</title>
+
     <link rel="icon" href="media/logo.png" type="image/png">
-    <!--BOOTSTRAP CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- <script src="/src/main.jsx" type="module"></script> -->
-     <script
+    <script
     src="https://www.mantemetrics.app/index.js"
     data-id="DXDMKaYoZzFTRcrS4qNGgibRjrlA7sOy12A1FbwK">
-</script>
+    </script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #05070a;
+            --surface: #0b1016;
+            --surface-2: #101720;
+            --border: rgba(255,255,255,.09);
+            --border-hover: rgba(98,230,168,.3);
+            --text: #f5f7fa;
+            --muted: #8d99a6;
+            --accent: #62e6a8;
+            --accent-blue: #5bbcff;
+            --accent-purple: #a78bfa;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background:
+                radial-gradient(circle at 10% 0%, rgba(91,188,255,.08), transparent 30rem),
+                radial-gradient(circle at 90% 15%, rgba(98,230,168,.06), transparent 30rem),
+                var(--bg);
+            color: var(--text);
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ::selection {
+            background: var(--accent);
+            color: #031008;
+        }
+
+        .navbar {
+            background: rgba(5,7,10,.82);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .navbar-brand {
+            color: var(--text) !important;
+            font-weight: 850;
+            letter-spacing: -.05em;
+        }
+
+        .brand-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin-left: 3px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 15px rgba(98,230,168,.8);
+        }
+
+        .nav-link {
+            color: #aab5c0 !important;
+            font-size: .9rem;
+            font-weight: 500;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--text) !important;
+        }
+
+        .btn-main {
+            background: var(--accent);
+            color: #041009;
+            border: 1px solid var(--accent);
+            border-radius: 12px;
+            font-weight: 750;
+            padding: .75rem 1.05rem;
+            transition: .25s ease;
+        }
+
+        .btn-main:hover {
+            background: #7af0b8;
+            color: #041009;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-main {
+            color: var(--text);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            font-weight: 650;
+            padding: .75rem 1.05rem;
+            transition: .25s ease;
+        }
+
+        .btn-outline-main:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .page-header {
+            position: relative;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            padding: 150px 0 90px;
+            overflow: hidden;
+        }
+
+        .grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+            background-size: 55px 55px;
+            mask-image: linear-gradient(to bottom, black, transparent);
+            pointer-events: none;
+        }
+
+        .orb {
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: .1;
+            pointer-events: none;
+        }
+
+        .orb-one {
+            background: var(--accent);
+            top: -250px;
+            right: -150px;
+        }
+
+        .orb-two {
+            background: var(--accent-blue);
+            bottom: -250px;
+            left: -150px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent);
+            background: rgba(98,230,168,.05);
+            border: 1px solid rgba(98,230,168,.18);
+            padding: 8px 13px;
+            border-radius: 999px;
+            font-size: .74rem;
+            font-weight: 800;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+        }
+
+        .eyebrow-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 12px rgba(98,230,168,.8);
+        }
+
+        .page-title {
+            font-size: clamp(3.5rem, 8vw, 7.5rem);
+            line-height: .9;
+            letter-spacing: -.08em;
+            font-weight: 900;
+            margin: 25px 0;
+        }
+
+        .gradient-text {
+            background: linear-gradient(100deg, #fff, var(--accent-blue), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .page-description {
+            color: var(--muted);
+            max-width: 760px;
+            font-size: 1.08rem;
+            line-height: 1.85;
+        }
+
+        .hero-terminal {
+            margin-top: 35px;
+            background: #070a0e;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            overflow: hidden;
+        }
+
+        .terminal-top {
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .terminal-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #36404a;
+        }
+
+        .terminal-title {
+            margin-left: 8px;
+            color: #687581;
+            font: 11px monospace;
+        }
+
+        .terminal-body {
+            padding: 18px;
+            color: #a9b4bf;
+            font: .8rem/1.9 "SFMono-Regular", Consolas, monospace;
+        }
+
+        .green {
+            color: var(--accent);
+        }
+
+        .blue {
+            color: var(--accent-blue);
+        }
+
+        .purple {
+            color: var(--accent-purple);
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 7px;
+            height: 15px;
+            margin-left: 3px;
+            vertical-align: middle;
+            background: var(--accent);
+            animation: blink 1s steps(2) infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-label {
+            color: var(--accent);
+            font-size: .73rem;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            font-weight: 850;
+            margin-bottom: 13px;
+        }
+
+        .section-title {
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            line-height: 1;
+            letter-spacing: -.06em;
+            font-weight: 850;
+            margin-bottom: 18px;
+        }
+
+        .section-copy {
+            color: var(--muted);
+            line-height: 1.8;
+            max-width: 720px;
+        }
+
+        .skill-card {
+            height: 100%;
+            padding: 28px;
+            background: linear-gradient(145deg, rgba(255,255,255,.045), rgba(255,255,255,.012));
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            transition: .3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-card::after {
+            content: "";
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: var(--accent);
+            filter: blur(90px);
+            opacity: 0;
+            right: -70px;
+            top: -70px;
+            transition: .4s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-7px);
+            border-color: var(--border-hover);
+        }
+
+        .skill-card:hover::after {
+            opacity: .07;
+        }
+
+        .skill-icon {
+            width: 54px;
+            height: 54px;
+            border-radius: 16px;
+            display: grid;
+            place-items: center;
+            background: rgba(98,230,168,.07);
+            color: var(--accent);
+            font-size: 1.45rem;
+            margin-bottom: 23px;
+        }
+
+        .skill-card h3 {
+            font-size: 1.22rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .skill-card > p {
+            color: var(--muted);
+            font-size: .88rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .technology {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 7px 9px;
+            margin: 3px 2px;
+            border: 1px solid var(--border);
+            background: rgba(255,255,255,.025);
+            border-radius: 8px;
+            color: #b5c0ca;
+            font-size: .73rem;
+            transition: .2s ease;
+        }
+
+        .technology:hover {
+            color: var(--accent);
+            border-color: rgba(98,230,168,.3);
+            background: rgba(98,230,168,.04);
+        }
+
+        .tech-level {
+            margin-top: 22px;
+        }
+
+        .level-line {
+            height: 4px;
+            border-radius: 99px;
+            background: rgba(255,255,255,.06);
+            overflow: hidden;
+        }
+
+        .level-fill {
+            height: 100%;
+            border-radius: 99px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent));
+            width: 0;
+            transition: width 1.4s ease;
+        }
+
+        .level-label {
+            display: flex;
+            justify-content: space-between;
+            color: #71808e;
+            font-size: .7rem;
+            margin-bottom: 7px;
+        }
+
+        .architecture {
+            padding: 30px;
+            background: #080c10;
+            border: 1px solid var(--border);
+            border-radius: 25px;
+        }
+
+        .architecture-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 12px 0;
+        }
+
+        .architecture-box {
+            padding: 13px 17px;
+            border: 1px solid var(--border);
+            background: rgba(255,255,255,.025);
+            border-radius: 12px;
+            font-size: .78rem;
+            color: #c2ccd5;
+        }
+
+        .architecture-box.active {
+            color: var(--accent);
+            border-color: rgba(98,230,168,.25);
+            background: rgba(98,230,168,.035);
+        }
+
+        .architecture-arrow {
+            color: #4f5c67;
+        }
+
+        .principle {
+            padding: 28px;
+            height: 100%;
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            background: rgba(255,255,255,.02);
+        }
+
+        .principle-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            letter-spacing: -.07em;
+            color: rgba(98,230,168,.25);
+        }
+
+        .principle h3 {
+            font-size: 1rem;
+            margin: 18px 0 10px;
+        }
+
+        .principle p {
+            color: var(--muted);
+            font-size: .85rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .project-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px 22px;
+            color: var(--text);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: rgba(255,255,255,.02);
+            transition: .25s ease;
+        }
+
+        .project-link:hover {
+            color: var(--text);
+            border-color: rgba(98,230,168,.3);
+            transform: translateX(5px);
+        }
+
+        .project-link small {
+            color: var(--muted);
+            display: block;
+            margin-top: 4px;
+        }
+
+        .project-link i {
+            color: var(--accent);
+        }
+
+        .cta {
+            padding: 70px 30px;
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            text-align: center;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(98,230,168,.1), transparent 35%),
+                radial-gradient(circle at 80% 80%, rgba(91,188,255,.09), transparent 35%),
+                var(--surface);
+        }
+
+        .cta h2 {
+            font-size: clamp(2.4rem, 5vw, 4.6rem);
+            font-weight: 900;
+            letter-spacing: -.065em;
+        }
+
+        .cta p {
+            color: var(--muted);
+            max-width: 650px;
+            line-height: 1.8;
+            margin: 18px auto 30px;
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 55px 0 30px;
+        }
+
+        .footer-brand {
+            font-size: 1.4rem;
+            font-weight: 900;
+            letter-spacing: -.06em;
+        }
+
+        .footer-link {
+            color: #85929e;
+            font-size: .85rem;
+            transition: .2s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--accent);
+        }
+
+        .footer-copy {
+            color: var(--muted);
+            font-size: .84rem;
+            line-height: 1.7;
+            max-width: 430px;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity .8s ease, transform .8s ease;
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 767px) {
+            .page-header {
+                padding-top: 125px;
+            }
+
+            .section {
+                padding: 75px 0;
+            }
+
+            .page-title {
+                font-size: 4rem;
+            }
+
+            .architecture {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <script type="application/ld+json">
-        {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Mante Ntara",
-        "alternateName": [
-            "ManteDev",
-            "Mante MWC",
-            "Moyi Wycliffe"
-        ],
-        "url": "https://mantemwc.vercel.app/",
-        "jobTitle": "Full-Stack Web Developer",
-        "sameAs": [
-            "https://github.com/MoyiWycliffe/",
-            "https://www.facebook.com/ManteNtara2/",
-            "https://x.com/moyi_mwc"
-        ]
-}
-</script>
 
-<header class="bg-dark text-white py-1">
-    <div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container py-2">
 
-        <nav class="navbar navbar-expand-lg navbar-dark mb-2">
-            <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+            MANTE MWC<span class="brand-dot"></span>
+        </a>
 
-                <a class="navbar-brand fw-bold" href="#">
-                    Mante MWC
-                </a>
+        <button class="navbar-toggler border-0 shadow-none" type="button"
+                data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <i class="bi bi-list fs-2"></i>
+        </button>
 
-                <button class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarMenu">
-                    <span class="navbar-toggler-icon"></span>.
-                </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
 
-                <div class="collapse navbar-collapse" id="navbarMenu">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
 
-                    <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/about.html">About</a>
+                </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="projects.html">Projects</a>
-                        </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/skills.html">Skills</a>
+                </li>
 
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="skills.html">Skills</a>
-                        </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/education.html">Education</a>
+                </li>
 
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="education.html">Education</a>
-                        </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/projects.html">Projects</a>
+                </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html#services">Services</a>
-                        </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/samples/">Samples</a>
+                </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html#pricing">Pricing</a>
-                        </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pricing.html">Pricing</a>
+                </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html#contact">Contact</a>
-                        </li>
+                <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                    <a class="btn btn-main" href="/contact.html">
+                        Let's Build
+                        <i class="bi bi-arrow-up-right ms-1"></i>
+                    </a>
+                </li>
 
-                    </ul>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main>
+
+<section class="page-header">
+
+    <div class="grid"></div>
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+
+    <div class="container position-relative">
+
+        <div class="row">
+            <div class="col-lg-10">
+
+                <div class="eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    Technical Capability
+                </div>
+
+                <h1 class="page-title">
+                    Skills that
+                    <span class="gradient-text">build systems.</span>
+                </h1>
+
+                <p class="page-description">
+                    My technical skillset spans frontend development, backend engineering,
+                    databases, cybersecurity, APIs, cloud infrastructure and software
+                    architecture. I focus on understanding how the pieces work together,
+                    not just collecting technology names.
+                </p>
+
+                <div class="hero-terminal">
+
+                    <div class="terminal-top">
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-title">mante@skills:~</span>
+                    </div>
+
+                    <div class="terminal-body">
+                        <div><span class="green">$</span> skills --list</div>
+                        <div><span class="blue">frontend</span> → HTML · CSS · JavaScript · Bootstrap</div>
+                        <div><span class="blue">backend</span> → Python · FastAPI · PHP · Node.js</div>
+                        <div><span class="blue">database</span> → MySQL · SQL · Data Modelling</div>
+                        <div><span class="blue">security</span> → Web Security · DNS · TLS · Headers</div>
+                        <div><span class="blue">infrastructure</span> → Git · Cloud · Deployment</div>
+                        <div><span class="green">$</span> ready<span class="cursor"></span></div>
+                    </div>
 
                 </div>
 
             </div>
-        </nav>
+        </div>
 
     </div>
-</header>
+</section>
+
+<section class="section pt-0">
+    <div class="container">
+
+        <div class="reveal">
+            <div class="section-label">01 — Core Engineering</div>
+
+            <h2 class="section-title">
+                The foundation behind
+                <span class="gradient-text">my work.</span>
+            </h2>
+
+            <p class="section-copy">
+                These are the areas I actively use while building applications and products.
+                Each category connects to real projects rather than existing only as a list on a résumé.
+            </p>
+        </div>
+
+        <div class="row g-4 mt-4">
+
+            <div class="col-lg-6 reveal">
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        <i class="bi bi-window-stack"></i>
+                    </div>
+
+                    <h3>Frontend Engineering</h3>
+
+                    <p>
+                        Building responsive interfaces, dashboards, landing pages and
+                        interactive web experiences with attention to structure, usability
+                        and maintainability.
+                    </p>
+
+                    <div>
+                        <span class="technology"><i class="bi bi-filetype-html"></i> HTML5</span>
+                        <span class="technology"><i class="bi bi-filetype-css"></i> CSS3</span>
+                        <span class="technology"><i class="bi bi-filetype-js"></i> JavaScript</span>
+                        <span class="technology">Bootstrap</span>
+                        <span class="technology">Chart.js</span>
+                        <span class="technology">Responsive UI</span>
+                    </div>
+
+                    <div class="tech-level">
+                        <div class="level-label">
+                            <span>Practical experience</span>
+                            <span>Active</span>
+                        </div>
+
+                        <div class="level-line">
+                            <div class="level-fill" data-width="88%"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-6 reveal">
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        <i class="bi bi-server"></i>
+                    </div>
+
+                    <h3>Backend Engineering</h3>
+
+                    <p>
+                        Designing server-side applications, REST APIs, authentication,
+                        business logic, data processing and application integrations.
+                    </p>
+
+                    <div>
+                        <span class="technology"><i class="bi bi-filetype-py"></i> Python</span>
+                        <span class="technology">FastAPI</span>
+                        <span class="technology">PHP</span>
+                        <span class="technology">Node.js</span>
+                        <span class="technology">Express</span>
+                        <span class="technology">REST APIs</span>
+                    </div>
+
+                    <div class="tech-level">
+                        <div class="level-label">
+                            <span>Practical experience</span>
+                            <span>Active</span>
+                        </div>
+
+                        <div class="level-line">
+                            <div class="level-fill" data-width="84%"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-6 reveal">
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        <i class="bi bi-database"></i>
+                    </div>
+
+                    <h3>Database Engineering</h3>
+
+                    <p>
+                        Designing relational structures and connecting applications to
+                        persistent data through schemas, queries, relationships and aggregation.
+                    </p>
+
+                    <div>
+                        <span class="technology">MySQL</span>
+                        <span class="technology">SQL</span>
+                        <span class="technology">Schema Design</span>
+                        <span class="technology">Relationships</span>
+                        <span class="technology">Indexes</span>
+                        <span class="technology">Querying</span>
+                    </div>
+
+                    <div class="tech-level">
+                        <div class="level-label">
+                            <span>Practical experience</span>
+                            <span>Active</span>
+                        </div>
+
+                        <div class="level-line">
+                            <div class="level-fill" data-width="82%"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-6 reveal">
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        <i class="bi bi-shield-lock"></i>
+                    </div>
+
+                    <h3>Cybersecurity</h3>
+
+                    <p>
+                        Studying and applying web security principles across authentication,
+                        HTTP, DNS, TLS, security headers, application exposure and attack surfaces.
+                    </p>
+
+                    <div>
+                        <span class="technology">Web Security</span>
+                        <span class="technology">HTTP</span>
+                        <span class="technology">DNS</span>
+                        <span class="technology">SSL / TLS</span>
+                        <span class="technology">Security Headers</span>
+                        <span class="technology">Vulnerability Analysis</span>
+                    </div>
+
+                    <div class="tech-level">
+                        <div class="level-label">
+                            <span>Current focus</span>
+                            <span>Growing</span>
+                        </div>
+
+                        <div class="level-line">
+                            <div class="level-fill" data-width="76%"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-6 reveal">
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        <i class="bi bi-cloud-arrow-up"></i>
+                    </div>
+
+                    <h3>Infrastructure & Deployment</h3>
+
+                    <p>
+                        Working with source control, hosting, domains, APIs, cloud services,
+                        databases and the process of moving applications into production.
+                    </p>
+
+                    <div>
+                        <span class="technology"><i class="bi bi-git"></i> Git</span>
+                        <span class="technology">GitHub</span>
+                        <span class="technology">Vercel</span>
+                        <span class="technology">Render</span>
+                        <span class="technology">AWS</span>
+                        <span class="technology">Azure</span>
+                        <span class="technology">Cloudflare</span>
+                    </div>
+
+                    <div class="tech-level">
+                        <div class="level-label">
+                            <span>Practical experience</span>
+                            <span>Growing</span>
+                        </div>
+
+                        <div class="level-line">
+                            <div class="level-fill" data-width="73%"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-6 reveal">
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        <i class="bi bi-diagram-3"></i>
+                    </div>
+
+                    <h3>System Design</h3>
+
+                    <p>
+                        Breaking products into components, defining data flow, designing
+                        application boundaries and understanding how systems communicate.
+                    </p>
+
+                    <div>
+                        <span class="technology">Architecture</span>
+                        <span class="technology">Data Flow</span>
+                        <span class="technology">API Design</span>
+                        <span class="technology">Authentication</span>
+                        <span class="technology">Scalability</span>
+                        <span class="technology">Modularity</span>
+                    </div>
+
+                    <div class="tech-level">
+                        <div class="level-label">
+                            <span>Current focus</span>
+                            <span>Growing</span>
+                        </div>
+
+                        <div class="level-line">
+                            <div class="level-fill" data-width="68%"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="section pt-0">
+    <div class="container">
+
+        <div class="reveal">
+            <div class="section-label">02 — Technology Map</div>
+
+            <h2 class="section-title">
+                How the pieces
+                <span class="gradient-text">connect.</span>
+            </h2>
+
+            <p class="section-copy">
+                A technology is useful when it solves a specific problem. My projects
+                typically combine several layers into one working system.
+            </p>
+        </div>
+
+        <div class="architecture mt-5 reveal">
+
+            <div class="architecture-row">
+                <div class="architecture-box active">
+                    User Interface
+                </div>
+
+                <div class="architecture-arrow">
+                    <i class="bi bi-arrow-right"></i>
+                </div>
+
+                <div class="architecture-box">
+                    JavaScript
+                </div>
+
+                <div class="architecture-arrow">
+                    <i class="bi bi-arrow-right"></i>
+                </div>
+
+                <div class="architecture-box active">
+                    REST API
+                </div>
+            </div>
+
+            <div class="architecture-row">
+                <div class="architecture-arrow">
+                    <i class="bi bi-arrow-down"></i>
+                </div>
+            </div>
+
+            <div class="architecture-row">
+                <div class="architecture-box">
+                    Authentication
+                </div>
+
+                <div class="architecture-box active">
+                    Business Logic
+                </div>
+
+                <div class="architecture-box">
+                    Validation
+                </div>
+
+                <div class="architecture-box">
+                    Security
+                </div>
+            </div>
+
+            <div class="architecture-row">
+                <div class="architecture-arrow">
+                    <i class="bi bi-arrow-down"></i>
+                </div>
+            </div>
+
+            <div class="architecture-row">
+                <div class="architecture-box active">
+                    FastAPI / PHP / Node.js
+                </div>
+
+                <div class="architecture-arrow">
+                    <i class="bi bi-arrow-right"></i>
+                </div>
+
+                <div class="architecture-box active">
+                    MySQL
+                </div>
+
+                <div class="architecture-arrow">
+                    <i class="bi bi-arrow-right"></i>
+                </div>
+
+                <div class="architecture-box">
+                    Cloud / Hosting
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="section pt-0">
+    <div class="container">
+
+        <div class="reveal">
+            <div class="section-label">03 — Engineering Principles</div>
+
+            <h2 class="section-title">
+                How I approach
+                <span class="gradient-text">software.</span>
+            </h2>
+        </div>
+
+        <div class="row g-4 mt-4">
+
+            <div class="col-md-6 col-lg-3 reveal">
+                <div class="principle">
+                    <div class="principle-number">01</div>
+                    <h3>Understand First</h3>
+                    <p>
+                        Requirements and constraints come before implementation.
+                        Code is the solution, not the starting point.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 reveal">
+                <div class="principle">
+                    <div class="principle-number">02</div>
+                    <h3>Keep It Practical</h3>
+                    <p>
+                        Choose technologies based on the problem instead of adding
+                        complexity simply because a technology exists.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 reveal">
+                <div class="principle">
+                    <div class="principle-number">03</div>
+                    <h3>Security Matters</h3>
+                    <p>
+                        Security should be considered during design and development,
+                        not attached to an application at the very end.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 reveal">
+                <div class="principle">
+                    <div class="principle-number">04</div>
+                    <h3>Keep Learning</h3>
+                    <p>
+                        Every project exposes another problem to understand.
+                        Building is one of the fastest ways to learn engineering.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="section pt-0">
+    <div class="container">
+
+        <div class="reveal">
+            <div class="section-label">04 — Applied Skills</div>
+
+            <h2 class="section-title">
+                Skills proven through
+                <span class="gradient-text">projects.</span>
+            </h2>
+
+            <p class="section-copy">
+                The strongest evidence for a technical skill is seeing it used in a real system.
+            </p>
+        </div>
+
+        <div class="row g-3 mt-4">
+
+            <div class="col-lg-6 reveal">
+                <a href="/projects.html" class="project-link">
+                    <div>
+                        <strong>Mantemetrics</strong>
+                        <small>FastAPI · MySQL · Analytics · SaaS · JavaScript</small>
+                    </div>
+                    <i class="bi bi-arrow-up-right"></i>
+                </a>
+            </div>
+
+            <div class="col-lg-6 reveal">
+                <a href="/projects.html" class="project-link">
+                    <div>
+                        <strong>Riscaly</strong>
+                        <small>Cybersecurity · DNS · TLS · Security Analysis</small>
+                    </div>
+                    <i class="bi bi-arrow-up-right"></i>
+                </a>
+            </div>
+
+            <div class="col-lg-6 reveal">
+                <a href="/projects.html" class="project-link">
+                    <div>
+                        <strong>ManteAds</strong>
+                        <small>Node.js · Express · Automation · APIs · MySQL</small>
+                    </div>
+                    <i class="bi bi-arrow-up-right"></i>
+                </a>
+            </div>
+
+            <div class="col-lg-6 reveal">
+                <a href="/projects.html" class="project-link">
+                    <div>
+                        <strong>Cutlnk</strong>
+                        <small>PHP · MySQL · URL Management · Analytics</small>
+                    </div>
+                    <i class="bi bi-arrow-up-right"></i>
+                </a>
+            </div>
+
+            <div class="col-lg-6 reveal">
+                <a href="/projects.html" class="project-link">
+                    <div>
+                        <strong>CountNotify</strong>
+                        <small>FastAPI · MySQL · Countdown · Notifications</small>
+                    </div>
+                    <i class="bi bi-arrow-up-right"></i>
+                </a>
+            </div>
+
+            <div class="col-lg-6 reveal">
+                <a href="/projects.html" class="project-link">
+                    <div>
+                        <strong>Other Experiments</strong>
+                        <small>Web applications · APIs · Infrastructure · Security</small>
+                    </div>
+                    <i class="bi bi-arrow-up-right"></i>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="section pt-0">
+    <div class="container">
+
+        <div class="cta reveal">
+
+            <div class="section-label">05 — Next Step</div>
+
+            <h2>
+                Skills are useful.
+                <br>
+                <span class="gradient-text">Building proves them.</span>
+            </h2>
+
+            <p>
+                Explore the systems I've built, the education behind my engineering journey,
+                or the website and software solutions I can build for your project.
+            </p>
+
+            <div class="d-flex justify-content-center flex-wrap gap-3">
+
+                <a href="/projects.html" class="btn btn-main">
+                    Explore Projects
+                    <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+
+                <a href="/education.html" class="btn btn-outline-main">
+                    Education
+                </a>
+
+                <a href="/contact.html" class="btn btn-outline-main">
+                    Work With Me
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<footer>
+
+    <div class="container">
+
+        <div class="row g-5">
+
+            <div class="col-lg-6">
+
+                <div class="footer-brand">
+                    MANTE MWC<span class="brand-dot"></span>
+                </div>
+
+                <p class="footer-copy mt-3">
+                    Software engineering, cybersecurity and product development.
+                    Building practical systems through code, experimentation and continuous learning.
+                </p>
+
+                <div class="d-flex gap-3 mt-4">
+
+                    <a href="https://github.com/MoyiWycliffe"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn btn-outline-main">
+                        <i class="bi bi-github me-2"></i>
+                        GitHub
+                    </a>
+
+                    <a href="https://x.com/moyi_mwc"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn btn-outline-main">
+                        <i class="bi bi-twitter-x me-2"></i>
+                        X
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-6 col-lg-2">
+
+                <h6 class="fw-bold mb-3">Explore</h6>
+
+                <div class="d-flex flex-column gap-2">
+                    <a href="/" class="footer-link">Home</a>
+                    <a href="/about.html" class="footer-link">About</a>
+                    <a href="/skills.html" class="footer-link">Skills</a>
+                    <a href="/education.html" class="footer-link">Education</a>
+                    <a href="/projects.html" class="footer-link">Projects</a>
+                </div>
+
+            </div>
+
+            <div class="col-6 col-lg-2">
+
+                <h6 class="fw-bold mb-3">Build</h6>
+
+                <div class="d-flex flex-column gap-2">
+                    <a href="/services.html" class="footer-link">Services</a>
+                    <a href="/samples/" class="footer-link">Samples</a>
+                    <a href="/pricing.html" class="footer-link">Pricing</a>
+                    <a href="/contact.html" class="footer-link">Contact</a>
+                </div>
+
+            </div>
+
+            <div class="col-lg-2">
+
+                <h6 class="fw-bold mb-3">Focus</h6>
+
+                <div class="d-flex flex-column gap-2">
+                    <span class="footer-link">Engineering</span>
+                    <span class="footer-link">Cybersecurity</span>
+                    <span class="footer-link">SaaS</span>
+                    <span class="footer-link">Web Systems</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="d-flex flex-column flex-md-row justify-content-between gap-3 mt-5 pt-4"
+             style="border-top:1px solid var(--border);">
+
+            <small class="text-secondary">
+                © <span id="year"></span> Mante MWC. All rights reserved.
+            </small>
+
+            <small class="text-secondary">
+                Built with code, curiosity & too many terminal windows.
+            </small>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const revealElements = document.querySelectorAll(".reveal");
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+
+        entries.forEach(entry => {
+
+            if (!entry.isIntersecting) {
+                return;
+            }
+
+            entry.target.classList.add("show");
+
+            observer.unobserve(entry.target);
+
+        });
+
+    }, {
+        threshold: 0.12
+    });
+
+    revealElements.forEach(element => {
+        revealObserver.observe(element);
+    });
+
+
+    const levelFills = document.querySelectorAll(".level-fill");
+
+    const levelObserver = new IntersectionObserver((entries, observer) => {
+
+        entries.forEach(entry => {
+
+            if (!entry.isIntersecting) {
+                return;
+            }
+
+            const width = entry.target.dataset.width;
+
+            setTimeout(() => {
+                entry.target.style.width = width;
+            }, 150);
+
+            observer.unobserve(entry.target);
+
+        });
+
+    }, {
+        threshold: 0.3
+    });
+
+    levelFills.forEach(element => {
+        levelObserver.observe(element);
+    });
+
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+
+    const navbar = document.querySelector(".navbar");
+
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 30) {
+            navbar.style.background = "rgba(5,7,10,.96)";
+        } else {
+            navbar.style.background = "rgba(5,7,10,.82)";
+        }
+
+    });
+
+});
+</script>
+
+</body>
+</html>
