@@ -1,971 +1,2507 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
- 
-<title>Pricing | Mante MWC — Full-Stack Web Developer</title>
+    <meta name="description" content="Mante MWC website pricing calculator — estimate website cost, pages, features, delivery time and maintenance.">
+    <meta name="author" content="Mante MWC">
 
-<meta name="description"
-      content="Affordable professional web development packages by Mante MWC. Choose from starter, business, professional and custom web development solutions.">
+    <title>Pricing — Mante MWC</title>
 
-<meta name="keywords"
-      content="Mante MWC pricing, web developer Kenya pricing, website development Kenya, full stack developer Kenya, affordable websites Kenya">
-
-<link rel="icon" href="media/logo.png" type="image/png">
-
-<!-- Bootstrap -->
-<link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-    rel="stylesheet">
- 
-<script
+    <link rel="icon" href="media/logo.png" type="image/png">
+    <script
     src="https://www.mantemetrics.app/index.js"
     data-id="DXDMKaYoZzFTRcrS4qNGgibRjrlA7sOy12A1FbwK">
-</script>
+    </script>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #05070a;
+            --surface: #0b1016;
+            --surface-2: #101720;
+            --border: rgba(255,255,255,.09);
+            --text: #f5f7fa;
+            --muted: #8d99a6;
+            --accent: #62e6a8;
+            --blue: #5bbcff;
+            --purple: #a78bfa;
+            --danger: #ff7182;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background:
+                radial-gradient(circle at 10% 0%, rgba(91,188,255,.08), transparent 30rem),
+                radial-gradient(circle at 90% 10%, rgba(98,230,168,.07), transparent 30rem),
+                var(--bg);
+            color: var(--text);
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        ::selection {
+            background: var(--accent);
+            color: #031008;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .navbar {
+            background: rgba(5,7,10,.86);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .navbar-brand {
+            color: var(--text) !important;
+            font-weight: 900;
+            letter-spacing: -.06em;
+        }
+
+        .brand-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin-left: 3px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 15px rgba(98,230,168,.8);
+        }
+
+        .nav-link {
+            color: #aab5c0 !important;
+            font-size: .9rem;
+            font-weight: 500;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #fff !important;
+        }
+
+        .btn-main {
+            background: var(--accent);
+            color: #041009;
+            border: 1px solid var(--accent);
+            border-radius: 12px;
+            font-weight: 800;
+            padding: .75rem 1.05rem;
+            transition: .25s ease;
+        }
+
+        .btn-main:hover {
+            color: #041009;
+            background: #7af0b8;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-main {
+            color: var(--text);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            font-weight: 650;
+            padding: .75rem 1.05rem;
+            transition: .25s ease;
+        }
+
+        .btn-outline-main:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            position: relative;
+            min-height: 62vh;
+            display: flex;
+            align-items: center;
+            padding: 150px 0 90px;
+            overflow: hidden;
+        }
+
+        .grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+            background-size: 55px 55px;
+            mask-image: linear-gradient(to bottom, black, transparent);
+        }
+
+        .orb {
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: .09;
+            pointer-events: none;
+        }
+
+        .orb-one {
+            background: var(--accent);
+            top: -230px;
+            right: -120px;
+        }
+
+        .orb-two {
+            background: var(--blue);
+            bottom: -250px;
+            left: -160px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent);
+            background: rgba(98,230,168,.05);
+            border: 1px solid rgba(98,230,168,.18);
+            padding: 8px 13px;
+            border-radius: 999px;
+            font-size: .73rem;
+            font-weight: 850;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+        }
+
+        .eyebrow-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 12px rgba(98,230,168,.8);
+        }
+
+        .hero-title {
+            font-size: clamp(3.4rem, 8vw, 7rem);
+            line-height: .9;
+            letter-spacing: -.08em;
+            font-weight: 900;
+            margin: 25px 0;
+        }
+
+        .gradient {
+            background: linear-gradient(100deg, #fff, var(--blue), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero-copy {
+            color: var(--muted);
+            max-width: 760px;
+            font-size: 1.08rem;
+            line-height: 1.85;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-label {
+            color: var(--accent);
+            font-size: .72rem;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            font-weight: 850;
+            margin-bottom: 13px;
+        }
+
+        .section-title {
+            font-size: clamp(2.3rem, 5vw, 4.2rem);
+            line-height: 1;
+            letter-spacing: -.065em;
+            font-weight: 900;
+        }
+
+        .section-copy {
+            color: var(--muted);
+            line-height: 1.8;
+            max-width: 700px;
+        }
+
+        /* Calculator */
+
+        .calculator {
+            background:
+                linear-gradient(145deg, rgba(255,255,255,.045), rgba(255,255,255,.012));
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 30px 100px rgba(0,0,0,.25);
+        }
+
+        .calculator-header {
+            padding: 25px 30px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .calculator-header h3 {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 800;
+        }
+
+        .live-badge {
+            color: var(--accent);
+            background: rgba(98,230,168,.07);
+            border: 1px solid rgba(98,230,168,.18);
+            padding: 7px 10px;
+            border-radius: 999px;
+            font-size: .68rem;
+            font-weight: 800;
+        }
+
+        .calculator-body {
+            padding: 30px;
+        }
+
+        .control-card {
+            background: rgba(0,0,0,.13);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 22px;
+            height: 100%;
+        }
+
+        .control-label {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .control-label span:first-child {
+            font-weight: 750;
+        }
+
+        .control-value {
+            color: var(--accent);
+            font-weight: 900;
+        }
+
+        .form-range {
+            height: 5px;
+        }
+
+        .form-range::-webkit-slider-runnable-track {
+            background: rgba(255,255,255,.1);
+            height: 5px;
+            border-radius: 99px;
+        }
+
+        .form-range::-webkit-slider-thumb {
+            margin-top: -5px;
+            background: var(--accent);
+            border: 0;
+            width: 16px;
+            height: 16px;
+            box-shadow: 0 0 18px rgba(98,230,168,.35);
+        }
+
+        .form-range::-moz-range-track {
+            background: rgba(255,255,255,.1);
+            height: 5px;
+        }
+
+        .form-range::-moz-range-thumb {
+            background: var(--accent);
+            border: 0;
+            width: 16px;
+            height: 16px;
+        }
+
+        .range-hints {
+            display: flex;
+            justify-content: space-between;
+            color: #687580;
+            font-size: .68rem;
+            margin-top: 9px;
+        }
+
+        .select-dark {
+            width: 100%;
+            color: var(--text);
+            background-color: #0b1016;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 12px 14px;
+            outline: none;
+        }
+
+        .select-dark:focus {
+            border-color: rgba(98,230,168,.5);
+            box-shadow: 0 0 0 .2rem rgba(98,230,168,.07);
+        }
+
+        .feature-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 13px;
+            border: 1px solid var(--border);
+            border-radius: 13px;
+            margin-bottom: 9px;
+            cursor: pointer;
+            transition: .2s ease;
+        }
+
+        .feature-option:hover {
+            border-color: rgba(98,230,168,.25);
+            background: rgba(98,230,168,.025);
+        }
+
+        .feature-option input {
+            margin-top: 3px;
+            accent-color: var(--accent);
+        }
+
+        .feature-option strong {
+            display: block;
+            font-size: .82rem;
+        }
+
+        .feature-option small {
+            display: block;
+            color: var(--muted);
+            font-size: .69rem;
+            line-height: 1.5;
+            margin-top: 3px;
+        }
+
+        .price-panel {
+            height: 100%;
+            min-height: 500px;
+            position: relative;
+            padding: 30px;
+            border-radius: 24px;
+            background:
+                radial-gradient(circle at 100% 0%, rgba(98,230,168,.13), transparent 45%),
+                #080c10;
+            border: 1px solid rgba(98,230,168,.18);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .price-panel-label {
+            color: var(--muted);
+            font-size: .75rem;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            font-weight: 800;
+        }
+
+        .price {
+            font-size: clamp(3.5rem, 7vw, 6rem);
+            line-height: .95;
+            font-weight: 900;
+            letter-spacing: -.08em;
+            margin: 15px 0 5px;
+        }
+
+        .currency {
+            font-size: 1.3rem;
+            vertical-align: top;
+            color: var(--accent);
+            letter-spacing: 0;
+        }
+
+        .estimate-note {
+            color: #687580;
+            font-size: .75rem;
+        }
+
+        .summary {
+            margin-top: 30px;
+            border-top: 1px solid var(--border);
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 13px 0;
+            border-bottom: 1px solid rgba(255,255,255,.05);
+            font-size: .82rem;
+        }
+
+        .summary-row span:first-child {
+            color: var(--muted);
+        }
+
+        .summary-row strong {
+            text-align: right;
+        }
+
+        .delivery {
+            margin-top: auto;
+            padding: 16px;
+            background: rgba(98,230,168,.05);
+            border: 1px solid rgba(98,230,168,.12);
+            border-radius: 14px;
+        }
+
+        .delivery-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .delivery strong {
+            color: var(--accent);
+        }
+
+        .delivery small {
+            display: block;
+            color: var(--muted);
+            margin-top: 5px;
+            line-height: 1.5;
+        }
+
+        .calculator-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .calculator-actions .btn {
+            flex: 1;
+        }
+
+        /* Pricing model */
+
+        .model-card {
+            height: 100%;
+            padding: 28px;
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            background: rgba(255,255,255,.02);
+            transition: .25s ease;
+        }
+
+        .model-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(98,230,168,.25);
+        }
+
+        .model-icon {
+            width: 50px;
+            height: 50px;
+            display: grid;
+            place-items: center;
+            border-radius: 15px;
+            color: var(--accent);
+            background: rgba(98,230,168,.06);
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+
+        .model-card h3 {
+            font-size: 1.1rem;
+            font-weight: 800;
+        }
+
+        .model-card p {
+            color: var(--muted);
+            font-size: .84rem;
+            line-height: 1.75;
+            margin: 0;
+        }
+
+        /* Packages */
+
+        .package-card {
+            height: 100%;
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 27px;
+            background: rgba(255,255,255,.02);
+        }
+
+        .package-card.featured {
+            border-color: rgba(98,230,168,.3);
+            background:
+                radial-gradient(circle at 100% 0%, rgba(98,230,168,.08), transparent 45%),
+                rgba(255,255,255,.025);
+        }
+
+        .package-name {
+            color: var(--muted);
+            font-size: .75rem;
+            text-transform: uppercase;
+            letter-spacing: .12em;
+            font-weight: 850;
+        }
+
+        .package-price {
+            font-size: 2.7rem;
+            letter-spacing: -.07em;
+            font-weight: 900;
+            margin: 12px 0 5px;
+        }
+
+        .package-price small {
+            font-size: .75rem;
+            color: var(--muted);
+            letter-spacing: 0;
+        }
+
+        .package-card p {
+            color: var(--muted);
+            font-size: .82rem;
+            line-height: 1.7;
+        }
+
+        .package-list {
+            padding: 0;
+            margin: 22px 0 0;
+            list-style: none;
+        }
+
+        .package-list li {
+            color: #adb8c2;
+            font-size: .8rem;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,.05);
+        }
+
+        .package-list i {
+            color: var(--accent);
+            margin-right: 7px;
+        }
+
+        /* FAQ */
+
+        .accordion-item {
+            background: transparent;
+            border: 1px solid var(--border);
+            margin-bottom: 10px;
+            border-radius: 15px !important;
+            overflow: hidden;
+        }
+
+        .accordion-button {
+            background: #090d12;
+            color: var(--text);
+            box-shadow: none !important;
+            font-weight: 700;
+            padding: 20px;
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: var(--accent);
+            background: #0b1016;
+        }
+
+        .accordion-button::after {
+            filter: invert(1);
+        }
+
+        .accordion-body {
+            color: var(--muted);
+            background: #090d12;
+            line-height: 1.8;
+            font-size: .85rem;
+        }
+
+        /* CTA */
+
+        .cta {
+            padding: 75px 30px;
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            text-align: center;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(98,230,168,.1), transparent 35%),
+                radial-gradient(circle at 80% 80%, rgba(91,188,255,.08), transparent 35%),
+                var(--surface);
+        }
+
+        .cta h2 {
+            font-size: clamp(2.4rem, 5vw, 4.5rem);
+            font-weight: 900;
+            letter-spacing: -.07em;
+        }
+
+        .cta p {
+            color: var(--muted);
+            max-width: 650px;
+            line-height: 1.8;
+            margin: 18px auto 30px;
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 55px 0 30px;
+        }
+
+        .footer-brand {
+            font-size: 1.4rem;
+            font-weight: 900;
+            letter-spacing: -.06em;
+        }
+
+        .footer-copy,
+        .footer-link {
+            color: var(--muted);
+            font-size: .84rem;
+        }
+
+        .footer-link:hover {
+            color: var(--accent);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: .75s ease;
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 767px) {
+
+            .hero {
+                padding-top: 125px;
+            }
+
+            .section {
+                padding: 75px 0;
+            }
+
+            .calculator-body {
+                padding: 18px;
+            }
+
+            .calculator-header {
+                padding: 20px;
+            }
+
+            .price-panel {
+                min-height: 480px;
+            }
+
+            .calculator-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
-<body class="bg-light">
+<body>
 
-<!-- ================= HEADER ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container py-2">
 
-<header class="bg-dark text-white py-2">
+        <a class="navbar-brand" href="/">
+            MANTE MWC<span class="brand-dot"></span>
+        </a>
 
- 
-<div class="container">
-
-    <nav class="navbar navbar-expand-lg navbar-dark">
-
-        <div class="container-fluid">
-
-            <a class="navbar-brand fw-bold" href="index.html">
-                Mante MWC
-            </a>
-
-            <button
-                class="navbar-toggler"
+        <button class="navbar-toggler border-0 shadow-none"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#navbarMenu" aria-label="Toggle">
+                data-bs-target="#mainNav">
+            <i class="bi bi-list fs-2"></i>
+        </button>
 
-                <span class="navbar-toggler-icon"></span>
+        <div class="collapse navbar-collapse" id="mainNav">
 
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarMenu">
-
-                <ul class="navbar-nav ms-auto">
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="projects.html">
-                            Projects
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="skills.html">
-                            Skills
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#services">
-                            Services
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="pricing.html">
-                            Pricing
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#contact">
-                            Contact
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-    </nav>
-
-</div>
- 
-
-</header>
-
-<!-- ================= PRICING HERO ================= -->
-
-<section class="bg-dark text-white text-center py-5">
-
- 
-<div class="container">
-
-    <span class="badge bg-warning text-dark mb-3 px-3 py-2">
-        WEB DEVELOPMENT SERVICES
-    </span>
-
-    <h1 class="display-4 fw-bold">
-        Simple, Transparent Pricing
-    </h1>
-
-    <p class="lead text-secondary mt-3 mx-auto"
-       style="max-width: 700px;">
-
-        Professional websites and web applications built around
-        your business, brand and goals.
-
-    </p>
-
-    <p class="text-white-50 mb-0">
-        No unnecessary packages. No confusing pricing.
-        Just straightforward development.
-    </p>
-
-</div>
- 
-
-</section>
-
-<!-- ================= PRICING ================= -->
-
-<main class="container py-5">
-
-<div class="text-center mb-5">
-
-    <h2 class="fw-bold">
-        Choose Your Package
-    </h2>
-
-    <p class="text-muted">
-        Start small or go fully custom.
-    </p>
-
-</div>
-
-
-<div class="row g-4 justify-content-center">
-
-
-    <!-- STARTER -->
-
-    <div class="col-12 col-md-6 col-xl-3">
-
-        <div class="card h-100 shadow-sm border-0">
-
-            <div class="card-body p-4 d-flex flex-column">
-
-                <span class="badge bg-success align-self-start mb-3">
-                    STARTER
-                </span>
-
-                <h3 class="fw-bold">
-                    Starter Website
-                </h3>
-
-                <p class="text-muted">
-                    Perfect for individuals, freelancers and
-                    small businesses that need a professional
-                    online presence.
-                </p>
-
-                <div class="my-3">
-
-                    <span class="display-6 fw-bold">
-                        KSh 8,000
-                    </span>
-
-                    <span class="text-muted">
-                        starting
-                    </span>
-
-                </div>
-
-                <hr>
-
-                <ul class="list-unstyled">
-
-                    <li class="mb-2">
-                        ✓ 1–3 pages
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Responsive design
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Mobile friendly
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Contact form
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Social media integration
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Basic SEO
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Deployment assistance
-                    </li>
-
-                </ul>
-
-                <div class="mt-auto">
-
-                    <a href="index.html#contact"
-                       class="btn btn-outline-dark w-100">
-
-                        Get Started
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- BUSINESS -->
-
-    <div class="col-12 col-md-6 col-xl-3">
-
-        <div class="card h-100 shadow border-0">
-
-            <div class="card-body p-4 d-flex flex-column">
-
-                <span class="badge bg-primary align-self-start mb-3">
-                    BUSINESS
-                </span>
-
-                <h3 class="fw-bold">
-                    Business Website
-                </h3>
-
-                <p class="text-muted">
-                    Built for businesses that need a stronger
-                    online presence and more functionality.
-                </p>
-
-                <div class="my-3">
-
-                    <span class="display-6 fw-bold">
-                        KSh 20,000
-                    </span>
-
-                    <span class="text-muted">
-                        starting
-                    </span>
-
-                </div>
-
-                <hr>
-
-                <ul class="list-unstyled">
-
-                    <li class="mb-2">
-                        ✓ Up to 7 pages
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Custom UI design
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Fully responsive
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Contact & inquiry forms
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ WhatsApp integration
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Google-friendly SEO
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Analytics integration
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Deployment
-                    </li>
-
-                </ul>
-
-                <div class="mt-auto">
-
-                    <a href="index.html#contact"
-                       class="btn btn-primary w-100">
-
-                        Choose Business
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- PROFESSIONAL -->
-
-    <div class="col-12 col-md-6 col-xl-3">
-
-        <div class="card h-100 border-primary border-2 shadow position-relative">
-
-            <div class="position-absolute top-0 start-50 translate-middle">
-                <span class="badge bg-primary px-3 py-2">
-                    MOST POPULAR
-                </span>
-            </div>
-
-            <div class="card-body p-4 d-flex flex-column pt-5">
-
-                <span class="badge bg-dark align-self-start mb-3">
-                    PROFESSIONAL
-                </span>
-
-                <h3 class="fw-bold">
-                    Advanced Website
-                </h3>
-
-                <p class="text-muted">
-                    For companies and organizations requiring
-                    advanced functionality and integrations.
-                </p>
-
-                <div class="my-3">
-
-                    <span class="display-6 fw-bold">
-                        KSh 40,000
-                    </span>
-
-                    <span class="text-muted">
-                        starting
-                    </span>
-
-                </div>
-
-                <hr>
-
-                <ul class="list-unstyled">
-
-                    <li class="mb-2">
-                        ✓ Custom website
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Advanced UI/UX
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Backend integration
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Database integration
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Authentication
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ APIs & integrations
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Advanced SEO
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Deployment & configuration
-                    </li>
-
-                </ul>
-
-                <div class="mt-auto">
-
-                    <a href="index.html#contact"
-                       class="btn btn-primary w-100">
-
-                        Start a Project
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- CUSTOM -->
-
-    <div class="col-12 col-md-6 col-xl-3">
-
-        <div class="card h-100 shadow-sm border-0 bg-dark text-white">
-
-            <div class="card-body p-4 d-flex flex-column">
-
-                <span class="badge bg-warning text-dark align-self-start mb-3">
-                    CUSTOM
-                </span>
-
-                <h3 class="fw-bold">
-                    Custom Web App
-                </h3>
-
-                <p class="text-white-50">
-                    For SaaS platforms, dashboards, marketplaces,
-                    e-commerce platforms and complex systems.
-                </p>
-
-                <div class="my-3">
-
-                    <span class="display-6 fw-bold">
-                        Custom
-                    </span>
-
-                </div>
-
-                <hr class="border-secondary">
-
-                <ul class="list-unstyled">
-
-                    <li class="mb-2">
-                        ✓ SaaS applications
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Admin dashboards
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ REST APIs
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Database architecture
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Authentication systems
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Payment integrations
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Third-party APIs
-                    </li>
-
-                    <li class="mb-2">
-                        ✓ Cloud deployment
-                    </li>
-
-                </ul>
-
-                <div class="mt-auto">
-
-                    <a href="index.html#contact"
-                       class="btn btn-warning w-100">
-
-                        Discuss Your Project
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- ================= ADDITIONAL SERVICES ================= -->
-
-<section class="mt-5 pt-5">
-
-    <div class="text-center mb-4">
-
-        <h2 class="fw-bold">
-            Additional Services
-        </h2>
-
-        <p class="text-muted">
-            Need something outside the main packages?
-        </p>
-
-    </div>
-
-
-    <div class="row g-3">
-
-        <div class="col-12 col-md-6 col-lg-4">
-
-            <div class="card border-0 shadow-sm h-100">
-
-                <div class="card-body p-4">
-
-                    <h5 class="fw-bold">
-                        🔧 Website Maintenance
-                    </h5>
-
-                    <p class="text-muted mb-0">
-                        Updates, bug fixes, content changes
-                        and technical maintenance.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="col-12 col-md-6 col-lg-4">
-
-            <div class="card border-0 shadow-sm h-100">
-
-                <div class="card-body p-4">
-
-                    <h5 class="fw-bold">
-                        🚀 Website Optimization
-                    </h5>
-
-                    <p class="text-muted mb-0">
-                        Improve website performance, loading
-                        speed and technical quality.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="col-12 col-md-6 col-lg-4">
-
-            <div class="card border-0 shadow-sm h-100">
-
-                <div class="card-body p-4">
-
-                    <h5 class="fw-bold">
-                        🔐 Security Improvements
-                    </h5>
-
-                    <p class="text-muted mb-0">
-                        Security headers, HTTPS configuration,
-                        vulnerability checks and hardening.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="col-12 col-md-6 col-lg-4">
-
-            <div class="card border-0 shadow-sm h-100">
-
-                <div class="card-body p-4">
-
-                    <h5 class="fw-bold">
-                        🔌 API Integration
-                    </h5>
-
-                    <p class="text-muted mb-0">
-                        Connect your website to external APIs,
-                        services and platforms.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="col-12 col-md-6 col-lg-4">
-
-            <div class="card border-0 shadow-sm h-100">
-
-                <div class="card-body p-4">
-
-                    <h5 class="fw-bold">
-                        💳 Payment Integration
-                    </h5>
-
-                    <p class="text-muted mb-0">
-                        Integrate payment systems such as
-                        Paystack and other supported gateways.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="col-12 col-md-6 col-lg-4">
-
-            <div class="card border-0 shadow-sm h-100">
-
-                <div class="card-body p-4">
-
-                    <h5 class="fw-bold">
-                        ☁️ Deployment
-                    </h5>
-
-                    <p class="text-muted mb-0">
-                        Deployment and configuration on
-                        modern cloud hosting platforms.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= FAQ ================= -->
-
-<section class="mt-5 pt-5">
-
-    <div class="text-center mb-4">
-
-        <h2 class="fw-bold">
-            Frequently Asked Questions
-        </h2>
-
-    </div>
-
-
-    <div class="accordion" id="pricingFAQ">
-
-        <div class="accordion-item">
-
-            <h2 class="accordion-header">
-
-                <button
-                    class="accordion-button"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faqOne">
-
-                    Are these fixed prices?
-
-                </button>
-
-            </h2>
-
-            <div id="faqOne"
-                 class="accordion-collapse collapse show"
-                 data-bs-parent="#pricingFAQ">
-
-                <div class="accordion-body">
-
-                    Prices shown are starting prices.
-                    Final pricing depends on the project's
-                    complexity, features and requirements.
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="accordion-item">
-
-            <h2 class="accordion-header">
-
-                <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faqTwo">
-
-                    Do you build custom web applications?
-
-                </button>
-
-            </h2>
-
-            <div id="faqTwo"
-                 class="accordion-collapse collapse"
-                 data-bs-parent="#pricingFAQ">
-
-                <div class="accordion-body">
-
-                    Yes. Custom applications can include
-                    authentication, databases, APIs,
-                    dashboards, payments and other
-                    advanced functionality.
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="accordion-item">
-
-            <h2 class="accordion-header">
-
-                <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faqThree">
-
-                    Do you provide hosting?
-
-                </button>
-
-            </h2>
-
-            <div id="faqThree"
-                 class="accordion-collapse collapse"
-                 data-bs-parent="#pricingFAQ">
-
-                <div class="accordion-body">
-
-                    Deployment assistance is available.
-                    Hosting and domain costs are normally
-                    separate from development costs.
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="accordion-item">
-
-            <h2 class="accordion-header">
-
-                <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faqFour">
-
-                    Can I request a custom package?
-
-                </button>
-
-            </h2>
-
-            <div id="faqFour"
-                 class="accordion-collapse collapse"
-                 data-bs-parent="#pricingFAQ">
-
-                <div class="accordion-body">
-
-                    Absolutely. If your project doesn't fit
-                    one of the packages above, contact me and
-                    we'll scope the project based on its
-                    requirements.
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= CTA ================= -->
-
-<section class="bg-dark text-white rounded-4 p-5 text-center mt-5">
-
-    <h2 class="fw-bold">
-        Have a project in mind?
-    </h2>
-
-    <p class="text-white-50 lead">
-        Let's turn the idea into something real.
-    </p>
-
-    <a href="index.html#contact"
-       class="btn btn-warning btn-lg">
-
-        Let's Work Together
-
-    </a>
-
-</section>
-
-</main>
-
-<!-- ================= FOOTER ================= -->
-
-<footer class="bg-black text-white py-4 mt-5">
-<div class="container">
-
-    <div class="row">
-
-        <div class="col-md-6">
-
-            <h5>
-                Mante MWC
-            </h5>
-
-            <p class="text-white-50">
-                Professional Full-Stack Web Developer.
-            </p>
-
-        </div>
-
-
-        <div class="col-md-3">
-
-            <h5>
-                Quick Links
-            </h5>
-
-            <ul class="nav flex-column">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
 
                 <li class="nav-item">
-                    <a class="nav-link text-white p-0 mb-2"
-                       href="index.html">
-
-                        Home
-
-                    </a>
+                    <a class="nav-link" href="/">Home</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link text-white p-0 mb-2"
-                       href="projects.html">
-
-                        Portfolio
-
-                    </a>
+                    <a class="nav-link" href="/about.html">About</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link text-white p-0"
-                       href="pricing.html">
+                    <a class="nav-link" href="/skills.html">Skills</a>
+                </li>
 
-                        Pricing
+                <li class="nav-item">
+                    <a class="nav-link" href="/education.html">Education</a>
+                </li>
 
+                <li class="nav-item">
+                    <a class="nav-link" href="/projects.html">Projects</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/samples/">Samples</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="/pricing.html">Pricing</a>
+                </li>
+
+                <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                    <a href="/contact.html" class="btn btn-main">
+                        Let's Build
+                        <i class="bi bi-arrow-up-right ms-1"></i>
                     </a>
                 </li>
 
             </ul>
 
         </div>
+    </div>
+</nav>
+
+<main>
+
+<section class="hero">
+
+    <div class="grid"></div>
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+
+    <div class="container position-relative">
+
+        <div class="row">
+
+            <div class="col-lg-10">
+
+                <div class="eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    Interactive Project Estimator
+                </div>
+
+                <h1 class="hero-title">
+                    Build your
+                    <span class="gradient">own quote.</span>
+                </h1>
+
+                <p class="hero-copy">
+                    Website pricing should make sense. Choose the number of pages,
+                    design level, functionality and optional features below and the
+                    estimator will calculate an approximate project cost and delivery
+                    timeline in real time.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
 
 
-        <div class="col-md-3">
+<section class="section pt-0">
 
-            <h5>
-                Connect
-            </h5>
+    <div class="container">
 
-            <a
-                href="https://github.com/MoyiWycliffe"
-                class="btn btn-outline-light btn-sm mb-2 w-100"
-                target="_blank"
-                rel="noopener noreferrer">
+        <div class="row g-4">
 
-                GitHub
+            <!-- CONFIGURATION -->
 
-            </a>
+            <div class="col-xl-8">
 
-            <a
-                href="https://x.com/moyi_mwc"
-                class="btn btn-outline-light btn-sm mb-2 w-100"
-                target="_blank"
-                rel="noopener noreferrer">
+                <div class="calculator reveal">
 
-                Twitter
+                    <div class="calculator-header">
 
-            </a>
+                        <h3>
+                            <i class="bi bi-sliders2 me-2"></i>
+                            Configure your website
+                        </h3>
 
-            <a
-                href="https://facebook.com/ManteNtara2"
-                class="btn btn-outline-light btn-sm w-100"
-                target="_blank"
-                rel="noopener noreferrer">
+                        <span class="live-badge">
+                            <i class="bi bi-lightning-charge-fill me-1"></i>
+                            LIVE ESTIMATE
+                        </span>
 
-                Facebook
+                    </div>
 
-            </a>
+                    <div class="calculator-body">
+
+                        <div class="row g-3">
+
+                            <!-- PAGES -->
+
+                            <div class="col-md-6">
+
+                                <div class="control-card">
+
+                                    <div class="control-label">
+                                        <span>Number of pages</span>
+
+                                        <span class="control-value">
+                                            <span id="pagesValue">5</span>
+                                        </span>
+                                    </div>
+
+                                    <input
+                                        type="range"
+                                        class="form-range"
+                                        id="pages"
+                                        min="1"
+                                        max="30"
+                                        value="5">
+
+                                    <div class="range-hints">
+                                        <span>1 page</span>
+                                        <span>30 pages</span>
+                                    </div>
+
+                                    <small class="text-secondary d-block mt-3">
+                                        Each additional page increases development,
+                                        content integration and testing time.
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- DESIGN -->
+
+                            <div class="col-md-6">
+
+                                <div class="control-card">
+
+                                    <div class="control-label">
+                                        <span>Design level</span>
+
+                                        <span class="control-value" id="designDisplay">
+                                            Professional
+                                        </span>
+                                    </div>
+
+                                    <select id="design" class="select-dark">
+
+                                        <option value="basic"
+                                                data-price="0"
+                                                data-days="0">
+                                            Basic — clean & simple
+                                        </option>
+
+                                        <option value="professional"
+                                                data-price="5000"
+                                                data-days="1"
+                                                selected>
+                                            Professional — polished UI/UX
+                                        </option>
+
+                                        <option value="premium"
+                                                data-price="12000"
+                                                data-days="3">
+                                            Premium — high-end experience
+                                        </option>
+
+                                        <option value="custom"
+                                                data-price="25000"
+                                                data-days="5">
+                                            Custom — fully tailored
+                                        </option>
+
+                                    </select>
+
+                                    <small class="text-secondary d-block mt-3">
+                                        Design complexity affects both the visual
+                                        work and development time.
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- WEBSITE TYPE -->
+
+                            <div class="col-md-6">
+
+                                <div class="control-card">
+
+                                    <div class="control-label">
+                                        <span>Website type</span>
+                                    </div>
+
+                                    <select id="websiteType" class="select-dark">
+
+                                        <option value="business"
+                                                data-price="0"
+                                                data-days="0">
+                                            Business Website
+                                        </option>
+
+                                        <option value="portfolio"
+                                                data-price="0"
+                                                data-days="0">
+                                            Portfolio
+                                        </option>
+
+                                        <option value="ecommerce"
+                                                data-price="25000"
+                                                data-days="5">
+                                            E-commerce
+                                        </option>
+
+                                        <option value="booking"
+                                                data-price="18000"
+                                                data-days="4">
+                                            Booking / Reservation
+                                        </option>
+
+                                        <option value="blog"
+                                                data-price="8000"
+                                                data-days="2">
+                                            Blog / Content
+                                        </option>
+
+                                        <option value="webapp"
+                                                data-price="35000"
+                                                data-days="7">
+                                            Web Application
+                                        </option>
+
+                                    </select>
+
+                                    <small class="text-secondary d-block mt-3">
+                                        Different website categories require different
+                                        levels of functionality.
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- RESPONSIVE -->
+
+                            <div class="col-md-6">
+
+                                <div class="control-card">
+
+                                    <div class="control-label">
+                                        <span>Responsive experience</span>
+
+                                        <span class="control-value">
+                                            Included
+                                        </span>
+                                    </div>
+
+                                    <div class="feature-option mb-0">
+
+                                        <input
+                                            type="checkbox"
+                                            checked
+                                            disabled>
+
+                                        <div>
+                                            <strong>Mobile + tablet + desktop</strong>
+                                            <small>
+                                                Every website is designed to work across
+                                                modern screen sizes.
+                                            </small>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- FEATURES -->
+
+                            <div class="col-12">
+
+                                <div class="control-card">
+
+                                    <div class="control-label">
+
+                                        <span>
+                                            Optional functionality
+                                        </span>
+
+                                        <span class="control-value">
+                                            Add what you need
+                                        </span>
+
+                                    </div>
+
+
+                                    <label class="feature-option">
+
+                                        <input
+                                            type="checkbox"
+                                            class="feature"
+                                            data-price="5000"
+                                            data-days="1">
+
+                                        <div>
+                                            <strong>
+                                                Contact / Lead Form
+                                                <span class="text-secondary">
+                                                    + KES 5,000
+                                                </span>
+                                            </strong>
+
+                                            <small>
+                                                Collect enquiries and customer details
+                                                through a custom form.
+                                            </small>
+                                        </div>
+
+                                    </label>
+
+
+                                    <label class="feature-option">
+
+                                        <input
+                                            type="checkbox"
+                                            class="feature"
+                                            data-price="5000"
+                                            data-days="1">
+
+                                        <div>
+                                            <strong>
+                                                WhatsApp Integration
+                                                <span class="text-secondary">
+                                                    + KES 5,000
+                                                </span>
+                                            </strong>
+
+                                            <small>
+                                                WhatsApp contact buttons and direct
+                                                customer communication.
+                                            </small>
+                                        </div>
+
+                                    </label>
+
+
+                                    <label class="feature-option">
+
+                                        <input
+                                            type="checkbox"
+                                            class="feature"
+                                            data-price="10000"
+                                            data-days="2">
+
+                                        <div>
+                                            <strong>
+                                                Authentication / Login
+                                                <span class="text-secondary">
+                                                    + KES 10,000
+                                                </span>
+                                            </strong>
+
+                                            <small>
+                                                User registration, login and protected
+                                                application areas.
+                                            </small>
+                                        </div>
+
+                                    </label>
+
+
+                                    <label class="feature-option">
+
+                                        <input
+                                            type="checkbox"
+                                            class="feature"
+                                            data-price="15000"
+                                            data-days="3">
+
+                                        <div>
+                                            <strong>
+                                                Admin Dashboard
+                                                <span class="text-secondary">
+                                                    + KES 15,000
+                                                </span>
+                                            </strong>
+
+                                            <small>
+                                                Manage application data, users,
+                                                content or business operations.
+                                            </small>
+                                        </div>
+
+                                    </label>
+
+
+                                    <label class="feature-option">
+
+                                        <input
+                                            type="checkbox"
+                                            class="feature"
+                                            data-price="10000"
+                                            data-days="2">
+
+                                        <div>
+                                            <strong>
+                                                Database / Backend
+                                                <span class="text-secondary">
+                                                    + KES 10,000
+                                                </span>
+                                            </strong>
+
+                                            <small>
+                                                Server-side logic, API endpoints and
+                                                persistent database functionality.
+                                            </small>
+                                        </div>
+
+                                    </label>
+
+
+                                    <label class="feature-option">
+
+                                        <input
+                                            type="checkbox"
+                                            class="feature"
+                                            data-price="15000"
+                                            data-days="3">
+
+                                        <div>
+                                            <strong>
+                                                Payments
+                                                <span class="text-secondary">
+                                                    + KES 15,000
+                                                </span>
+                                            </strong>
+
+                                            <small>
+                                                Payment integration such as Paystack,
+                                                M-Pesa or another supported provider.
+                                            </small>
+                                        </div>
+
+                                    </label>
+
+
+                                    <label class="feature-option">
+
+                                        <input
+                                            type="checkbox"
+                                            class="feature"
+                                            data-price="8000"
+                                            data-days="2">
+
+                                        <div>
+                                            <strong>
+                                                Analytics
+                                                <span class="text-secondary">
+                                                    + KES 8,000
+                                                </span>
+                                            </strong>
+
+                                            <small>
+                                                Traffic, engagement, conversion or
+                                                custom business analytics.
+                                            </small>
+                                        </div>
+
+                                    </label>
+
+
+                                    <label class="feature-option mb-0">
+
+                                        <input
+                                            type="checkbox"
+                                            class="feature"
+                                            data-price="12000"
+                                            data-days="2">
+
+                                        <div>
+                                            <strong>
+                                                SEO Setup
+                                                <span class="text-secondary">
+                                                    + KES 12,000
+                                                </span>
+                                            </strong>
+
+                                            <small>
+                                                Technical SEO foundations, metadata,
+                                                indexing and structured page setup.
+                                            </small>
+                                        </div>
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- CONTENT -->
+
+                            <div class="col-md-6">
+
+                                <div class="control-card">
+
+                                    <div class="control-label">
+                                        <span>Content readiness</span>
+                                    </div>
+
+                                    <select id="content" class="select-dark">
+
+                                        <option value="ready"
+                                                data-price="0"
+                                                data-days="0">
+                                            I provide the content
+                                        </option>
+
+                                        <option value="partial"
+                                                data-price="5000"
+                                                data-days="1">
+                                            I have some content
+                                        </option>
+
+                                        <option value="full"
+                                                data-price="12000"
+                                                data-days="2">
+                                            I need help with content
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- URGENCY -->
+
+                            <div class="col-md-6">
+
+                                <div class="control-card">
+
+                                    <div class="control-label">
+                                        <span>Delivery preference</span>
+                                    </div>
+
+                                    <select id="deliveryPreference" class="select-dark">
+
+                                        <option value="standard">
+                                            Standard delivery
+                                        </option>
+
+                                        <option value="priority">
+                                            Priority delivery
+                                        </option>
+
+                                        <option value="rush">
+                                            Rush delivery
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRICE -->
+
+            <div class="col-xl-4">
+
+                <div class="price-panel reveal">
+
+                    <div class="price-panel-label">
+                        Estimated project
+                    </div>
+
+                    <div class="price">
+                        <span class="currency">KES</span>
+                        <span id="totalPrice">45,000</span>
+                    </div>
+
+                    <div class="estimate-note">
+                        Approximate starting estimate
+                    </div>
+
+
+                    <div class="summary">
+
+                        <div class="summary-row">
+                            <span>Pages</span>
+                            <strong id="summaryPages">5</strong>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Website type</span>
+                            <strong id="summaryType">Business</strong>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Design</span>
+                            <strong id="summaryDesign">Professional</strong>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Features</span>
+                            <strong id="summaryFeatures">0</strong>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Estimated work</span>
+                            <strong>
+                                <span id="summaryDays">7</span> days
+                            </strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="delivery">
+
+                        <div class="delivery-top">
+
+                            <span>
+                                <i class="bi bi-calendar3 me-2"></i>
+                                Estimated delivery
+                            </span>
+
+                            <strong id="deliveryDays">
+                                7–9 days
+                            </strong>
+
+                        </div>
+
+                        <small>
+                            Final delivery depends on content availability,
+                            revisions, integrations and project complexity.
+                        </small>
+
+                    </div>
+
+
+                    <div class="calculator-actions">
+
+                        <button
+                            type="button"
+                            class="btn btn-main"
+                            id="requestQuote">
+                            Request This Build
+                            <i class="bi bi-arrow-right ms-1"></i>
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn btn-outline-main"
+                            id="resetCalculator">
+                            Reset
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
     </div>
 
+</section>
 
-    <hr class="border-secondary">
 
-    <p class="text-center mb-0 text-white-50">
+<section class="section pt-0">
 
-        © <span id="currentYear"></span>
-        Mante MWC. All Rights Reserved.
+    <div class="container">
 
-    </p>
+        <div class="reveal">
 
-</div>
+            <div class="section-label">
+                01 — How Pricing Works
+            </div>
+
+            <h2 class="section-title">
+                You pay for the
+                <span class="gradient">work you need.</span>
+            </h2>
+
+            <p class="section-copy">
+                There is no fake "one website fits all" pricing. A simple five-page
+                business website and a full web application are completely different
+                engineering projects.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4 mt-4">
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="model-card">
+
+                    <div class="model-icon">
+                        <i class="bi bi-file-earmark-text"></i>
+                    </div>
+
+                    <h3>Pages</h3>
+
+                    <p>
+                        More pages mean more layouts, content structures, responsive
+                        states, testing and implementation work.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="model-card">
+
+                    <div class="model-icon">
+                        <i class="bi bi-palette"></i>
+                    </div>
+
+                    <h3>Design</h3>
+
+                    <p>
+                        A basic informational website requires less design work than
+                        a highly customised product experience.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="model-card">
+
+                    <div class="model-icon">
+                        <i class="bi bi-cpu"></i>
+                    </div>
+
+                    <h3>Functionality</h3>
+
+                    <p>
+                        Authentication, payments, dashboards, databases, APIs and
+                        automation increase engineering requirements.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="model-card">
+
+                    <div class="model-icon">
+                        <i class="bi bi-phone"></i>
+                    </div>
+
+                    <h3>Responsive Design</h3>
+
+                    <p>
+                        Mobile, tablet and desktop experiences are considered as part
+                        of the build rather than an afterthought.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="model-card">
+
+                    <div class="model-icon">
+                        <i class="bi bi-clock-history"></i>
+                    </div>
+
+                    <h3>Time</h3>
+
+                    <p>
+                        The estimate includes development, testing, revisions and
+                        integration work where applicable.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="model-card">
+
+                    <div class="model-icon">
+                        <i class="bi bi-rocket-takeoff"></i>
+                    </div>
+
+                    <h3>Complexity</h3>
+
+                    <p>
+                        The final quote can change when a project requires custom
+                        functionality outside the selected configuration.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section pt-0">
+
+    <div class="container">
+
+        <div class="reveal">
+
+            <div class="section-label">
+                02 — Starting Points
+            </div>
+
+            <h2 class="section-title">
+                Need something
+                <span class="gradient">simpler?</span>
+            </h2>
+
+            <p class="section-copy">
+                These packages provide a starting point. The calculator above lets
+                you customise them further.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4 mt-4">
+
+            <div class="col-lg-4 reveal">
+
+                <div class="package-card">
+
+                    <div class="package-name">
+                        Starter
+                    </div>
+
+                    <div class="package-price">
+                        KES 15K
+                        <small>+</small>
+                    </div>
+
+                    <p>
+                        For individuals and small businesses that need a professional
+                        online presence without complex functionality.
+                    </p>
+
+                    <ul class="package-list">
+
+                        <li>
+                            <i class="bi bi-check-circle"></i>
+                            1–3 pages
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle"></i>
+                            Responsive design
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle"></i>
+                            Professional layout
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle"></i>
+                            Contact information
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle"></i>
+                            Basic deployment
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 reveal">
+
+                <div class="package-card featured">
+
+                    <div class="package-name">
+                        Professional
+                    </div>
+
+                    <div class="package-price">
+                        KES 35K
+                        <small>+</small>
+                    </div>
+
+                    <p>
+                        A stronger business website with more pages, polished UX and
+                        room for integrations.
+                    </p>
+
+                    <ul class="package-list">
+
+                        <li>
+                            <i class="bi bi-check-circle"></i>
+                            4–8 pages
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle"></i>
+                            Premium responsive UI
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle"></i>
+                            Contact / WhatsApp
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle"></i>
+                            Basic SEO setup
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle"></i>
+                            Analytics ready
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 reveal">
+
+                <div class="package-card">
+
+                    <div class="package-name">
+                        Custom
+                    </div>
+
+                    <div class="package-price">
+                        KES 75K
+                        <small>+</small>
+                    </div>
+
+                    <p>
+                        For businesses requiring custom functionality, backend
+                        systems, dashboards or integrations.
+                    </p>
+
+                    <ul class="package-list">
+
+                        <li>
+                            <i class="bi bi-check-circle"></i>
+                            Custom page structure
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle"></i>
+                            Backend/API
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle"></i>
+                            Database
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle"></i>
+                            Authentication
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle"></i>
+                            Custom integrations
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section pt-0">
+
+    <div class="container">
+
+        <div class="reveal">
+
+            <div class="section-label">
+                03 — Questions
+            </div>
+
+            <h2 class="section-title">
+                Before we
+                <span class="gradient">build.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="accordion mt-5 reveal" id="pricingFaq">
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqOne">
+
+                        Is the calculator price the final price?
+
+                    </button>
+
+                </h2>
+
+                <div
+                    id="faqOne"
+                    class="accordion-collapse collapse show"
+                    data-bs-parent="#pricingFaq">
+
+                    <div class="accordion-body">
+
+                        No. It is an estimate designed to give you a realistic
+                        starting point. The final price depends on the exact
+                        requirements, content, integrations, revisions and technical
+                        complexity of the project.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqTwo">
+
+                        Does every page have the same price?
+
+                    </button>
+
+                </h2>
+
+                <div
+                    id="faqTwo"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#pricingFaq">
+
+                    <div class="accordion-body">
+
+                        Not necessarily. The calculator uses an average page
+                        development cost to create an understandable estimate.
+                        A simple About page and a complex dashboard are obviously
+                        not equivalent pieces of work.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqThree">
+
+                        What happens after I request a quote?
+
+                    </button>
+
+                </h2>
+
+                <div
+                    id="faqThree"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#pricingFaq">
+
+                    <div class="accordion-body">
+
+                        The configuration can be used as the starting specification.
+                        We can then discuss your business, required pages,
+                        functionality, content and technical requirements before
+                        agreeing on the final scope and price.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqFour">
+
+                        Can I request something not listed?
+
+                    </button>
+
+                </h2>
+
+                <div
+                    id="faqFour"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#pricingFaq">
+
+                    <div class="accordion-body">
+
+                        Absolutely. The calculator covers common website requirements,
+                        but custom software, APIs, automation, integrations and unusual
+                        business requirements can be quoted separately.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqFive">
+
+                        Is hosting included?
+
+                    </button>
+
+                </h2>
+
+                <div
+                    id="faqFive"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#pricingFaq">
+
+                    <div class="accordion-body">
+
+                        Hosting and domain costs depend on the infrastructure selected
+                        for the project. They can be discussed separately so you are
+                        not locked into a hosting provider unnecessarily.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section pt-0">
+
+    <div class="container">
+
+        <div class="cta reveal">
+
+            <div class="section-label">
+                Ready?
+            </div>
+
+            <h2>
+                Turn the estimate
+                <br>
+                <span class="gradient">into something real.</span>
+            </h2>
+
+            <p>
+                Configure the project above, explore the website samples,
+                or get in touch directly to discuss exactly what you want built.
+            </p>
+
+            <div class="d-flex justify-content-center flex-wrap gap-3">
+
+                <button
+                    type="button"
+                    class="btn btn-main"
+                    onclick="document.getElementById('requestQuote').click()">
+
+                    Start With My Estimate
+                    <i class="bi bi-arrow-right ms-2"></i>
+
+                </button>
+
+                <a href="/samples/" class="btn btn-outline-main">
+                    Explore Samples
+                </a>
+
+                <a href="/contact.html" class="btn btn-outline-main">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+
+        <div class="row g-5">
+
+            <div class="col-lg-6">
+
+                <div class="footer-brand">
+                    MANTE MWC<span class="brand-dot"></span>
+                </div>
+
+                <p class="footer-copy mt-3">
+                    Software engineering, cybersecurity and product development.
+                    Building practical systems through code, experimentation and continuous learning.
+                </p>
+
+            </div>
+
+            <div class="col-6 col-lg-2">
+
+                <h6 class="fw-bold mb-3">Explore</h6>
+
+                <div class="d-flex flex-column gap-2">
+                    <a href="/" class="footer-link">Home</a>
+                    <a href="/about.html" class="footer-link">About</a>
+                    <a href="/skills.html" class="footer-link">Skills</a>
+                    <a href="/education.html" class="footer-link">Education</a>
+                    <a href="/projects.html" class="footer-link">Projects</a>
+                </div>
+
+            </div>
+
+            <div class="col-6 col-lg-2">
+
+                <h6 class="fw-bold mb-3">Build</h6>
+
+                <div class="d-flex flex-column gap-2">
+                    <a href="/samples/" class="footer-link">Samples</a>
+                    <a href="/pricing.html" class="footer-link">Pricing</a>
+                    <a href="/contact.html" class="footer-link">Contact</a>
+                </div>
+
+            </div>
+
+            <div class="col-lg-2">
+
+                <h6 class="fw-bold mb-3">Focus</h6>
+
+                <div class="d-flex flex-column gap-2">
+                    <span class="footer-link">Websites</span>
+                    <span class="footer-link">Web Apps</span>
+                    <span class="footer-link">SaaS</span>
+                    <span class="footer-link">Security</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="d-flex flex-column flex-md-row justify-content-between gap-3 mt-5 pt-4"
+             style="border-top:1px solid var(--border);">
+
+            <small class="text-secondary">
+                © <span id="year"></span> Mante MWC. All rights reserved.
+            </small>
+
+            <small class="text-secondary">
+                Built with code, curiosity & too many terminal windows.
+            </small>
+
+        </div>
+
+    </div>
 
 </footer>
 
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
 <script>
 
-document.getElementById("currentYear").textContent =
-    new Date().getFullYear();
+document.addEventListener("DOMContentLoaded", function () {
 
-</script>
+    const pages = document.getElementById("pages");
+    const design = document.getElementById("design");
+    const websiteType = document.getElementById("websiteType");
+    const content = document.getElementById("content");
+    const deliveryPreference = document.getElementById("deliveryPreference");
 
-<script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+    const pagesValue = document.getElementById("pagesValue");
+    const totalPrice = document.getElementById("totalPrice");
+
+    const summaryPages = document.getElementById("summaryPages");
+    const summaryType = document.getElementById("summaryType");
+    const summaryDesign = document.getElementById("summaryDesign");
+    const summaryFeatures = document.getElementById("summaryFeatures");
+    const summaryDays = document.getElementById("summaryDays");
+    const deliveryDays = document.getElementById("deliveryDays");
+    const designDisplay = document.getElementById("designDisplay");
+
+    const features = document.querySelectorAll(".feature");
+
+    const requestQuote = document.getElementById("requestQuote");
+    const resetCalculator = document.getElementById("resetCalculator");
+
+
+    /*
+     * BASE PRICING
+     *
+     * The first page establishes the base website cost.
+     * Every additional page adds an incremental amount.
+     */
+
+    const BASE_PRICE = 15000;
+    const BASE_DAYS = 2;
+
+    const PAGE_PRICE = 6000;
+    const PAGE_DAYS = 0.7;
+
+
+    function formatCurrency(value) {
+
+        return Math.round(value).toLocaleString("en-KE");
+
+    }
+
+
+    function getSelectedData(select) {
+
+        return select.options[select.selectedIndex];
+
+    }
+
+
+    function getReadableName(select) {
+
+        const text = getSelectedData(select).textContent.trim();
+
+        return text.split("—")[0].split(" - ")[0].trim();
+
+    }
+
+
+    function calculate() {
+
+        const pageCount = Number(pages.value);
+
+        /*
+         * Base website calculation.
+         *
+         * 1 page = BASE_PRICE
+         * every page after the first = PAGE_PRICE
+         */
+
+        let price =
+            BASE_PRICE +
+            Math.max(0, pageCount - 1) * PAGE_PRICE;
+
+        let days =
+            BASE_DAYS +
+            Math.max(0, pageCount - 1) * PAGE_DAYS;
+
+
+        /*
+         * Design level
+         */
+
+        const selectedDesign = getSelectedData(design);
+
+        price += Number(selectedDesign.dataset.price || 0);
+        days += Number(selectedDesign.dataset.days || 0);
+
+
+        /*
+         * Website type
+         */
+
+        const selectedType = getSelectedData(websiteType);
+
+        price += Number(selectedType.dataset.price || 0);
+        days += Number(selectedType.dataset.days || 0);
+
+
+        /*
+         * Content
+         */
+
+        const selectedContent = getSelectedData(content);
+
+        price += Number(selectedContent.dataset.price || 0);
+        days += Number(selectedContent.dataset.days || 0);
+
+
+        /*
+         * Optional features
+         */
+
+        let selectedFeatureCount = 0;
+
+        features.forEach(feature => {
+
+            if (feature.checked) {
+
+                price += Number(feature.dataset.price || 0);
+                days += Number(feature.dataset.days || 0);
+
+                selectedFeatureCount++;
+
+            }
+
+        });
+
+
+        /*
+         * Delivery preference
+         */
+
+        let deliveryMultiplier = 1;
+
+        if (deliveryPreference.value === "priority") {
+
+            price *= 1.15;
+            deliveryMultiplier = .8;
+
+        }
+
+        if (deliveryPreference.value === "rush") {
+
+            price *= 1.30;
+            deliveryMultiplier = .6;
+
+        }
+
+
+        /*
+         * Minimum practical timeline.
+         */
+
+        days = Math.max(2, days);
+
+
+        /*
+         * Update main UI
+         */
+
+        pagesValue.textContent = pageCount;
+
+        totalPrice.textContent = formatCurrency(price);
+
+        designDisplay.textContent =
+            getReadableName(design);
+
+
+        /*
+         * Update summary
+         */
+
+        summaryPages.textContent = pageCount;
+
+        summaryType.textContent =
+            getReadableName(websiteType);
+
+        summaryDesign.textContent =
+            getReadableName(design);
+
+        summaryFeatures.textContent =
+            selectedFeatureCount;
+
+
+        const roundedDays =
+            Math.max(2, Math.ceil(days));
+
+        summaryDays.textContent =
+            roundedDays;
+
+
+        /*
+         * Delivery estimate
+         */
+
+        const estimatedDelivery =
+            Math.max(2, Math.ceil(days * deliveryMultiplier));
+
+        const deliveryMax =
+            estimatedDelivery + 2;
+
+        deliveryDays.textContent =
+            estimatedDelivery + "–" + deliveryMax + " days";
+
+
+        /*
+         * Store current estimate.
+         */
+
+        window.currentEstimate = {
+
+            pages: pageCount,
+
+            price: Math.round(price),
+
+            days: roundedDays,
+
+            delivery:
+                estimatedDelivery + "–" + deliveryMax + " days",
+
+            websiteType:
+                getReadableName(websiteType),
+
+            design:
+                getReadableName(design),
+
+            features:
+                selectedFeatureCount
+
+        };
+
+    }
+
+
+    /*
+     * Listeners
+     */
+
+    pages.addEventListener("input", calculate);
+
+    design.addEventListener("change", calculate);
+
+    websiteType.addEventListener("change", calculate);
+
+    content.addEventListener("change", calculate);
+
+    deliveryPreference.addEventListener("change", calculate);
+
+
+    features.forEach(feature => {
+
+        feature.addEventListener("change", calculate);
+
+    });
+
+
+    /*
+     * Request quote
+     */
+
+    requestQuote.addEventListener("click", function () {
+
+        calculate();
+
+        const estimate = window.currentEstimate;
+
+        const params = new URLSearchParams({
+
+            pages: estimate.pages,
+
+            price: estimate.price,
+
+            days: estimate.days,
+
+            delivery: estimate.delivery,
+
+            type: estimate.websiteType,
+
+            design: estimate.design,
+
+            features: estimate.features
+
+        });
+
+
+        window.location.href =
+            "/contact.html?" + params.toString();
+
+    });
+
+
+    /*
+     * Reset
+     */
+
+    resetCalculator.addEventListener("click", function () {
+
+        pages.value = 5;
+
+        design.value = "professional";
+
+        websiteType.value = "business";
+
+        content.value = "ready";
+
+        deliveryPreference.value = "standard";
+
+
+        features.forEach(feature => {
+
+            feature.checked = false;
+
+        });
+
+
+        calculate();
+
+    });
+
+
+    /*
+     * Reveal animations
+     */
+
+    const revealElements =
+        document.querySelectorAll(".reveal");
+
+
+    const revealObserver =
+        new IntersectionObserver((entries, observer) => {
+
+            entries.forEach(entry => {
+
+                if (!entry.isIntersecting) {
+                    return;
+                }
+
+                entry.target.classList.add("show");
+
+                observer.unobserve(entry.target);
+
+            });
+
+        }, {
+            threshold: .12
+        });
+
+
+    revealElements.forEach(element => {
+
+        revealObserver.observe(element);
+
+    });
+
+
+    /*
+     * Navbar
+     */
+
+    const navbar =
+        document.querySelector(".navbar");
+
+
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 30) {
+
+            navbar.style.background =
+                "rgba(5,7,10,.97)";
+
+        } else {
+
+            navbar.style.background =
+                "rgba(5,7,10,.86)";
+
+        }
+
+    });
+
+
+    /*
+     * Footer year
+     */
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+
+    /*
+     * Initial calculation
+     */
+
+    calculate();
+
+});
+
 </script>
 
 </body>
