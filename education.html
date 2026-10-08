@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Mante MWC — Education, software engineering journey, technical growth and continuous learning.">
+    <meta name="author" content="Mante MWC">
+
+    <title>Education — Mante MWC</title>
+
+    <link rel="icon" href="media/logo.png" type="image/png">
+    <script
+    src="https://www.mantemetrics.app/index.js"
+    data-id="DXDMKaYoZzFTRcrS4qNGgibRjrlA7sOy12A1FbwK">
+    </script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #05070a;
+            --surface: #0a0f14;
+            --surface-2: #0f161d;
+            --border: rgba(255,255,255,.09);
+            --text: #f5f7fa;
+            --muted: #8d99a6;
+            --accent: #62e6a8;
+            --blue: #5bbcff;
+            --purple: #a78bfa;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            color: var(--text);
+            background:
+                radial-gradient(circle at 8% 0%, rgba(91,188,255,.08), transparent 32rem),
+                radial-gradient(circle at 92% 15%, rgba(98,230,168,.07), transparent 30rem),
+                var(--bg);
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        ::selection {
+            background: var(--accent);
+            color: #031008;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .navbar {
+            background: rgba(5,7,10,.88);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .navbar-brand {
+            color: var(--text) !important;
+            font-weight: 900;
+            letter-spacing: -.06em;
+        }
+
+        .brand-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin-left: 3px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 15px rgba(98,230,168,.8);
+        }
+
+        .nav-link {
+            color: #aab5c0 !important;
+            font-size: .9rem;
+            font-weight: 500;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #fff !important;
+        }
+
+        .btn-main {
+            background: var(--accent);
+            color: #041009;
+            border: 1px solid var(--accent);
+            border-radius: 12px;
+            font-weight: 800;
+            padding: .75rem 1.05rem;
+            transition: .25s ease;
+        }
+
+        .btn-main:hover {
+            color: #041009;
+            background: #7af0b8;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-main {
+            color: var(--text);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            font-weight: 650;
+            padding: .75rem 1.05rem;
+            transition: .25s ease;
+        }
+
+        .btn-outline-main:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            min-height: 72vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 155px 0 100px;
+            overflow: hidden;
+        }
+
+        .grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+            background-size: 55px 55px;
+            mask-image: linear-gradient(to bottom, black, transparent);
+        }
+
+        .orb {
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            filter: blur(110px);
+            opacity: .09;
+            pointer-events: none;
+        }
+
+        .orb-one {
+            background: var(--accent);
+            top: -250px;
+            right: -130px;
+        }
+
+        .orb-two {
+            background: var(--blue);
+            bottom: -280px;
+            left: -170px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 13px;
+            border-radius: 999px;
+            color: var(--accent);
+            background: rgba(98,230,168,.05);
+            border: 1px solid rgba(98,230,168,.18);
+            font-size: .72rem;
+            font-weight: 850;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+        }
+
+        .eyebrow-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 12px rgba(98,230,168,.8);
+        }
+
+        .hero-title {
+            font-size: clamp(3.5rem, 8vw, 7.5rem);
+            line-height: .88;
+            letter-spacing: -.085em;
+            font-weight: 900;
+            margin: 26px 0;
+        }
+
+        .gradient {
+            background: linear-gradient(100deg, #fff, var(--blue), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero-copy {
+            max-width: 760px;
+            color: var(--muted);
+            font-size: 1.08rem;
+            line-height: 1.85;
+        }
+
+        .hero-stats {
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .stat {
+            padding: 13px 16px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            background: rgba(255,255,255,.025);
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 1rem;
+        }
+
+        .stat span {
+            color: var(--muted);
+            font-size: .68rem;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+        }
+
+        .section {
+            padding: 105px 0;
+        }
+
+        .section-label {
+            color: var(--accent);
+            font-size: .72rem;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            font-weight: 850;
+            margin-bottom: 13px;
+        }
+
+        .section-title {
+            font-size: clamp(2.4rem, 5vw, 4.5rem);
+            line-height: .98;
+            letter-spacing: -.07em;
+            font-weight: 900;
+        }
+
+        .section-copy {
+            max-width: 720px;
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        /* Education card */
+
+        .education-card {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(98,230,168,.18);
+            border-radius: 28px;
+            padding: 35px;
+            background:
+                radial-gradient(circle at 100% 0%, rgba(98,230,168,.11), transparent 35%),
+                linear-gradient(145deg, rgba(255,255,255,.045), rgba(255,255,255,.012));
+            box-shadow: 0 30px 100px rgba(0,0,0,.22);
+        }
+
+        .education-card::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(var(--accent), var(--blue));
+        }
+
+        .school-icon {
+            width: 65px;
+            height: 65px;
+            display: grid;
+            place-items: center;
+            border-radius: 19px;
+            background: rgba(98,230,168,.07);
+            color: var(--accent);
+            font-size: 1.7rem;
+            margin-bottom: 25px;
+        }
+
+        .education-card h3 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            letter-spacing: -.05em;
+            font-weight: 900;
+        }
+
+        .education-card .institution {
+            color: var(--blue);
+            font-weight: 750;
+        }
+
+        .education-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin: 20px 0;
+        }
+
+        .meta-pill {
+            color: #b6c1ca;
+            background: rgba(255,255,255,.035);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 7px 11px;
+            font-size: .7rem;
+        }
+
+        .education-description {
+            color: var(--muted);
+            line-height: 1.85;
+            max-width: 850px;
+        }
+
+        /* Timeline */
+
+        .timeline {
+            position: relative;
+            margin-top: 55px;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            bottom: 5px;
+            left: 19px;
+            width: 1px;
+            background: linear-gradient(
+                to bottom,
+                var(--accent),
+                rgba(255,255,255,.08),
+                transparent
+            );
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 65px;
+            margin-bottom: 55px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 10px;
+            top: 0;
+            width: 19px;
+            height: 19px;
+            border: 4px solid var(--bg);
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 20px rgba(98,230,168,.4);
+        }
+
+        .timeline-year {
+            color: var(--accent);
+            font-size: .72rem;
+            font-weight: 850;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+        }
+
+        .timeline-item h3 {
+            margin: 9px 0;
+            font-size: 1.45rem;
+            font-weight: 850;
+            letter-spacing: -.03em;
+        }
+
+        .timeline-item p {
+            color: var(--muted);
+            line-height: 1.8;
+            max-width: 750px;
+            margin: 0;
+        }
+
+        /* Study areas */
+
+        .study-card {
+            height: 100%;
+            padding: 28px;
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            background: rgba(255,255,255,.02);
+            transition: .25s ease;
+        }
+
+        .study-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(98,230,168,.25);
+            background: rgba(255,255,255,.03);
+        }
+
+        .study-icon {
+            width: 50px;
+            height: 50px;
+            display: grid;
+            place-items: center;
+            border-radius: 15px;
+            color: var(--accent);
+            background: rgba(98,230,168,.06);
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+        }
+
+        .study-card h3 {
+            font-size: 1.08rem;
+            font-weight: 850;
+        }
+
+        .study-card p {
+            color: var(--muted);
+            font-size: .82rem;
+            line-height: 1.75;
+            margin: 0;
+        }
+
+        /* Learning system */
+
+        .learning-panel {
+            border: 1px solid var(--border);
+            border-radius: 28px;
+            padding: 32px;
+            background:
+                linear-gradient(145deg, rgba(255,255,255,.04), rgba(255,255,255,.012));
+        }
+
+        .learning-step {
+            display: flex;
+            gap: 18px;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255,255,255,.06);
+        }
+
+        .learning-step:last-child {
+            border-bottom: 0;
+        }
+
+        .step-number {
+            flex: 0 0 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            color: var(--accent);
+            background: rgba(98,230,168,.07);
+            font-weight: 900;
+        }
+
+        .learning-step h4 {
+            font-size: .95rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .learning-step p {
+            color: var(--muted);
+            font-size: .78rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* Terminal */
+
+        .terminal {
+            overflow: hidden;
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            background: #070a0d;
+            box-shadow: 0 30px 80px rgba(0,0,0,.2);
+        }
+
+        .terminal-header {
+            padding: 13px 17px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .terminal-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: rgba(255,255,255,.2);
+        }
+
+        .terminal-title {
+            color: #66727e;
+            font-family: monospace;
+            font-size: .7rem;
+            margin-left: 8px;
+        }
+
+        .terminal-body {
+            padding: 25px;
+            min-height: 310px;
+            color: #b8c4cf;
+            font-family: "Courier New", monospace;
+            font-size: .78rem;
+            line-height: 1.9;
+        }
+
+        .terminal-green {
+            color: var(--accent);
+        }
+
+        .terminal-blue {
+            color: var(--blue);
+        }
+
+        .terminal-purple {
+            color: var(--purple);
+        }
+
+        .terminal-muted {
+            color: #596671;
+        }
+
+        /* Philosophy */
+
+        .philosophy {
+            height: 100%;
+            padding: 30px;
+            border: 1px solid var(--border);
+            border-radius: 23px;
+            background: rgba(255,255,255,.02);
+        }
+
+        .philosophy i {
+            color: var(--accent);
+            font-size: 1.5rem;
+        }
+
+        .philosophy h3 {
+            font-size: 1rem;
+            font-weight: 850;
+            margin: 18px 0 9px;
+        }
+
+        .philosophy p {
+            color: var(--muted);
+            font-size: .82rem;
+            line-height: 1.75;
+            margin: 0;
+        }
+
+        /* CTA */
+
+        .cta {
+            padding: 80px 30px;
+            text-align: center;
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(98,230,168,.1), transparent 35%),
+                radial-gradient(circle at 80% 80%, rgba(91,188,255,.08), transparent 35%),
+                var(--surface);
+        }
+
+        .cta h2 {
+            font-size: clamp(2.4rem, 5vw, 4.5rem);
+            line-height: .95;
+            letter-spacing: -.07em;
+            font-weight: 900;
+        }
+
+        .cta p {
+            max-width: 650px;
+            color: var(--muted);
+            line-height: 1.8;
+            margin: 20px auto 30px;
+        }
+
+        footer {
+            padding: 55px 0 30px;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-brand {
+            font-size: 1.4rem;
+            font-weight: 900;
+            letter-spacing: -.06em;
+        }
+
+        .footer-copy,
+        .footer-link {
+            color: var(--muted);
+            font-size: .84rem;
+        }
+
+        .footer-link:hover {
+            color: var(--accent);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: .75s ease;
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 767px) {
+
+            .hero {
+                padding-top: 125px;
+            }
+
+            .section {
+                padding: 75px 0;
+            }
+
+            .education-card {
+                padding: 27px;
+            }
+
+            .learning-panel {
+                padding: 23px;
+            }
+
+            .terminal-body {
+                font-size: .68rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+    <div class="container py-2">
+
+        <a class="navbar-brand" href="/">
+            MANTE MWC<span class="brand-dot"></span>
+        </a>
+
+        <button
+            class="navbar-toggler border-0 shadow-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav">
+
+            <i class="bi bi-list fs-2"></i>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/about.html">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/skills.html">Skills</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="/education.html">
+                        Education
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/projects.html">
+                        Projects
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/samples/">
+                        Samples
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/pricing.html">
+                        Pricing
+                    </a>
+                </li>
+
+                <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+
+                    <a href="/contact.html" class="btn btn-main">
+                        Let's Build
+                        <i class="bi bi-arrow-up-right ms-1"></i>
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<main>
+
+<section class="hero">
+
+    <div class="grid"></div>
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+
+    <div class="container position-relative">
+
+        <div class="row">
+
+            <div class="col-xl-10">
+
+                <div class="eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    Education & Engineering Journey
+                </div>
+
+                <h1 class="hero-title">
+                    Learning to
+                    <span class="gradient">build systems.</span>
+                </h1>
+
+                <p class="hero-copy">
+                    My education is not just about collecting certificates.
+                    It is the foundation behind the software, infrastructure,
+                    security research and products I build. University gives me
+                    the theory; projects force me to make that theory work in the
+                    real world.
+                </p>
+
+                <div class="hero-stats">
+
+                    <div class="stat">
+                        <strong>Software Engineering</strong>
+                        <span>Degree Program</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>2024 → 2028</strong>
+                        <span>Academic Journey</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>Build → Break → Learn</strong>
+                        <span>Learning Loop</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section pt-0">
+
+    <div class="container">
+
+        <div class="education-card reveal">
+
+            <div class="school-icon">
+                <i class="bi bi-mortarboard-fill"></i>
+            </div>
+
+            <div class="row g-4 align-items-end">
+
+                <div class="col-lg-8">
+
+                    <div class="section-label">
+                        Current Education
+                    </div>
+
+                    <h3>
+                        Bachelor of Science in
+                        <span class="gradient">
+                            Software Engineering
+                        </span>
+                    </h3>
+
+                    <div class="institution mt-2">
+                        Kirinyaga University
+                    </div>
+
+                    <div class="education-meta">
+
+                        <span class="meta-pill">
+                            <i class="bi bi-calendar3 me-1"></i>
+                            Started 2024
+                        </span>
+
+                        <span class="meta-pill">
+                            <i class="bi bi-hourglass-split me-1"></i>
+                            Expected 2028
+                        </span>
+
+                        <span class="meta-pill">
+                            <i class="bi bi-code-slash me-1"></i>
+                            Software Engineering
+                        </span>
+
+                        <span class="meta-pill">
+                            <i class="bi bi-shield-lock me-1"></i>
+                            Security Focus
+                        </span>
+
+                    </div>
+
+                    <p class="education-description mt-4">
+                        The program provides a structured foundation in software
+                        engineering, algorithms, databases, system development,
+                        programming and computing principles. I complement the
+                        academic curriculum with independent development, real
+                        products, experimentation and cybersecurity work.
+                    </p>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <div class="p-3 rounded-4 border"
+                         style="border-color:var(--border)!important;background:rgba(255,255,255,.025);">
+
+                        <div class="text-secondary small mb-2">
+                            CURRENT APPROACH
+                        </div>
+
+                        <div class="fw-bold">
+                            Theory → Implementation
+                        </div>
+
+                        <div class="text-secondary small mt-2">
+                            Learn the concept, build something with it,
+                            discover what the textbooks didn't mention.
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section pt-0">
+
+    <div class="container">
+
+        <div class="row g-5 align-items-start">
+
+            <div class="col-lg-5 reveal">
+
+                <div class="section-label">
+                    Academic Timeline
+                </div>
+
+                <h2 class="section-title">
+                    The journey
+                    <span class="gradient">so far.</span>
+                </h2>
+
+                <p class="section-copy mt-4">
+                    Education and practical engineering have developed side by
+                    side. Each stage has added another layer to how I understand
+                    software systems.
+                </p>
+
+            </div>
+
+
+            <div class="col-lg-7">
+
+                <div class="timeline">
+
+                    <div class="timeline-item reveal">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-year">
+                            2024
+                        </div>
+
+                        <h3>
+                            Started Software Engineering
+                        </h3>
+
+                        <p>
+                            Began the university journey with a focus on understanding
+                            the foundations of software development, programming,
+                            computer systems and engineering methodology.
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-item reveal">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-year">
+                            2025
+                        </div>
+
+                        <h3>
+                            From Coursework to Building
+                        </h3>
+
+                        <p>
+                            Started connecting academic concepts with practical
+                            development — databases, APIs, web applications,
+                            authentication, deployment and full project workflows.
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-item reveal">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-year">
+                            2026
+                        </div>
+
+                        <h3>
+                            Engineering Real Products
+                        </h3>
+
+                        <p>
+                            Expanded into SaaS development, analytics, cybersecurity,
+                            cloud infrastructure and production-oriented projects
+                            such as Mantemetrics, ManteAds, Riscaly and Cutlnk.
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-item reveal">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-year">
+                            2027 → 2028
+                        </div>
+
+                        <h3>
+                            Deeper Engineering & Specialisation
+                        </h3>
+
+                        <p>
+                            Continue strengthening software architecture,
+                            cybersecurity, distributed systems, cloud engineering,
+                            product development and the ability to turn ideas into
+                            reliable software.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="reveal">
+
+            <div class="section-label">
+                What I Study
+            </div>
+
+            <h2 class="section-title">
+                More than
+                <span class="gradient">just code.</span>
+            </h2>
+
+            <p class="section-copy">
+                Software engineering is a wide field. These are some of the areas
+                that shape how I approach development and problem solving.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4 mt-4">
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="study-card">
+
+                    <div class="study-icon">
+                        <i class="bi bi-braces"></i>
+                    </div>
+
+                    <h3>Programming</h3>
+
+                    <p>
+                        Programming concepts, algorithms, data structures,
+                        abstraction, modularity and writing maintainable code.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="study-card">
+
+                    <div class="study-icon">
+                        <i class="bi bi-diagram-3"></i>
+                    </div>
+
+                    <h3>Software Architecture</h3>
+
+                    <p>
+                        Understanding how components interact, how systems are
+                        structured and how software can evolve without becoming
+                        impossible to maintain.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="study-card">
+
+                    <div class="study-icon">
+                        <i class="bi bi-database"></i>
+                    </div>
+
+                    <h3>Databases</h3>
+
+                    <p>
+                        Relational databases, SQL, schema design, relationships,
+                        indexing, queries and application data modelling.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="study-card">
+
+                    <div class="study-icon">
+                        <i class="bi bi-shield-lock"></i>
+                    </div>
+
+                    <h3>Cybersecurity</h3>
+
+                    <p>
+                        Web security, HTTP, DNS, SSL/TLS, security headers,
+                        vulnerabilities, attack surfaces and defensive thinking.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="study-card">
+
+                    <div class="study-icon">
+                        <i class="bi bi-cloud-arrow-up"></i>
+                    </div>
+
+                    <h3>Cloud & Infrastructure</h3>
+
+                    <p>
+                        Deployment, hosting, DNS, cloud services, Git workflows,
+                        server configuration and understanding production systems.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="study-card">
+
+                    <div class="study-icon">
+                        <i class="bi bi-api"></i>
+                    </div>
+
+                    <h3>APIs & Backend Systems</h3>
+
+                    <p>
+                        REST APIs, authentication, server-side logic, request
+                        handling, integrations and communication between systems.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="study-card">
+
+                    <div class="study-icon">
+                        <i class="bi bi-git"></i>
+                    </div>
+
+                    <h3>Version Control</h3>
+
+                    <p>
+                        Git, GitHub, branching, merging, conflict resolution,
+                        project history and collaborative software workflows.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="study-card">
+
+                    <div class="study-icon">
+                        <i class="bi bi-window-stack"></i>
+                    </div>
+
+                    <h3>Web Engineering</h3>
+
+                    <p>
+                        Frontend interfaces, responsive layouts, browser behaviour,
+                        JavaScript, backend integration and production websites.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="study-card">
+
+                    <div class="study-icon">
+                        <i class="bi bi-lightbulb"></i>
+                    </div>
+
+                    <h3>Problem Solving</h3>
+
+                    <p>
+                        Breaking large problems into smaller systems, debugging,
+                        researching, testing assumptions and iterating toward a
+                        working solution.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section pt-0">
+
+    <div class="container">
+
+        <div class="row g-5 align-items-center">
+
+            <div class="col-lg-6 reveal">
+
+                <div class="section-label">
+                    Learning Beyond Class
+                </div>
+
+                <h2 class="section-title">
+                    The real
+                    <span class="gradient">laboratory.</span>
+                </h2>
+
+                <p class="section-copy mt-4">
+                    Some of the most valuable lessons come from trying to build
+                    something that actually has to work.
+                </p>
+
+                <p class="section-copy mt-3">
+                    Building my own projects means dealing with the things that
+                    assignments often simplify: deployment failures, database
+                    connections, authentication bugs, CORS, DNS, hosting,
+                    security, performance, product decisions and users.
+                </p>
+
+            </div>
+
+
+            <div class="col-lg-6 reveal">
+
+                <div class="terminal">
+
+                    <div class="terminal-header">
+
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-dot"></span>
+
+                        <span class="terminal-title">
+                            ~/mante/learning-loop
+                        </span>
+
+                    </div>
+
+                    <div class="terminal-body">
+
+                        <div>
+                            <span class="terminal-muted">$</span>
+                            <span class="terminal-green"> learn</span>
+                            software-concept
+                        </div>
+
+                        <div class="terminal-muted">
+                            → understand the theory
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <span class="terminal-muted">$</span>
+                            <span class="terminal-blue"> build</span>
+                            practical-system
+                        </div>
+
+                        <div class="terminal-muted">
+                            → turn theory into code
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <span class="terminal-muted">$</span>
+                            <span class="terminal-purple"> deploy</span>
+                            production
+                        </div>
+
+                        <div class="terminal-muted">
+                            → discover reality
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <span class="terminal-muted">$</span>
+                            <span class="terminal-green"> debug</span>
+                            everything
+                        </div>
+
+                        <div class="terminal-muted">
+                            → find out why it broke
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <span class="terminal-muted">$</span>
+                            <span class="terminal-blue"> improve</span>
+                            architecture
+                        </div>
+
+                        <div class="terminal-muted">
+                            → make the next version better
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <span class="terminal-muted">$</span>
+                            <span class="terminal-green"> repeat</span>
+                            <span class="terminal-muted">∞</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section pt-0">
+
+    <div class="container">
+
+        <div class="reveal">
+
+            <div class="section-label">
+                Engineering Philosophy
+            </div>
+
+            <h2 class="section-title">
+                How I turn
+                <span class="gradient">knowledge into skill.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="row g-4 mt-4">
+
+            <div class="col-md-6 col-lg-3 reveal">
+
+                <div class="philosophy">
+
+                    <i class="bi bi-book"></i>
+
+                    <h3>Learn</h3>
+
+                    <p>
+                        Understand the principles before blindly copying
+                        implementations.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3 reveal">
+
+                <div class="philosophy">
+
+                    <i class="bi bi-code-square"></i>
+
+                    <h3>Build</h3>
+
+                    <p>
+                        Apply the concept to an actual system where requirements
+                        and edge cases exist.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3 reveal">
+
+                <div class="philosophy">
+
+                    <i class="bi bi-bug"></i>
+
+                    <h3>Break</h3>
+
+                    <p>
+                        Debug failures, question assumptions and understand what
+                        actually went wrong.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3 reveal">
+
+                <div class="philosophy">
+
+                    <i class="bi bi-arrow-repeat"></i>
+
+                    <h3>Iterate</h3>
+
+                    <p>
+                        Improve the implementation instead of treating the first
+                        working version as the final version.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section pt-0">
+
+    <div class="container">
+
+        <div class="cta reveal">
+
+            <div class="section-label">
+                Still Learning
+            </div>
+
+            <h2>
+                The degree is the
+                <br>
+                <span class="gradient">beginning, not the finish line.</span>
+            </h2>
+
+            <p>
+                Software changes too quickly for learning to stop at graduation.
+                The goal is to keep building, researching, experimenting and
+                becoming a better engineer long after the classroom ends.
+            </p>
+
+            <div class="d-flex justify-content-center flex-wrap gap-3">
+
+                <a href="/skills.html" class="btn btn-main">
+                    Explore My Skills
+                    <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+
+                <a href="/projects.html" class="btn btn-outline-main">
+                    View My Projects
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+
+        <div class="row g-5">
+
+            <div class="col-lg-6">
+
+                <div class="footer-brand">
+                    MANTE MWC<span class="brand-dot"></span>
+                </div>
+
+                <p class="footer-copy mt-3">
+                    Software engineering, cybersecurity and product development.
+                    Building practical systems through code, experimentation and
+                    continuous learning.
+                </p>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h6 class="fw-bold mb-3">
+                    Explore
+                </h6>
+
+                <div class="d-flex flex-column gap-2">
+
+                    <a href="/" class="footer-link">
+                        Home
+                    </a>
+
+                    <a href="/about.html" class="footer-link">
+                        About
+                    </a>
+
+                    <a href="/skills.html" class="footer-link">
+                        Skills
+                    </a>
+
+                    <a href="/education.html" class="footer-link">
+                        Education
+                    </a>
+
+                    <a href="/projects.html" class="footer-link">
+                        Projects
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h6 class="fw-bold mb-3">
+                    Build
+                </h6>
+
+                <div class="d-flex flex-column gap-2">
+
+                    <a href="/samples/" class="footer-link">
+                        Samples
+                    </a>
+
+                    <a href="/pricing.html" class="footer-link">
+                        Pricing
+                    </a>
+
+                    <a href="/contact.html" class="footer-link">
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-2">
+
+                <h6 class="fw-bold mb-3">
+                    Focus
+                </h6>
+
+                <div class="d-flex flex-column gap-2">
+
+                    <span class="footer-link">
+                        Software
+                    </span>
+
+                    <span class="footer-link">
+                        Web Engineering
+                    </span>
+
+                    <span class="footer-link">
+                        Security
+                    </span>
+
+                    <span class="footer-link">
+                        Cloud
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="d-flex flex-column flex-md-row justify-content-between gap-3 mt-5 pt-4"
+             style="border-top:1px solid var(--border);">
+
+            <small class="text-secondary">
+                © <span id="year"></span> Mante MWC. All rights reserved.
+            </small>
+
+            <small class="text-secondary">
+                Built with code, curiosity & too many terminal windows.
+            </small>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    /*
+     * Reveal animations
+     */
+
+    const revealElements =
+        document.querySelectorAll(".reveal");
+
+    const observer =
+        new IntersectionObserver((entries, observer) => {
+
+            entries.forEach(entry => {
+
+                if (!entry.isIntersecting) {
+                    return;
+                }
+
+                entry.target.classList.add("show");
+
+                observer.unobserve(entry.target);
+
+            });
+
+        }, {
+            threshold: .12
+        });
+
+
+    revealElements.forEach(element => {
+
+        observer.observe(element);
+
+    });
+
+
+    /*
+     * Navbar scroll state
+     */
+
+    const navbar =
+        document.querySelector(".navbar");
+
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 30) {
+
+            navbar.style.background =
+                "rgba(5,7,10,.97)";
+
+        } else {
+
+            navbar.style.background =
+                "rgba(5,7,10,.88)";
+
+        }
+
+    });
+
+
+    /*
+     * Footer year
+     */
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+});
+
+</script>
+
+</body>
+</html>
